@@ -10880,3 +10880,268 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-07-06 10:41:35.084
 !MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.multicorevisualizer_8.6.0.201502131403.jar.
+!SESSION 2015-08-31 13:24:12.879 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_85
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.099
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.lrparser.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.119
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.platform.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.120
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.launch.remote_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.122
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.build.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.123
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gdb_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.124
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.testsrunner.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.125
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.native_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.136
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.visualizer_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.137
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.dsf.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.138
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.managedbuilder.llvm_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.145
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.autotools.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.146
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.native.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.147
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.gdbjtag_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.148
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.debug_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.157
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.testsrunner.source.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.158
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.xlc.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.159
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.parser.upc.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.160
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.xlc.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.161
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.162
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.examples.dsf_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.163
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.standalone_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.164
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gdb.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.165
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.ui.memory_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.166
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.util_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.167
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.msw_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.168
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.autotools_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.169
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.170
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.lrparser.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.171
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.parser.upc.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.172
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.lrparser.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.173
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.ui.memory.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.174
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.parser.upc.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.175
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.xlc.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.176
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.qt_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.177
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.bupc_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.178
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.platform_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.179
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.build.crossgcc_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.181
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.standalone.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.182
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.debug.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.184
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.dsf_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.185
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.remote_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.187
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.build_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.188
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.multicorevisualizer_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.663
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.lrparser.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.664
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.platform.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.665
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.launch.remote_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.666
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.build.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.666
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gdb_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.667
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.testsrunner.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.667
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.native_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.668
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.visualizer_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.668
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.dsf.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.669
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.managedbuilder.llvm_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.670
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.autotools.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.670
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.native.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.671
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.gdbjtag_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.671
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.debug_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.672
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.testsrunner.source.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.672
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.xlc.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.673
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.parser.upc.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.673
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.xlc.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.674
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.675
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.examples.dsf_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.675
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.standalone_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.676
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gdb.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.676
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.ui.memory_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.677
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.util_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.677
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.msw_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.678
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.autotools_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.678
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.679
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.lrparser.feature_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.680
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.parser.upc.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.680
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.lrparser.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.681
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.ui.memory.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.681
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.core.parser.upc.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.682
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.xlc.sdk_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.682
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.qt_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.683
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.bupc_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.683
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.platform_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.684
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.build.crossgcc_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.684
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.debug.standalone.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.685
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.debug.source_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.686
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.dsf_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.686
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.remote_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.687
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.build_8.6.0.201502131403.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-08-31 13:25:20.687
+!MESSAGE Unable to acquire PluginConverter service during generation for: /usr/share/eclipse/dropins/cdt/eclipse/features/org.eclipse.cdt.gnu.multicorevisualizer_8.6.0.201502131403.jar.
