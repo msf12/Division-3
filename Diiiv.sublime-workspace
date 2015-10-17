@@ -1,0 +1,338 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"timeToCheckForTastes"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
+			"settings":
+			{
+				"buffer_size": 7034,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Teensy/sketch_oct17a/sketch_oct17a.ino",
+			"settings":
+			{
+				"buffer_size": 1196,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "Package Control: inst",
+		"selected_items":
+		[
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Documents/Division 3/Division-3/Teensy",
+		"/D/Documents/Division 3/Division-3/Teensy/sketch_oct17a",
+		"/D/Documents/Arduino/SdFat",
+		"/D/Documents/Arduino/SdFat/SdFat"
+	],
+	"file_history":
+	[
+		"/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
+		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/Letters/LetterScripts/LetterController.cs",
+		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/Letters/LetterScripts/letterBehaviour.cs",
+		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/GameController/GameController Scripts/wordBuildingController.cs",
+		"/D/Steam Library/SteamApps/common/The Ship/ship/cfg/config.cfg",
+		"/D/Steam Library/SteamApps/common/The Ship Single Player/ship/cfg/config.cfg",
+		"/D/Steam Library/steamapps/common/The Ship Dedicated Server/ship/cfg/server.cfg",
+		"/D/Steam Library/SteamApps/common/The Ship Tutorial/ship/cfg/config.cfg",
+		"/D/Desktop/WSplit 1.5.2/timer.ahk",
+		"/D/Steam Library/SteamApps/common/PAYDAY 2/HoxHud/.crashcheck",
+		"/C/Users/Mitchel/Documents/My Games/Binding of Isaac Rebirth/gamestate1.dat",
+		"/C/Users/Mitchel/Documents/My Games/Binding of Isaac Rebirth/persistentgamedata1.dat",
+		"/D/Downloads/Elite_Dangerous.pr0",
+		"/D/Documents/Division 2/Semester 6/Operating Systems/hw4.txt",
+		"/D/Downloads/WSplit 1.5.2/timer.ahk",
+		"/D/Downloads/things_you_might_have_seen_in_other_languages.rb",
+		"/D/Downloads/yielding.rb",
+		"/D/Steam Library/SteamApps/common/PAYDAY 2/payday2_win32_release_2117156_crash_2015_1_25T1_26_27C0.mdmp",
+		"/C/Program Files (x86)/MediaMonkey/lame_enc.dll",
+		"/C/Users/Mitchel/AppData/Local/PAYDAY 2/renderer_settings.xml",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{21972798-5c27-451a-b4a1-51cfe45be753}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{d8035dd1-72b7-4379-b4a2-fda6683806a8}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{c1dcec5b-3f9e-451e-94a1-556e2d2c5d12}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{93382c9e-0c13-4ed7-93fc-ccfc0f587985}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{4808c960-40ee-48a2-a4c8-1bff2219ffeb}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{d13935f5-559f-4975-a9fe-de4452c2ca0d}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{368ef33a-2c44-4241-81e8-0ec1f385074c}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{82c3198f-05d9-4a04-9289-fbaaeed895be}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{9e623fc5-af1a-4ba7-ac27-62568b820e4c}.prf",
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Lightings/{0cfa1795-65f6-4f06-a1d2-1084a77cc75e}.lght",
+		"/D/Downloads/TestProfile.prf",
+		"/D/Documents/{9e623fc5-af1a-4ba7-ac27-62568b820e4c}.prf",
+		"/D/Documents/7 Days to Die.prf",
+		"/D/Documents/Default.prf",
+		"/D/Documents/All profiles.prf",
+		"/D/Documents/{82c3198f-05d9-4a04-9289-fbaaeed895be}.prf",
+		"/D/Documents/Division 2/Semester 6/Database Driven Websites/First Site/my_operation.txt",
+		"/D/Steam Library/steamapps/common/Dark Souls Prepare to Die Edition/DATA/fmodex.dll",
+		"/D/Documents/Division 2/Semester 6/Algorithms/Week1/Day1/Homework1.txt",
+		"/D/Stuff/Stuff/Man in the Family/game.xml",
+		"/D/Steam Library/SteamApps/common/PAYDAY 2/dieselx.cfg",
+		"/D/Steam Library/SteamApps/common/7 Days To Die/serverconfig.xml",
+		"/D/Steam Library/steamapps/common/7 Days to Die Dedicated Server/serverconfig.xml",
+		"/D/Documents/GitHub/WordSnack/Unity Project/Assets/Letters/LetterScripts/LetterController.cs",
+		"/D/Documents/GitHub/WordSnack/Unity Project/Assets/Characters/PlayerScripts/Character.cs",
+		"/D/Documents/GitHub/WordSnack/Unity Project/Assets/GameController/GameController Scripts/VariableControl.cs",
+		"/D/Documents/GitHub/WordSnack/Unity Project/Assets/GameController/GameController Scripts/wordBuildingController.cs",
+		"/D/Documents/Minecraft Server/server.properties",
+		"/D/Documents/Minecraft Server/server-launcher.bat",
+		"/D/Documents/Minecraft Server/ops.json",
+		"/D/Documents/Minecraft Server/logs/2014-10-26-1.log.gz",
+		"/D/Documents/GitHub/WordSnack/Unity Project/Assets/Audio/PlayMusic3.cs",
+		"/C/Users/Mitchel/VirtualBox VMs/Mint/Mint.vbox",
+		"/C/Users/Mitchel/VirtualBox VMs/Mint/Mint.vdi"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\Documents\\GitHub\\WordSnack\\Unity Project"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sowpods",
+			"mouse1",
+			"raw",
+			"k9",
+			"k7",
+			"7.*\\n.*7",
+			"5	",
+			"{\n",
+			"tasteDictionary",
+			"tasteglow",
+			"TasteGlow",
+			"timeToCheckForTastes",
+			"variables.timeToCheckForTastes",
+			"timeToHighlightTaste"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"7.*\\n.*2",
+			"8\\t"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1527,
+								1527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Teensy/sketch_oct17a/sketch_oct17a.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								457,
+								457
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sketch_oct17a":
+	{
+		"height": 100.0
+	},
+	"output.stino_log":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "Diiiv.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Documents\\GitHub\\WordSnack\\game-studio.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

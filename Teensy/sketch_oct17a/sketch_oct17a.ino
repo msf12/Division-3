@@ -2,66 +2,72 @@
 #include <SdFat.h>
 #include <SdFatUtil.h>
 
-// SD card chip select pin.
-const uint8_t SD_CS_PIN = SS;
+// sd card chip select pin.
+const uint8_t sd_CS_PIN = SS;
 
 unsigned long baud = 19200;
-SdFat SD;
+SdFat sd;
 SdFile file;
 String path;
 
-void printDirContents(SdFile &file)
-{
-//  file.chdir
+void setup() {
+	path = "/";
+	Serial.begin(baud);
+	while(!Serial);
+	Serial.println("Press the any key");
+	while(!Serial.available());
+
+	if (!sd.begin(sd_CS_PIN, SPI_HALF_SPEED)) {
+		sd.initErrorHalt();
 }
 
-void setup() {
-  Serial.begin(baud);
-  while(!Serial);
-  Serial.println("Press the any key");
-  while(!Serial.available());
+sd.ls();
+sd.chdir("Music");
 
-  if (!SD.begin(SD_CS_PIN, SPI_HALF_SPEED)) {
-    SD.initErrorHalt();
-  }
-  
-  Serial.println("Path is " + path);
-  char temp[13];
-  SD.vwd()->getSFN(temp); //get SFN and store it in char[]
-  path += temp;
-  Serial.println("Path is " + path);
-  
-  SD.ls();
-  SD.chdir("Music");
-  
-  SD.vwd()->getSFN(temp);
-  path += temp;
-  path += "/";
-  Serial.println("Path is " + path);
 
-  SD.ls();
-  SD.chdir("Seth Ect - DiMethylTriptamine");
-  
-  SD.vwd()->getSFN(temp);
-  path += temp;
-  path += "/";
-  Serial.println("Path is " + path);
-  
-  while(file.openNext(SD.vwd(),O_READ))
-  {
-    file.printFileSize(&Serial);
-    Serial.write(' ');
-    file.printModifyDateTime(&Serial);
-    Serial.write(' ');
-    file.printName(&Serial);
-    if (file.isDir()) {
-      // Indicate a directory.
-      Serial.write('/');
-    }
-    Serial.println();
-    file.close();
-  }
-  Serial.println("Done");
+char test[160];
+file.getName(test,160);
+Serial.print("Test of LFN ")
+Serial.println(test); 
+
+
+char temp[13];
+sd.vwd()->getSFN(temp);
+path += temp;
+path += "/";
+Serial.println("Path is " + path);
+
+sd.ls();
+sd.chdir("Seth Ect - DiMethylTriptamine");
+
+sd.vwd()->getSFN(temp);
+path += temp;
+path += "/";
+Serial.println("Path is " + path);
+
+while(file.openNext(sd.vwd(),O_READ))
+{
+	Serial.println();
+	char test[160];
+	file.getName(test,160);
+	Serial.print("Test of LFN ");
+	Serial.println(test); 
+
+
+	file.printFileSize(&Serial);
+	Serial.write(' ');
+	file.printModifyDateTime(&Serial);
+	Serial.write(' ');
+	file.printName(&Serial);
+	
+	if (file.isDir()) {
+		// Indicate a directory.
+		Serial.write('/');
+	}
+	Serial.println();
+	file.close();
+}
+Serial.println("Done");
 }
 
 void loop() {}
