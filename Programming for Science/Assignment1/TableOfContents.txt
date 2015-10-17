@@ -1,0 +1,54 @@
+Alexi Hu - Beatles Coin Flip
+program uses random numbers to print one of two collections of phrases followed by a randomly chosen Beatles member
+the code is quite lengthy including function definitions, loops, flow control statements, user input, various data structures, and even comments!!!
+
+Andy Zito - Assignment 1
+Program generates 4 random numbers between 1 and 10 and has the user guess the correct numbers and order to complete the game. Code is concise and uses if statements, random number generation and user input. Code is clear but could use comments.
+
+Charisse DelVecchio - Untitled (1)
+notebook containing an exploration of how dictionary syntax works
+shows some tenacity and creativity in hunting for syntactical bugs
+
+Courtney Fuller - NameGame
+Program is a name game where users are in a while loop until guessing the proper name. The code is commented and multiple interactions are present, makes it a little messy, but shows progress. Code uses a while loop and user input effectively and student came to TA session to get help with a bug.Sophia Smith-Allen_39378_assignsubmission_file_Project 1 Dice Roll Simulator
+
+Hayden Perkins - Demo1
+some basic list, dictionary, and variable definitions with one simple function
+
+Jacob Prescott - Python BMI Program
+simple program asking for name, height, and weight and includes a function to calculate BMI
+could be improved by moving the cast to int inside the function or to the input statement
+
+Jacqueline Restivo - JacquelinesProject
+uses a for loop to print the lyrics of a song using a number in a range and defines a function to insert a separator (default “.”) into a collection
+loop could be simplified by iterating through elements of the list instead of using a number
+not sure how much is original work and how much was copied from the readings without fulling understanding it
+
+Joel Esquilin - Hangman
+Hangman movie guessing game which allows only 5 wrong guesses. Well written code using dictionaries, function definitions and effective use of while loops. Code is commented clearly and is well presented.
+
+Julia Rauch - Julia Rauch Assignment 1
+simple program that takes three inputs of types float, int, and str and prints various information about them along with the results of multiplying them by numbers
+really cool and simple program that showcases the type() function
+
+Kai Mashima - Numbers Game
+Code is a number guessing game that lets players choose a number and the amount of times to play and has the code “guess” it. Student effectively uses function definitions and IF statements. Code could be more concise but is at a good level for this point in the course. Code could be commented better but was all in one cell for easy use in the Ipython notebook.
+
+Katlyn O’Brien Donohue - Assignment 1
+simulates and graphs the results of the simulation
+really advanced for this point in the course…
+
+Lan Phuong Nguyen Hoang - Assignment 1
+Student plotted a basic graph using pylab and importing a csv file. Code could use comments and I would have liked to see the graph inline. 
+
+Matthew Fullmer - MatthewFullmerProgrammingForScienceDEMO1
+uses if/else statements to determine Myers-Briggs personality type with some comedic wording and outputs at the end
+commented and good use of str append
+
+Sophia Smith-Allen - Dice Roll Simulator
+uses input() to run the code only when the program reads an end of line and then outputs a random number in the range 1-6
+could have printed the number instead of using if statements to print a string containing the number
+
+Tajudeen Reilly - Taj Reilly, first project
+list of dictionaries containing information about a few stars
+Taj has mentioned plans to expand on this for use down the road
