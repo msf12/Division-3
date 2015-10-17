@@ -12,18 +12,10 @@
 	"buffers":
 	[
 		{
-			"file": "/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
-			"settings":
-			{
-				"buffer_size": 7034,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Teensy/sketch_oct17a/sketch_oct17a.ino",
 			"settings":
 			{
-				"buffer_size": 1196,
+				"buffer_size": 1260,
 				"line_ending": "Unix"
 			}
 		}
@@ -35,10 +27,30 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "Package Control: inst",
+		"height": 392.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
 			[
 				"Package Control: inst",
 				"Package Control: Install Package"
@@ -48,7 +60,7 @@
 	},
 	"console":
 	{
-		"height": 126.0,
+		"height": 413.0,
 		"history":
 		[
 			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
@@ -72,7 +84,20 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Stino/stino/pyarduino/base/serial_port.py",
+		"/D/Documents/Arduino/libraries/SdFat/utility/FatFile.h",
+		"/C/Program Files (x86)/Arduino/hardware/teensy/avr/boards.txt",
+		"/D/Documents/Division 3/Division-3/Teensy/sketch_oct17a/sketch_oct17a.ino",
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.last-run",
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/D/Documents/Division 3/Division-3/Teensy/sketch_oct17a/--defsym",
 		"/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414.info",
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Arduino-like IDE/README.md",
+		"/C/Users/Mitchel/AppData/Local/Temp/Temp1_Stino-new-stino (1).zip/Stino-new-stino/README.md",
+		"/C/Users/Mitchel/AppData/Local/Temp/Temp1_Stino-new-stino.zip/Stino-new-stino/README.md",
+		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Arduino-like IDE/app/base.py",
 		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/Letters/LetterScripts/LetterController.cs",
 		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/Letters/LetterScripts/letterBehaviour.cs",
 		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/GameController/GameController Scripts/wordBuildingController.cs",
@@ -144,6 +169,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"target",
+			"getName(temp)",
+			"getSFN",
+			"teensy31.build.flags.ld=-Wl",
+			"teensy31.build.flags.ld=-Wl,--gc-sections,--relax,--defsym=__rtc_localtime={extra.time.local} \"-T{build.core.path}/mk20dx256.ld\"",
+			"keyword_type",
 			"sowpods",
 			"mouse1",
 			"raw",
@@ -177,62 +208,33 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7034,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1527,
-								1527
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "Teensy/sketch_oct17a/sketch_oct17a.ino",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1196,
+						"buffer_size": 1260,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								457,
-								457
+								399,
+								399
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/User/Stino/Arduino.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -247,7 +249,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -272,6 +274,54 @@
 		]
 	},
 	"menu_visible": true,
+	"output.1445112083.882854":
+	{
+		"height": 100.0
+	},
+	"output.1445112696.646562":
+	{
+		"height": 100.0
+	},
+	"output.1445113282.264089":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111778.145875":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111810.358359":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111893.413981":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445112089.472438":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445112702.835801":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445112793.299618":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113603.654963":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113826.380471":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113854.528448":
+	{
+		"height": 100.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -281,6 +331,26 @@
 		"height": 100.0
 	},
 	"output.stino_log":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111857.730152":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113608.841129":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113623.589561":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113680.716163":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113857.292635":
 	{
 		"height": 100.0
 	},
