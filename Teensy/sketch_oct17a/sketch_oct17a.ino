@@ -1,8 +1,6 @@
-#include <SPI.h>
 #include <SdFat.h>
-#include <SdFatUtil.h>
 
-#define LFN_LENGTH 160
+#define LFN_LENGTH 250
 
 // sd card chip select pin.
 const uint8_t SD_CS_PIN = SS;
@@ -15,9 +13,11 @@ void lsDir(bool root = false)
 {
 	SdFile file;
 	char lfn[160]; //char[] to hold the long file names
-	sd.vwd()->getName(lfn,LFN_LENGTH); //store the long file name of the working directory in lfn
+	//store the long file name of the working directory in lfn
+	sd.vwd()->getName(lfn,LFN_LENGTH);
 
-	int pathLength = path.length(); //store length of the path to remove added parts later
+	//store length of the path to remove added parts later
+	int pathLength = path.length();
 	
 	// Serial.print("Current vwd is ");
 	// sd.vwd()->printName(&Serial);
@@ -35,7 +35,9 @@ void lsDir(bool root = false)
 		Serial.println(path.c_str());
 	}
 
-	SdFile currentDir(path.c_str(),O_READ); //store the current working directory using absolute path
+	//store the current working directory using absolute path
+	SdFile currentDir(path.c_str(),O_READ);
+
 	// Serial.print("currentDir: ");
 	// size_t ptr = (size_t)(&currentDir);
 	// Serial.println(ptr);
