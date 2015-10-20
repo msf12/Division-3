@@ -39,7 +39,7 @@
 			"file": "Teensy/FileNagivation/FileNavigation.ino",
 			"settings":
 			{
-				"buffer_size": 1169,
+				"buffer_size": 2153,
 				"line_ending": "Windows"
 			}
 		}
@@ -103,16 +103,15 @@
 	[
 		"/D/Documents/Division 3/Division-3/Teensy",
 		"/D/Documents/Arduino/SdFat",
-		"/D/Documents/Arduino/SdFat/SdFat",
-		"/D/Documents/Arduino/SdFat/SdFat/utility"
+		"/D/Documents/Arduino/SdFat/SdFat"
 	],
 	"file_history":
 	[
+		"/D/Documents/Arduino/SdFat/SdFat/utility/FatFile.cpp",
 		"/D/Documents/Arduino/libraries/SdFat/utility/FatFile.h",
+		"/D/Documents/Arduino/libraries/SdFat/utility/FatFileSystem.h",
 		"/D/Documents/Arduino/libraries/SdFat/SdFat.h",
 		"/D/Documents/Arduino/SdFat/SdFat/utility/FatFile.h",
-		"/D/Documents/Arduino/SdFat/SdFat/utility/FatFile.cpp",
-		"/D/Documents/Arduino/libraries/SdFat/utility/FatFileSystem.h",
 		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Stino/stino/pyarduino/base/serial_port.py",
 		"/C/Program Files (x86)/Arduino/hardware/teensy/avr/boards.txt",
 		"/D/Documents/Division 3/Division-3/Teensy/sketch_oct17a/sketch_oct17a.ino",
@@ -199,6 +198,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"::read()",
+			"loop",
+			"test",
+			"file",
 			"i",
 			"getname",
 			");\n",
@@ -284,15 +287,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1169,
+						"buffer_size": 2153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1024,
-								1024
+								2129,
+								2129
 							]
 						],
 						"settings":
@@ -300,7 +303,7 @@
 							"syntax": "Packages/User/Stino/Arduino.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.y": 1139.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -361,6 +364,50 @@
 		"height": 100.0
 	},
 	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445201035.062374":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302091.049314":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302255.485614":
+	{
+		"height": 109.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302326.259198":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302367.113087":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302427.610065":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302495.783347":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302505.623925":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303610.794038":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303762.060902":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303904.018008":
+	{
+		"height": 100.0
+	},
+	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445304194.818807":
 	{
 		"height": 100.0
 	},
@@ -693,6 +740,86 @@
 		"height": 100.0
 	},
 	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445211313.245745":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300231.109597":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300368.715998":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300438.396022":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300443.799906":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300612.408248":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300674.321742":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300730.106372":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300793.016257":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300831.236011":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300994.46027":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301155.178042":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301196.513441":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301254.735491":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301393.95386":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302311.027878":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302608.360849":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303614.768856":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303763.619852":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445304229.775884":
+	{
+		"height": 100.0
+	},
+	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445304316.066438":
 	{
 		"height": 100.0
 	},
