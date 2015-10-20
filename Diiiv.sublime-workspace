@@ -4,22 +4,6 @@
 		"selected_items":
 		[
 			[
-				"i",
-				"if	Arduino if"
-			],
-			[
-				"in",
-				"include	Arduino include syslib"
-			],
-			[
-				"inc",
-				"include	Arduino include userlib"
-			],
-			[
-				"se",
-				"setup	Arduino setup"
-			],
-			[
 				"time",
 				"timeToCheckForTastes"
 			]
@@ -40,7 +24,56 @@
 			"settings":
 			{
 				"buffer_size": 2153,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/ld:--defsym",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mitchel/.config/sublime-text-3/Packages/Stino-ST4ArduinoIDE/preset/platform_teensy3.txt",
+			"settings":
+			{
+				"buffer_size": 3722,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/--defsym",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "Teensy/FileNagivation/--defsym",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/usr/share/arduino/hardware/teensy/avr/boards.txt",
+			"settings":
+			{
+				"buffer_size": 27255,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -51,40 +84,32 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "Package Control: ",
+		"height": 192.0,
+		"last_filter": "Package Control: re",
 		"selected_items":
 		[
-			[
-				"Package Control: ",
-				"Package Control: Install Package"
-			],
 			[
 				"Package Control: re",
 				"Package Control: Remove Package"
 			],
 			[
-				"Package Control: remo",
-				"Package Control: Remove Package"
+				"Package Control: ",
+				"Package Control: Enable Package"
 			],
 			[
 				"Package Control: insta",
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: rem",
-				"Package Control: Remove Package"
-			],
-			[
 				"Package Control: inst",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 400.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 413.0,
+		"height": 126.0,
 		"history":
 		[
 			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
@@ -101,30 +126,19 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Documents/Division 3/Division-3/Teensy",
-		"/D/Documents/Arduino/SdFat",
-		"/D/Documents/Arduino/SdFat/SdFat"
+		"/home/mitchel/Documents/Division-3/Teensy",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNagivation"
 	],
 	"file_history":
 	[
-		"/D/Documents/Arduino/SdFat/SdFat/utility/FatFile.cpp",
-		"/D/Documents/Arduino/libraries/SdFat/utility/FatFile.h",
-		"/D/Documents/Arduino/libraries/SdFat/utility/FatFileSystem.h",
-		"/D/Documents/Arduino/libraries/SdFat/SdFat.h",
-		"/D/Documents/Arduino/SdFat/SdFat/utility/FatFile.h",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Stino/stino/pyarduino/base/serial_port.py",
-		"/C/Program Files (x86)/Arduino/hardware/teensy/avr/boards.txt",
-		"/D/Documents/Division 3/Division-3/Teensy/sketch_oct17a/sketch_oct17a.ino",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.last-run",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/D/Documents/Division 3/Division-3/Teensy/sketch_oct17a/--defsym",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNagivation/--defsym",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/ld:--defsym",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/--defsym",
+		"/home/mitchel/.config/sublime-text-3/Packages/Stino-ST4ArduinoIDE/preset/platform_teensy3.txt",
+		"/usr/share/arduino/hardware/teensy/avr/platform.txt",
+		"/home/mitchel/.config/sublime-text-3/Packages/Robot-Will-Stino-d5866f3/README.md",
+		"/home/mitchel/.cache/.fr-dP5nVT/Robot-Will-Stino-d5866f3/README.md",
 		"/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414.info",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Arduino-like IDE/README.md",
-		"/C/Users/Mitchel/AppData/Local/Temp/Temp1_Stino-new-stino (1).zip/Stino-new-stino/README.md",
-		"/C/Users/Mitchel/AppData/Local/Temp/Temp1_Stino-new-stino.zip/Stino-new-stino/README.md",
-		"/C/Users/Mitchel/AppData/Roaming/Sublime Text 3/Packages/Arduino-like IDE/app/base.py",
 		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/Letters/LetterScripts/LetterController.cs",
 		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/Letters/LetterScripts/letterBehaviour.cs",
 		"/D/Documents/Division 2/Semester 5/WordSnack/Unity Project/Assets/GameController/GameController Scripts/wordBuildingController.cs",
@@ -188,8 +202,6 @@
 		"height": 90.0,
 		"where_history":
 		[
-			"D:\\Documents\\Arduino\\SdFat\\SdFat",
-			"D:\\Documents\\Arduino\\SdFat",
 			"D:\\Documents\\GitHub\\WordSnack\\Unity Project"
 		]
 	},
@@ -198,24 +210,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"::read()",
-			"loop",
-			"test",
-			"file",
-			"i",
-			"getname",
-			");\n",
-			"fatfile",
-			"class",
-			"opennext",
-			"dir",
-			"file",
-			"target",
-			"getName(temp)",
-			"getSFN",
-			"teensy31.build.flags.ld=-Wl",
-			"teensy31.build.flags.ld=-Wl,--gc-sections,--relax,--defsym=__rtc_localtime={extra.time.local} \"-T{build.core.path}/mk20dx256.ld\"",
-			"keyword_type",
 			"sowpods",
 			"mouse1",
 			"raw",
@@ -249,7 +243,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -265,20 +259,21 @@
 						"selection":
 						[
 							[
-								202,
-								202
+								527,
+								527
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/User/Stino/Arduino.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -294,19 +289,160 @@
 						"selection":
 						[
 							[
-								2129,
-								2129
+								353,
+								353
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/Stino/Arduino.tmLanguage"
+							"syntax": "Packages/User/Stino/Arduino.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1139.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/ld:--defsym",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/mitchel/.config/sublime-text-3/Packages/Stino-ST4ArduinoIDE/preset/platform_teensy3.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/--defsym",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Teensy/FileNagivation/--defsym",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/usr/share/arduino/hardware/teensy/avr/boards.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11229,
+								11229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -318,7 +454,7 @@
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 30.0
 	},
 	"layout":
 	{
@@ -343,237 +479,17 @@
 		]
 	},
 	"menu_visible": true,
-	"output.1445112083.882854":
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNagivation|1445358397.8171978":
 	{
-		"height": 100.0
+		"height": 214.0
 	},
-	"output.1445112696.646562":
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNagivation|1445358532.2660582":
 	{
-		"height": 100.0
+		"height": 192.0
 	},
-	"output.1445113282.264089":
+	"output.build|/usr/share/arduino/hardware/teensy/avr|1445358527.9949727":
 	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445200504.637595":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445200641.465429":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445201035.062374":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302091.049314":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302255.485614":
-	{
-		"height": 109.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302326.259198":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302367.113087":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302427.610065":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302495.783347":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302505.623925":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303610.794038":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303762.060902":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303904.018008":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445304194.818807":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111778.145875":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111810.358359":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111893.413981":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445112089.472438":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445112702.835801":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445112793.299618":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113603.654963":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113826.380471":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113854.528448":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445114634.633859":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445114651.043895":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445114727.392623":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115423.044858":
-	{
-		"height": 208.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115438.73001":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115497.17692":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115594.186652":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115614.966181":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117728.430536":
-	{
-		"height": 431.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117767.930735":
-	{
-		"height": 411.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117844.225483":
-	{
-		"height": 195.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117916.598041":
-	{
-		"height": 390.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117942.311698":
-	{
-		"height": 544.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118005.463732":
-	{
-		"height": 314.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118037.636385":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118745.847149":
-	{
-		"height": 170.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118792.082699":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118863.459209":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118866.545314":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118913.023412":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118929.188059":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118933.782682":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118964.305363":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118997.092602":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120347.365269":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120542.279154":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120757.557148":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120772.762421":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120832.966994":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445199763.499911":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445199833.72877":
-	{
-		"height": 100.0
-	},
-	"output.build|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445200271.343505":
-	{
-		"height": 100.0
+		"height": 0.0
 	},
 	"output.find_results":
 	{
@@ -584,482 +500,6 @@
 		"height": 100.0
 	},
 	"output.stino_log":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445200710.676307":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445200829.664324":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445200868.039442":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445201057.703191":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445201075.798217":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445201140.310622":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445201220.168746":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445207585.985698":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445207738.943505":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445207776.129511":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445207967.365309":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445208121.575476":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445208147.911618":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445208776.411216":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445208834.463123":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445208954.88854":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209046.541346":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209164.274483":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209173.383029":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209213.387576":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209291.325995":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209328.043514":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209478.42223":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209486.181372":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209527.538548":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209603.997245":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209645.194525":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209684.633975":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209707.69313":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445209759.298835":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445210398.072011":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445210424.326349":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445210712.914871":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445210864.750298":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445210891.618441":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445211103.111878":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445211226.199701":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445211260.608752":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445211313.245745":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300231.109597":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300368.715998":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300438.396022":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300443.799906":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300612.408248":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300674.321742":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300730.106372":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300793.016257":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300831.236011":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445300994.46027":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301155.178042":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301196.513441":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301254.735491":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445301393.95386":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302311.027878":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445302608.360849":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303614.768856":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445303763.619852":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445304229.775884":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\FileNagivation|1445304316.066438":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445111857.730152":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113608.841129":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113623.589561":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113680.716163":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445113857.292635":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445114054.833608":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115622.376487":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115687.197311":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115803.902815":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445115987.626621":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116004.474597":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116093.344974":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116194.198175":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116203.072136":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116329.670811":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116536.424591":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116587.251559":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116621.060054":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116682.776289":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116697.880367":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116784.187768":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116877.810647":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445116978.689535":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117003.551183":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117039.427781":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117160.867504":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445117520.052909":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118047.317055":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118076.176153":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118154.187998":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118198.05016":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118305.060264":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118388.333824":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118497.508983":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118656.506952":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118682.22637":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445118690.12321":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445119002.737268":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445119835.748505":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445119973.579097":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445119981.479834":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120020.367923":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120074.696106":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120193.576814":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120289.097094":
-	{
-		"height": 261.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120349.759197":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120456.8813":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120502.260619":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120544.181116":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120634.799568":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120678.087732":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120777.309901":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120817.045866":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120834.461551":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120869.422969":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120908.439152":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445120951.721053":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445200916.047335":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445200939.841965":
-	{
-		"height": 100.0
-	},
-	"output.upload|D:\\Documents\\Division 3\\Division-3\\Teensy\\sketch_oct17a|1445211215.08414":
 	{
 		"height": 100.0
 	},
