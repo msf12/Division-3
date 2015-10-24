@@ -17,8 +17,8 @@ class DoublyLinkedList
 	Node* tail;
 	uint32_t size;
 
-	void sort(Node* head, Node* tail);
-	void merge(Node* list, Node* head1, Node* head2);
+	void sort(Node*& n1, Node*& n2,int distance);
+	Node* merge(Node* head1, Node* head2);
 
 public:
 	DoublyLinkedList();
@@ -31,6 +31,7 @@ public:
 	bool addAt(Data data,int index);
 	Data getAt(int index);
 	void sort();
+	void printList();
 };
 
 
