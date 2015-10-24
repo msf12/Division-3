@@ -17,8 +17,7 @@ struct FileInfo {
 	char* longFileName;
 };
 
-//pointer to array of files in current directory to be built at runtime
-FileInfo* files;
+DoublyLinkedList<FileInfo> files;
 
 void setup()
 {

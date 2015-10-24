@@ -17,6 +17,9 @@ class DoublyLinkedList
 	Node* tail;
 	uint32_t size;
 
+	void sort(Node* head, Node* tail);
+	Node* merge(Node* head1, Node* head2);
+
 public:
 	DoublyLinkedList();
 	~DoublyLinkedList();
@@ -27,6 +30,7 @@ public:
 	bool add(Data data);
 	bool addAt(Data data,int index);
 	Data getAt(int index);
+	void sort();
 };
 
 
