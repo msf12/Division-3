@@ -1,6 +1,6 @@
 #include "DoublyLinkedList.h"
 
-struct Node;
+// struct Node;
 
 template <typename Data>
 DoublyLinkedList<Data>::DoublyLinkedList()
@@ -200,25 +200,25 @@ void DoublyLinkedList<Data>::sort(Node* head, Node* tail)
 	}
 	sort(head,center);
 	sort(center->next,tail);
-	merge(head,center->next);
+	merge(head,head,center->next);
 }
 
 template <typename Data>
-Node* DoublyLinkedList<Data>::merge(Node* head1, Node* head2)
+void DoublyLinkedList<Data>::merge(Node* list, Node* head1, Node* head2)
 {
-	if(!head)
-		return head2;
-	if(!tail)
-		return head1;
+	if(!head1)
+		list = head2;
+	if(!head2)
+		list = head1;
 	if(head1->data > head2->data)
 	{
-		head1->next = merge(head1->next,head2);
-		return head1;
+		list = head1;
+		merge(list->next,head1->next,head2);
 	}
 	else
 	{
-		head2->next = merge(head2->next,head1);
-		return head2;
+		list = head2;
+		merge(list->next,head2->next,head1);
 	}
 }
 

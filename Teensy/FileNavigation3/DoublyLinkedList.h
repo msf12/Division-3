@@ -18,7 +18,7 @@ class DoublyLinkedList
 	uint32_t size;
 
 	void sort(Node* head, Node* tail);
-	Node* merge(Node* head1, Node* head2);
+	void merge(Node* list, Node* head1, Node* head2);
 
 public:
 	DoublyLinkedList();
