@@ -12,15 +12,17 @@ uint8_t depth;
 //used to store information about files when they are first listed
 //http://forum.arduino.cc/index.php?topic=173562.0
 struct FileInfo {
-	uint16_t index;
+	uint32_t index;
 	//pointer to an array to be created at runtime
-	char* longFileName;
+	char longFileName[LFN_LENGTH];
 };
 
+// template <typename FileInfo>;
 DoublyLinkedList<FileInfo> files;
 
 void setup()
 {
+	SdFile file;
 	if (!sd.begin(SD_CS_PIN, SPI_HALF_SPEED)) {
 		sd.initErrorHalt();
 	}
@@ -31,9 +33,27 @@ void setup()
 	Serial.println("Press the any key");
 	while(!Serial.available());
 	path = "/";
+
+	while(file.openNext(sd.vwd(),O_READ))
+	{
+		FileInfo info;
+
+		file.getName(info.longFileName,LFN_LENGTH);
+		info.index = sd.vwd()->curPosition();
+
+		Serial.print(info.longFileName);
+		Serial.print(" - ");
+		Serial.println(info.index);
+		
+		files.add(info);
+		file.close();
+	}
+
+	for(int i=0; i<files.getSize(); i++)
+	{
+		Serial.println(files.getAt(i)->longFileName);
+	}
 }
-
-
 
 void loop()
 {
