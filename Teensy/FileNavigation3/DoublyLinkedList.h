@@ -1,5 +1,6 @@
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
+#define DOUBLYLINKEDLIST_DEBUG 0
 
 #include <stdint.h>
 
@@ -30,8 +31,11 @@ public:
 	bool add(Data data);
 	bool addAt(Data data,int index);
 	Data getAt(int index);
+
+#if DOUBLYLINKEDLIST_DEBUG
 	void sort();
 	void printList();
+#endif
 };
 
 

@@ -230,6 +230,8 @@ typename DoublyLinkedList<Data>::Node* DoublyLinkedList<Data>::merge(Node* head1
 	}
 }
 
+#if DOUBLYLINKEDLIST_DEBUG
+
 template <typename Data>
 void DoublyLinkedList<Data>::printList()
 {
@@ -264,3 +266,5 @@ int main(int argc, char const *argv[])
 	d.printList();
 	return 0;
 }
+
+#endif
