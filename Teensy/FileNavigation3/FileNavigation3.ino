@@ -14,8 +14,53 @@ uint8_t depth;
 struct FileInfo {
 	uint32_t index;
 	//pointer to an array to be created at runtime
-	char longFileName[LFN_LENGTH];
+	char fileName[LFN_LENGTH];
 };
+
+bool operator==(FileInfo &left, FileInfo &right)
+{
+	for (uint i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	{
+		if(left.fileName[i] != right.fileName[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator!=(FileInfo &left, FileInfo &right)
+{
+	return !(left==right);
+}
+
+bool operator<=(FileInfo &left, FileInfo &right)
+{
+	for (uint i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	{
+		if(left.fileName[i] > right.fileName[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator>=(FileInfo &left, FileInfo &right)
+{
+	for (uint i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	{
+		if(left.fileName[i] < right.fileName[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator<(FileInfo &left, FileInfo &right)
+{
+	return !(left>=right);
+}
+
+bool operator>(FileInfo &left, FileInfo &right)
+{
+	return !(left<=right);
+}
 
 // template <typename FileInfo>;
 DoublyLinkedList<FileInfo> files;
@@ -38,10 +83,10 @@ void setup()
 	{
 		FileInfo info;
 
-		file.getName(info.longFileName,LFN_LENGTH);
+		file.getName(info.fileName,LFN_LENGTH);
 		info.index = sd.vwd()->curPosition();
 
-		Serial.print(info.longFileName);
+		Serial.print(info.fileName);
 		Serial.print(" - ");
 		Serial.println(info.index);
 		
@@ -49,9 +94,20 @@ void setup()
 		file.close();
 	}
 
+	Serial.println();
+
 	for(int i=0; i<files.getSize(); i++)
 	{
-		Serial.println(files.getAt(i)->longFileName);
+		Serial.println(files.getAt(i)->fileName);
+	}
+
+	Serial.println();
+
+	files.sort();
+
+	for(int i=0; i<files.getSize(); i++)
+	{
+		Serial.println(files.getAt(i)->fileName);
 	}
 }
 

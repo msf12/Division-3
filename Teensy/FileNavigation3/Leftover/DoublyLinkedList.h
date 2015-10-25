@@ -1,6 +1,6 @@
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
-#define DOUBLYLINKEDLIST_DEBUG 0
+#define DOUBLYLINKEDLIST_DEBUG 1
 
 #include <stdint.h>
 
@@ -27,6 +27,9 @@ public:
 	~DoublyLinkedList();
 
 	Data getHead();
+	Data getTail();
+	int getSize();
+	bool add(Data data);
 	bool addAt(Data data,int index);
 
 	Data getAt(int index);
@@ -34,7 +37,7 @@ public:
 
 #if DOUBLYLINKEDLIST_DEBUG
 
-	printList();
+	void printList();
 
 #endif
 };

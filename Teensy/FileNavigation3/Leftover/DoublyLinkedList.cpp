@@ -2,6 +2,7 @@
 
 #if DOUBLYLINKEDLIST_DEBUG
 #include <iostream>
+#include <random>
 #endif
 
 template <typename Data>
@@ -239,30 +240,102 @@ void DoublyLinkedList<Data>::printList()
 	Node* temp = head;
 	for (int i = 0; i < size; ++i)
 	{
-		std::cout << temp->data << std::endl;
+		std::cout << temp->data.fileName << " - " << temp->data.index << std::endl;
 		temp = temp->next;
 	}
 	std::cout << std::endl;
 }
 
+struct Test {
+	int index;
+	char fileName[5];
+};
+
+bool operator==(Test &left, Test &right)
+{
+	for (int i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	{
+		if(left.fileName[i] != right.fileName[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator!=(Test &left, Test &right)
+{
+	return !(left==right);
+}
+
+bool operator<=(Test &left, Test &right)
+{
+	for (int i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	{
+		if(left.fileName[i] > right.fileName[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator>=(Test &left, Test &right)
+{
+	for (int i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	{
+		if(left.fileName[i] < right.fileName[i])
+			return false;
+	}
+	return true;
+}
+
+bool operator<(Test &left, Test &right)
+{
+	return !(left>=right);
+}
+
+bool operator>(Test &left, Test &right)
+{
+	return !(left<=right);
+}
+
 int main(int argc, char const *argv[])
 {
-	DoublyLinkedList<int> d;
-	d.add(2);
-	d.add(1);
-	d.addAt(2,0);
-	d.add(20);
-	d.add(0);
-	d.add(752);
-	d.add(1);
-	d.add(2);
-	d.add(5);
-	d.add(16);
-	d.add(-28);
-	d.add(41);
-	d.add(5);
-	d.add(7);
-	d.add(3);
+
+	// Test test1;
+	// test1.fileName[0] = 't';
+	// test1.fileName[1] = 'e';
+	// test1.fileName[2] = 's';
+	// test1.fileName[3] = 't';
+	// test1.fileName[4] = '1';
+
+	// Test test2;
+	// test2.fileName[0] = 't';
+	// test2.fileName[1] = 'e';
+	// test2.fileName[2] = 's';
+	// test2.fileName[3] = 't';
+	// test2.fileName[4] = '0';
+
+	// std::cout << (test1 == test2) << std::endl;
+	// std::cout << (test1 < test2) << std::endl;
+	// std::cout << (test1 > test2) << std::endl;
+	// std::cout << (test1 <= test2) << std::endl;
+	// std::cout << (test1 >= test2) << std::endl;
+
+	DoublyLinkedList<Test> d;
+	std::default_random_engine generator;
+	std::uniform_int_distribution<int> distribution(65,91);
+
+	for (int i = 0; i < 10; ++i)
+	{
+		Test test;
+		test.fileName[0] = 't';
+		test.fileName[1] = 'e';
+		test.fileName[2] = 's';
+		test.fileName[3] = 't';
+		test.fileName[4] = (char)distribution(generator);
+		test.index = i;
+		d.add(test);
+	}
+	
+	d.printList();
 	d.sort();
 	d.printList();
 	return 0;

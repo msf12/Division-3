@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"D",
+				"DOUBLYLINKEDLIST_DEBUG"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"de",
+				"define"
+			],
+			[
+				"d",
+				"def	#ifndef … #define … #endif"
+			],
+			[
 				"print",
 				"printList"
 			],
@@ -43,15 +59,7 @@
 			"file": "Teensy/FileNavigation3/FileNavigation3.ino",
 			"settings":
 			{
-				"buffer_size": 768,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Teensy/FileNavigation3/DoublyLinkedList.cpp",
-			"settings":
-			{
-				"buffer_size": 4413,
+				"buffer_size": 2183,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +67,26 @@
 			"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
 			"settings":
 			{
-				"buffer_size": 550,
+				"buffer_size": 3663,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.cpp",
+			"settings":
+			{
+				"buffer_size": 6161,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#ifndef DOUBLYLINKEDLIST_H\n#define DOUBLYLINKEDLIST_H\n#define DOUBLYLINKEDLIST_DEBUG 1\n\n#include <stdint.h>\n\ntemplate <typename Data>\nclass DoublyLinkedList\n{\n	struct Node\n	{\n		Node* previous;\n		Node* next;\n		Data data;\n	};\n\n	Node* head;\n	Node* tail;\n	uint32_t size;\n\n	//Merge sort\n	void sort(Node*& node1, Node*& node2,int distance);\n	Node* merge(Node* head1, Node* head2);\n\npublic:\n	DoublyLinkedList();\n	~DoublyLinkedList();\n\n	Data getHead();\n	Data getTail();\n	int getSize();\n	bool add(Data data);\n	bool addAt(Data data,int index);\n\n	Data getAt(int index);\n	void sort();\n\n#if DOUBLYLINKEDLIST_DEBUG\n\n	void printList();\n\n#endif\n};\n#endif",
+			"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
+			"file_size": 638,
+			"file_write_time": 130902122579811436,
+			"settings":
+			{
+				"buffer_size": 638,
 				"line_ending": "Unix"
 			}
 		}
@@ -117,16 +144,23 @@
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation2",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3",
-		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Implementing_A_List_Source"
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Implementing_A_List_Source",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Leftover"
 	],
 	"file_history":
 	[
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/Print.h",
+		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFile.h",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.cpp",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.tcc",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.h",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/include/c++/4.8.4/iostream",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Implementing_A_List_Source/AList.cpp",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Implementing_A_List_Source/AList.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/LinkedList.h",
 		"/home/mitchel/.cache/.fr-ReHeBt/SimpleList/SimpleList.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/FileInfoList.h",
-		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFile.h",
 		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/WString.h",
 		"/home/mitchel/Arduino/libraries/SdFat/SdFat.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation2/FileNavigation2.ino",
@@ -214,6 +248,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"int i = 0; i < sizeof",
+			"Test",
+			"sizeof(fileName)/sizeof(*fileName)",
+			"if(fileName[i]",
+			"Test &right",
+			"test1",
+			"test.fileName",
+			"FileInfo",
+			"this.",
+			"&FileInfo",
+			"longFileName",
+			"\\)\\n\\t\\{",
+			"template",
+			"node1",
+			"node2",
+			"node1",
+			"tail",
+			"Tail",
+			"tail",
+			"head",
+			"Head",
+			"head",
+			"Head",
+			"head",
 			"	printList",
 			"typename",
 			"list2",
@@ -245,7 +303,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"7.*\\n.*2",
@@ -269,15 +327,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 768,
+						"buffer_size": 2183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								511,
-								511
+								917,
+								917
 							]
 						],
 						"settings":
@@ -285,36 +343,37 @@
 							"syntax": "Packages/User/Stino/Arduino.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 1065.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Teensy/FileNavigation3/DoublyLinkedList.cpp",
+					"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4413,
+						"buffer_size": 3663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4293,
-								4293
+								282,
+								282
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3315.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -322,30 +381,60 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
+					"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 550,
+						"buffer_size": 6161,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								538
+								5182,
+								5182
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3435.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -591,6 +680,150 @@
 		"height": 100.0
 	},
 	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445659018.1216977":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717163.0733604":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717200.5390015":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717605.8552246":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717617.2635524":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717663.4308743":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717841.8870006":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717851.9599934":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718070.5235283":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718082.7765903":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718115.9521852":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718124.081039":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718249.086382":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718264.9871223":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718379.814693":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718411.7119534":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718496.9800372":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718519.494846":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718666.0363524":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718672.0545356":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718890.9713387":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718905.3122163":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718955.5468986":
+	{
+		"height": 187.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719289.280405":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719321.4529483":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719329.3194084":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719348.8796997":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719369.8369377":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719485.1991313":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719496.3691204":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719503.3885143":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719545.429387":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719751.745201":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445736937.5827749":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445741177.1573224":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445741262.3664339":
+	{
+		"height": 100.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445741453.4158711":
 	{
 		"height": 100.0
 	},
@@ -907,6 +1140,106 @@
 		"height": 100.0
 	},
 	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445632843.6462703":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445717913.2886817":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445718052.9464152":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719355.8195019":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719515.908841":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719549.2878385":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719599.2920492":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719742.5259957":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719752.6066422":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719808.7963572":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719867.8718622":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445719902.3111832":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445720085.9265194":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445720130.055773":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445720195.660127":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445720261.0155058":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737008.4723303":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737106.9102123":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737113.2609942":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737163.1948156":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737206.3557954":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737853.2949145":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737876.0269055":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737903.263307":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445737952.4753683":
+	{
+		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1445741269.2655342":
 	{
 		"height": 100.0
 	},

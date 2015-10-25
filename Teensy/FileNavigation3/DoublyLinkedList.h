@@ -1,8 +1,5 @@
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
-#define DOUBLYLINKEDLIST_DEBUG 0
-
-#include <stdint.h>
 
 template <typename Data>
 class DoublyLinkedList
@@ -135,10 +132,6 @@ public:
 
 	bool addAt(Data data,int index)
 	{
-		// std::cout<<"Index is "<<index<<std::endl;
-		// std::cout<<"Size is "<<size<<std::endl;
-		// std::cout<<"Size/2 is "<<size/2<<std::endl;
-		// std::cout<<"Index < size/2 is "<<(index<size/2)<<std::endl;
 		if(!size && !index)
 		{
 			Node* node = new Node;
@@ -235,19 +228,15 @@ public:
 		sort(head,tail,size);
 	}
 
-#if DOUBLYLINKEDLIST_DEBUG
-
-	printList()
+	void clearList()
 	{
-		Node* temp = head;
-		for (int i = 0; i < size; ++i)
+		while(size > 0)
 		{
-			std::cout << temp->data << std::endl;
-			temp = temp->next;
+			Node* temp = head;
+			head = head->next;
+			delete temp;
+			size--;
 		}
-		std::cout << std::endl;
 	}
-
-#endif
 };
 #endif
