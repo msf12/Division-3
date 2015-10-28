@@ -32,7 +32,7 @@ public:
 	bool add(Data data);
 	bool addAt(Data data,int index);
 
-	Data getAt(int index);
+	Data* getAt(int index);
 	void sort();
 
 #if DOUBLYLINKEDLIST_DEBUG

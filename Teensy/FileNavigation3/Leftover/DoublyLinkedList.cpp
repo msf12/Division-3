@@ -3,6 +3,7 @@
 #if DOUBLYLINKEDLIST_DEBUG
 #include <iostream>
 #include <random>
+#include <ctime>
 #endif
 
 template <typename Data>
@@ -138,7 +139,7 @@ bool DoublyLinkedList<Data>::addAt(Data data,int index)
 }
 
 template <typename Data>
-Data DoublyLinkedList<Data>::getAt(int index)
+Data* DoublyLinkedList<Data>::getAt(int index)
 {
 	if(index < size && index >= 0)
 	{
@@ -152,7 +153,7 @@ Data DoublyLinkedList<Data>::getAt(int index)
 			{
 				nodeToReturn = nodeToReturn->next;
 			}
-			return nodeToReturn->data;
+			return &(nodeToReturn->data);
 		}
 		else
 		{
@@ -161,7 +162,7 @@ Data DoublyLinkedList<Data>::getAt(int index)
 			{
 				nodeToReturn = nodeToReturn->previous;
 			}
-			return nodeToReturn->data;
+			return &(nodeToReturn->data);
 		}
 	}
 	else
@@ -173,6 +174,8 @@ void DoublyLinkedList<Data>::sort()
 {
 	sort(head,tail,size);
 }
+
+#include <unistd.h>
 
 //Merge sort
 template <typename Data>
@@ -206,7 +209,70 @@ void DoublyLinkedList<Data>::sort(Node*& node1, Node*& node2,int distance)
 	center->next = nullptr;
 	sort(node1,center,distance/2);
 	sort(centerNext,node2,(distance-1)/2);
+
+	int i = 0;
+	Node* test;
+
+	std::cout << "Sorted" << std::endl;
+	for (test = node1; test != center; test = test->next)
+	{
+		std::cout << i << " - ";
+		std::cout << (test->data.fileName);
+		std::cout << (" - ");
+		std::cout << (test->data.index) << std::endl;
+		i++;
+	}
+	std::cout << i << " - ";
+	std::cout << (test->data.fileName);
+	std::cout << (" - ");
+	std::cout << (test->data.index) << std::endl << "-----------------------------------" << std::endl;
+	i++;
+	for (test = centerNext; test != node2; test = test->next)
+	{
+		std::cout << i << " - ";
+		std::cout << (test->data.fileName);
+		std::cout << (" - ");
+		std::cout << (test->data.index) << std::endl;
+		i++;
+	}
+	std::cout << i << " - ";
+	std::cout << (test->data.fileName);
+	std::cout << (" - ");
+	std::cout << (test->data.index);
+	std::cout << std::endl;
+	std::cout << std::endl;
+
 	node1 = merge(node1,centerNext);
+	
+	i=0;
+	std::cout << "Merged" << std::endl;
+	for (test = node1; test != center; test = test->next)
+	{
+		std::cout << i << " - ";
+		std::cout << (test->data.fileName);
+		std::cout << (" - ");
+		std::cout << (test->data.index) << std::endl;
+		i++;
+	}
+	std::cout << i << " - ";
+	std::cout << (test->data.fileName);
+	std::cout << (" - ");
+	std::cout << (test->data.index) << std::endl << "-----------------------------------" << std::endl;
+	i++;
+	for (test = centerNext; test != node2; test = test->next)
+	{
+		std::cout << i << " - ";
+		std::cout << (test->data.fileName);
+		std::cout << (" - ");
+		std::cout << (test->data.index) << std::endl;
+		i++;
+	}
+	std::cout << i << " - ";
+	std::cout << (test->data.fileName);
+	std::cout << (" - ");
+	std::cout << (test->data.index);
+	std::cout << std::endl;
+	std::cout << std::endl;
 }
 
 template <typename Data>
@@ -246,98 +312,242 @@ void DoublyLinkedList<Data>::printList()
 	std::cout << std::endl;
 }
 
-struct Test {
-	int index;
-	char fileName[5];
+struct FileInfo {
+	uint32_t index;
+	char fileName[250] = {};
 };
 
-bool operator==(Test &left, Test &right)
+bool operator==(const FileInfo &left, const FileInfo &right)
 {
-	for (int i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	for (uint i = 0; left.fileName[i] != '\0' && right.fileName[i] != '\0'; ++i)
 	{
-		if(left.fileName[i] != right.fileName[i])
+		if(tolower(left.fileName[i]) != tolower(right.fileName[i]))
 			return false;
 	}
 	return true;
 }
 
-bool operator!=(Test &left, Test &right)
+bool operator!=(const FileInfo &left, const FileInfo &right)
 {
 	return !(left==right);
 }
 
-bool operator<=(Test &left, Test &right)
+bool operator<(const FileInfo &left, const FileInfo &right)
 {
-	for (int i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	for (uint i = 0; left.fileName[i] != '\0' && right.fileName[i] != '\0'; ++i)
 	{
-		if(left.fileName[i] > right.fileName[i])
+
+		if(tolower(left.fileName[i]) > tolower(right.fileName[i]))
 			return false;
+		else if(tolower(left.fileName[i]) < tolower(right.fileName[i]))
+			return true;
 	}
-	return true;
+	return false;
 }
 
-bool operator>=(Test &left, Test &right)
+bool operator>(const FileInfo &left, const FileInfo &right)
 {
-	for (int i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
-	{
-		if(left.fileName[i] < right.fileName[i])
-			return false;
-	}
-	return true;
+	return right<left;
 }
 
-bool operator<(Test &left, Test &right)
+bool operator<=(const FileInfo &left, const FileInfo &right)
 {
-	return !(left>=right);
+	return !(right<left);
 }
 
-bool operator>(Test &left, Test &right)
+bool operator>=(const FileInfo &left, const FileInfo &right)
 {
-	return !(left<=right);
+	return !(left<right);
 }
 
 int main(int argc, char const *argv[])
 {
+	DoublyLinkedList<FileInfo> d;
 
-	// Test test1;
-	// test1.fileName[0] = 't';
-	// test1.fileName[1] = 'e';
-	// test1.fileName[2] = 's';
-	// test1.fileName[3] = 't';
-	// test1.fileName[4] = '1';
+	FileInfo test;
+	test.fileName[0] = '.';
+	test.fileName[1] = '_';
+	test.fileName[2] = '.';
+	test.fileName[3] = 'T';
+	test.fileName[4] = 'r';
+	test.fileName[5] = 'a';
+	test.fileName[6] = 's';
+	test.fileName[7] = 'h';
+	test.fileName[8] = 'e';
+	test.fileName[9] = 's';
+	test.fileName[10] = '\0';
+	test.index = 96;
+	d.add(test);
 
-	// Test test2;
-	// test2.fileName[0] = 't';
-	// test2.fileName[1] = 'e';
-	// test2.fileName[2] = 's';
-	// test2.fileName[3] = 't';
-	// test2.fileName[4] = '0';
+	FileInfo test2;
+	test2.fileName[0] = '.';
+	test2.fileName[1] = 'T';
+	test2.fileName[2] = 'r';
+	test2.fileName[3] = 'a';
+	test2.fileName[4] = 's';
+	test2.fileName[5] = 'h';
+	test2.fileName[6] = 'e';
+	test2.fileName[7] = 's';
+	test2.fileName[8] = '\0';
+	test2.index = 192;
+	d.add(test2);
 
-	// std::cout << (test1 == test2) << std::endl;
-	// std::cout << (test1 < test2) << std::endl;
-	// std::cout << (test1 > test2) << std::endl;
-	// std::cout << (test1 <= test2) << std::endl;
-	// std::cout << (test1 >= test2) << std::endl;
+	FileInfo test3;
+	test3.fileName[0] = '.';
+	test3.fileName[1] = 'S';
+	test3.fileName[2] = 'p';
+	test3.fileName[3] = 'o';
+	test3.fileName[4] = 't';
+	test3.fileName[5] = 'l';
+	test3.fileName[6] = 'i';
+	test3.fileName[7] = 'g';
+	test3.fileName[8] = 'h';
+	test3.fileName[9] = 't';
+	test3.fileName[10] = '-';
+	test3.fileName[11] = 'V';
+	test3.fileName[12] = '1';
+	test3.fileName[13] = '0';
+	test3.fileName[14] = '0';
+	test3.fileName[15] = '\0';
+	test3.index = 288;
+	d.add(test3);
 
-	DoublyLinkedList<Test> d;
-	std::default_random_engine generator;
-	std::uniform_int_distribution<int> distribution(65,91);
+	FileInfo test4;
+	test4.fileName[0] = '.';
+	test4.fileName[1] = 'f';
+	test4.fileName[2] = 's';
+	test4.fileName[3] = 'e';
+	test4.fileName[4] = 'v';
+	test4.fileName[5] = 'e';
+	test4.fileName[6] = 'n';
+	test4.fileName[7] = 't';
+	test4.fileName[8] = 's';
+	test4.fileName[9] = 'd';
+	test4.fileName[10] = '\0';
+	test4.index = 352;
+	d.add(test4);
 
-	for (int i = 0; i < 10; ++i)
-	{
-		Test test;
-		test.fileName[0] = 't';
-		test.fileName[1] = 'e';
-		test.fileName[2] = 's';
-		test.fileName[3] = 't';
-		test.fileName[4] = (char)distribution(generator);
-		test.index = i;
-		d.add(test);
-	}
+	FileInfo test5;
+	test5.fileName[0] = 'L';
+	test5.fileName[1] = 'O';
+	test5.fileName[2] = 'S';
+	test5.fileName[3] = 'T';
+	test5.fileName[4] = '.';
+	test5.fileName[5] = 'D';
+	test5.fileName[6] = 'I';
+	test5.fileName[7] = 'R';
+	test5.fileName[8] = '\0';
+	test5.index = 384;
+	d.add(test5);
+
+	FileInfo test6;
+	test6.fileName[0] = '.';
+	test6.fileName[1] = 'a';
+	test6.fileName[2] = 'n';
+	test6.fileName[3] = 'd';
+	test6.fileName[4] = 'r';
+	test6.fileName[5] = 'o';
+	test6.fileName[6] = 'i';
+	test6.fileName[7] = 'd';
+	test6.fileName[8] = '_';
+	test6.fileName[9] = 's';
+	test6.fileName[10] = 'e';
+	test6.fileName[11] = 'c';
+	test6.fileName[12] = 'u';
+	test6.fileName[13] = 'r';
+	test6.fileName[14] = 'e';
+	test6.fileName[15] = '\0';
+	test6.index = 480;
+	d.add(test6);
+
+	// FileInfo test7;
+	// test7.fileName[0] = 'A';
+	// test7.fileName[1] = 'n';
+	// test7.fileName[2] = 'd';
+	// test7.fileName[3] = 'r';
+	// test7.fileName[4] = 'o';
+	// test7.fileName[5] = 'i';
+	// test7.fileName[6] = 'd';
+	// test7.fileName[7] = '\0';
+	// test7.index = 544;
+	// d.add(test7);
+
+	// FileInfo test8;
+	// test8.fileName[0] = 'S';
+	// test8.fileName[1] = 'i';
+	// test8.fileName[2] = 'z';
+	// test8.fileName[3] = 'e';
+	// test8.fileName[4] = 'T';
+	// test8.fileName[5] = 'e';
+	// test8.fileName[6] = 's';
+	// test8.fileName[7] = 't';
+	// test8.fileName[8] = '.';
+	// test8.fileName[9] = 't';
+	// test8.fileName[10] = 'x';
+	// test8.fileName[11] = 't';
+	// test8.fileName[12] = '\0';
+	// test8.index = 608;
+	// d.add(test8);
+
+	// FileInfo test9;
+	// test9.fileName[0] = 'L';
+	// test9.fileName[1] = 'G';
+	// test9.fileName[2] = 'B';
+	// test9.fileName[3] = 'a';
+	// test9.fileName[4] = 'c';
+	// test9.fileName[5] = 'k';
+	// test9.fileName[6] = 'u';
+	// test9.fileName[7] = 'p';
+	// test9.fileName[8] = '\0';
+	// test9.index = 672;
+	// d.add(test9);
+
+	// FileInfo test10;
+	// test10.fileName[0] = 'M';
+	// test10.fileName[1] = 'u';
+	// test10.fileName[2] = 's';
+	// test10.fileName[3] = 'i';
+	// test10.fileName[4] = 'c';
+	// test10.fileName[5] = '\0';
+	// test10.index = 736;
+	// d.add(test10);
+
+	// ._.Trashes - 96
+	// .Trashes - 192
+	// .Spotlight-V100 - 288
+	// .fseventsd - 352
+	// LOST.DIR - 384
+	// .android_secure - 480
+	// Android - 544
+	// SizeTest.txt - 608
+	// LGBackup - 672
+	// Music - 736
 	
-	d.printList();
+	// d.printList();
+
+
+	for(int i=0; i<d.getSize(); i++)
+	{
+		std::cout << i << " - ";
+		std::cout << (d.getAt(i)->fileName);
+		std::cout << (" - ");
+		std::cout << (d.getAt(i)->index) << std::endl;
+	}
+	std::cout << std::endl;
+
 	d.sort();
-	d.printList();
+	
+	// d.printList();
+	
+
+	for(int i=0; i<d.getSize(); i++)
+	{
+		std::cout << i << " - ";
+		std::cout << (d.getAt(i)->fileName);
+		std::cout << (" - ");
+		std::cout << (d.getAt(i)->index) << std::endl;
+	}
+
 	return 0;
 }
 
