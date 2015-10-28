@@ -46,7 +46,15 @@ class DoublyLinkedList
 		center->next = nullptr;
 		sort(node1,center,distance/2);
 		sort(centerNext,node2,(distance-1)/2);
+		
+		//node1 is a reference to the head pointer so that pointer doesn't need to be adjusted further
 		node1 = merge(node1,centerNext);
+		
+		//ensure the tail is the last Node
+		while(tail->next)
+		{
+			tail = tail->next;
+		}
 	}
 
 	Node* merge(Node* head1, Node* head2)
@@ -62,11 +70,15 @@ class DoublyLinkedList
 		if(head1->data < head2->data)
 		{
 			head1->next = merge(head1->next,head2);
+			//set the previous pointer for the next node
+			head1->next->previous = head1;
 			return head1;
 		}
 		else
 		{
 			head2->next = merge(head1,head2->next);
+			//set the previous pointer for the next node
+			head2->next->previous = head2;
 			return head2;
 		}
 	}

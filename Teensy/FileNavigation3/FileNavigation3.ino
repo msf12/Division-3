@@ -34,29 +34,13 @@ bool operator!=(const FileInfo &left, const FileInfo &right)
 
 bool operator<(const FileInfo &left, const FileInfo &right)
 {
-	// Serial.print("left is ");
-	// Serial.print(left.fileName);
-	// Serial.print(" and right is ");
-	// Serial.println(right.fileName);
 	for (uint i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
 	{
-		// Serial.print("left at ");
-		// Serial.print(i);
-		// Serial.print(" is ");
-		// Serial.println(left.fileName[i]);
-		// Serial.print("right at ");
-		// Serial.print(i);
-		// Serial.print(" is ");
-		// Serial.println(right.fileName[i]);
-		// Serial.print("left[i] < right[i] is ");
-		// Serial.println(left.fileName[i] < right.fileName[i]);
-
 		if(tolower(left.fileName[i]) > tolower(right.fileName[i]))
 			return false;
 		else if(tolower(left.fileName[i]) < tolower(right.fileName[i]))
 			return true;
 	}
-	// Serial.println();
 	return false;
 }
 
@@ -75,7 +59,6 @@ bool operator>=(const FileInfo &left, const FileInfo &right)
 	return !(left<right);
 }
 
-// template <typename FileInfo>;
 DoublyLinkedList<FileInfo> files;
 
 void setup()
@@ -107,44 +90,6 @@ void setup()
 		file.close();
 	}
 
-	Serial.println();
-
-	// for(int i=0; i<files.getSize()-1; i++)
-	// {
-	// 	Serial.print(files.getAt(0)->fileName);
-	// 	Serial.print(" == ");
-	// 	Serial.println(files.getAt(i+1)->fileName);
-	// 	Serial.println(*files.getAt(i) == *files.getAt(i+1));
-		
-	// 	Serial.print(files.getAt(0)->fileName);
-	// 	Serial.print(" > ");
-	// 	Serial.println(files.getAt(i+1)->fileName);
-	// 	Serial.println(*files.getAt(i) > *files.getAt(i+1));
-		
-	// 	Serial.print(files.getAt(0)->fileName);
-	// 	Serial.print(" < ");
-	// 	Serial.println(files.getAt(i+1)->fileName);
-	// 	Serial.println(*files.getAt(i) < *files.getAt(i+1));
-		
-	// 	Serial.print(files.getAt(0)->fileName);
-	// 	Serial.print(" >= ");
-	// 	Serial.println(files.getAt(i+1)->fileName);
-	// 	Serial.println(*files.getAt(i) >= *files.getAt(i+1));
-		
-	// 	Serial.print(files.getAt(0)->fileName);
-	// 	Serial.print(" <= ");
-	// 	Serial.println(files.getAt(i+1)->fileName);
-	// 	Serial.println(*files.getAt(i) <= *files.getAt(i+1));
-	// }
-
-	Serial.println();
-
-	for(int i=0; i<files.getSize(); i++)
-	{
-		Serial.print(files.getAt(i)->fileName);
-		Serial.print(" - ");
-		Serial.println(files.getAt(i)->index);
-	}
 	Serial.println();
 
 	files.sort();
