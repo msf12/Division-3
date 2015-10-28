@@ -80,7 +80,7 @@ void setup()
 		FileInfo info;
 
 		file.getName(info.fileName,LFN_LENGTH);
-		info.index = sd.vwd()->curPosition();
+		info.index = sd.vwd()->curPosition()/32-1; //http://forum.arduino.cc/index.php?topic=154033.0
 
 		Serial.print(info.fileName);
 		Serial.print(" - ");
@@ -100,6 +100,17 @@ void setup()
 		Serial.print(" - ");
 		Serial.println(files.getAt(i)->index);
 	}
+
+	Serial.println();
+
+	// FileInfo test = *files.getAt(9);
+	// Serial.print(test.fileName);
+	// Serial.print(" - ");
+	// Serial.println(test.index);
+	// file.open(sd.vwd(),test.index,O_READ);
+	// while (file.available()) {
+ //    	Serial.write(file.read());
+    }
 }
 
 void loop()
