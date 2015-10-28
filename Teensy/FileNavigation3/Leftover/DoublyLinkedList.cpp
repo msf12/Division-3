@@ -210,74 +210,97 @@ void DoublyLinkedList<Data>::sort(Node*& node1, Node*& node2,int distance)
 	sort(node1,center,distance/2);
 	sort(centerNext,node2,(distance-1)/2);
 
-	int i = 0;
-	Node* test;
+	// int i = 0;
+	// Node* test;
 
-	std::cout << "Sorted" << std::endl;
-	for (test = node1; test != center; test = test->next)
-	{
-		std::cout << i << " - ";
-		std::cout << (test->data.fileName);
-		std::cout << (" - ");
-		std::cout << (test->data.index) << std::endl;
-		i++;
-	}
-	std::cout << i << " - ";
-	std::cout << (test->data.fileName);
-	std::cout << (" - ");
-	std::cout << (test->data.index) << std::endl << "-----------------------------------" << std::endl;
-	i++;
-	for (test = centerNext; test != node2; test = test->next)
-	{
-		std::cout << i << " - ";
-		std::cout << (test->data.fileName);
-		std::cout << (" - ");
-		std::cout << (test->data.index) << std::endl;
-		i++;
-	}
-	std::cout << i << " - ";
-	std::cout << (test->data.fileName);
-	std::cout << (" - ");
-	std::cout << (test->data.index);
-	std::cout << std::endl;
-	std::cout << std::endl;
+	// std::cout << "Sorted" << std::endl;
+	// for (test = node1; test != center; test = test->next)
+	// {
+	// 	std::cout << i << " - ";
+	// 	std::cout << (test->data.fileName);
+	// 	std::cout << (" - ");
+	// 	std::cout << (test->data.index) << std::endl;
+	// 	i++;
+	// }
+	// std::cout << i << " - ";
+	// std::cout << (test->data.fileName);
+	// std::cout << (" - ");
+	// std::cout << (test->data.index) << std::endl << "-----------------------------------" << std::endl;
+	// i++;
+	// for (test = centerNext; test != node2; test = test->next)
+	// {
+	// 	std::cout << i << " - ";
+	// 	std::cout << (test->data.fileName);
+	// 	std::cout << (" - ");
+	// 	std::cout << (test->data.index) << std::endl;
+	// 	i++;
+	// }
+	// std::cout << i << " - ";
+	// std::cout << (test->data.fileName);
+	// std::cout << (" - ");
+	// std::cout << (test->data.index);
+	// std::cout << std::endl;
+	// std::cout << std::endl;
 
 	node1 = merge(node1,centerNext);
-	
-	i=0;
-	std::cout << "Merged" << std::endl;
-	for (test = node1; test != center; test = test->next)
+	//ensure the tail is the last Node
+	while(tail->next)
 	{
-		std::cout << i << " - ";
-		std::cout << (test->data.fileName);
-		std::cout << (" - ");
-		std::cout << (test->data.index) << std::endl;
-		i++;
+		tail = tail->next;
 	}
-	std::cout << i << " - ";
-	std::cout << (test->data.fileName);
-	std::cout << (" - ");
-	std::cout << (test->data.index) << std::endl << "-----------------------------------" << std::endl;
-	i++;
-	for (test = centerNext; test != node2; test = test->next)
-	{
-		std::cout << i << " - ";
-		std::cout << (test->data.fileName);
-		std::cout << (" - ");
-		std::cout << (test->data.index) << std::endl;
-		i++;
-	}
-	std::cout << i << " - ";
-	std::cout << (test->data.fileName);
-	std::cout << (" - ");
-	std::cout << (test->data.index);
-	std::cout << std::endl;
-	std::cout << std::endl;
+
+	// i=0;
+	// std::cout << "Merged" << std::endl;
+	// for (test = node1; test; test = test->next)
+	// {
+	// 	std::cout << i << " - ";
+	// 	std::cout << (test->data.fileName);
+	// 	std::cout << (" - ");
+	// 	std::cout << (test->data.index);
+	// 	std::cout << " - " << test << std::endl;
+	// 	i++;
+	// 	node2 = test;
+	// }
+	// std::cout << i << " - ";
+	// std::cout << (test->data.fileName);
+	// std::cout << (" - ");
+	// std::cout << /*(test->data.index) << std::endl <<*/ "-----------------------------------" << std::endl;
+	// i++;
+	// for (test = centerNext; test; test = test->next)
+	// {
+	// 	std::cout << i << " - ";
+	// 	std::cout << (test->data.fileName);
+	// 	std::cout << (" - ");
+	// 	std::cout << (test->data.index) << std::endl;
+	// 	i++;
+	// }
+	// std::cout << i << " - ";
+	// std::cout << (test->data.fileName);
+	// std::cout << (" - ");
+	// std::cout << (test->data.index);
+	// std::cout << std::endl;
+	// std::cout << std::endl;
 }
 
 template <typename Data>
 typename DoublyLinkedList<Data>::Node* DoublyLinkedList<Data>::merge(Node* head1, Node* head2)
 {
+	// std::cout << "Merging" << std::endl;
+	// for (Node* test = head1; test; test = test->next)
+	// {
+	// 	std::cout << (test->data.fileName);
+	// 	std::cout << (" - ");
+	// 	std::cout << (test->data.index) << std::endl;
+	// }
+	// std::cout << "-----------------------------------" << std::endl;
+	// for (Node* test = head2; test; test = test->next)
+	// {
+	// 	std::cout << (test->data.fileName);
+	// 	std::cout << (" - ");
+	// 	std::cout << (test->data.index) << std::endl;
+	// }
+	// std::cout << std::endl << std::endl;
+
 	if(!head1 || head1==head2)
 	{
 		return head2;
@@ -289,11 +312,15 @@ typename DoublyLinkedList<Data>::Node* DoublyLinkedList<Data>::merge(Node* head1
 	if(head1->data < head2->data)
 	{
 		head1->next = merge(head1->next,head2);
+		//set the previous pointer for the next node
+		head1->next->previous = head1;
 		return head1;
 	}
 	else
 	{
 		head2->next = merge(head1,head2->next);
+		//set the previous pointer for the next node
+		head2->next->previous = head2;
 		return head2;
 	}
 }
@@ -303,8 +330,8 @@ typename DoublyLinkedList<Data>::Node* DoublyLinkedList<Data>::merge(Node* head1
 template <typename Data>
 void DoublyLinkedList<Data>::printList()
 {
-	Node* temp = head;
-	for (int i = 0; i < size; ++i)
+	Node* temp = head;;
+	for (int i = 0; temp; ++i)
 	{
 		std::cout << temp->data.fileName << " - " << temp->data.index << std::endl;
 		temp = temp->next;
@@ -460,57 +487,57 @@ int main(int argc, char const *argv[])
 	test6.index = 480;
 	d.add(test6);
 
-	// FileInfo test7;
-	// test7.fileName[0] = 'A';
-	// test7.fileName[1] = 'n';
-	// test7.fileName[2] = 'd';
-	// test7.fileName[3] = 'r';
-	// test7.fileName[4] = 'o';
-	// test7.fileName[5] = 'i';
-	// test7.fileName[6] = 'd';
-	// test7.fileName[7] = '\0';
-	// test7.index = 544;
-	// d.add(test7);
+	FileInfo test7;
+	test7.fileName[0] = 'A';
+	test7.fileName[1] = 'n';
+	test7.fileName[2] = 'd';
+	test7.fileName[3] = 'r';
+	test7.fileName[4] = 'o';
+	test7.fileName[5] = 'i';
+	test7.fileName[6] = 'd';
+	test7.fileName[7] = '\0';
+	test7.index = 544;
+	d.add(test7);
 
-	// FileInfo test8;
-	// test8.fileName[0] = 'S';
-	// test8.fileName[1] = 'i';
-	// test8.fileName[2] = 'z';
-	// test8.fileName[3] = 'e';
-	// test8.fileName[4] = 'T';
-	// test8.fileName[5] = 'e';
-	// test8.fileName[6] = 's';
-	// test8.fileName[7] = 't';
-	// test8.fileName[8] = '.';
-	// test8.fileName[9] = 't';
-	// test8.fileName[10] = 'x';
-	// test8.fileName[11] = 't';
-	// test8.fileName[12] = '\0';
-	// test8.index = 608;
-	// d.add(test8);
+	FileInfo test8;
+	test8.fileName[0] = 'S';
+	test8.fileName[1] = 'i';
+	test8.fileName[2] = 'z';
+	test8.fileName[3] = 'e';
+	test8.fileName[4] = 'T';
+	test8.fileName[5] = 'e';
+	test8.fileName[6] = 's';
+	test8.fileName[7] = 't';
+	test8.fileName[8] = '.';
+	test8.fileName[9] = 't';
+	test8.fileName[10] = 'x';
+	test8.fileName[11] = 't';
+	test8.fileName[12] = '\0';
+	test8.index = 608;
+	d.add(test8);
 
-	// FileInfo test9;
-	// test9.fileName[0] = 'L';
-	// test9.fileName[1] = 'G';
-	// test9.fileName[2] = 'B';
-	// test9.fileName[3] = 'a';
-	// test9.fileName[4] = 'c';
-	// test9.fileName[5] = 'k';
-	// test9.fileName[6] = 'u';
-	// test9.fileName[7] = 'p';
-	// test9.fileName[8] = '\0';
-	// test9.index = 672;
-	// d.add(test9);
+	FileInfo test9;
+	test9.fileName[0] = 'L';
+	test9.fileName[1] = 'G';
+	test9.fileName[2] = 'B';
+	test9.fileName[3] = 'a';
+	test9.fileName[4] = 'c';
+	test9.fileName[5] = 'k';
+	test9.fileName[6] = 'u';
+	test9.fileName[7] = 'p';
+	test9.fileName[8] = '\0';
+	test9.index = 672;
+	d.add(test9);
 
-	// FileInfo test10;
-	// test10.fileName[0] = 'M';
-	// test10.fileName[1] = 'u';
-	// test10.fileName[2] = 's';
-	// test10.fileName[3] = 'i';
-	// test10.fileName[4] = 'c';
-	// test10.fileName[5] = '\0';
-	// test10.index = 736;
-	// d.add(test10);
+	FileInfo test10;
+	test10.fileName[0] = 'M';
+	test10.fileName[1] = 'u';
+	test10.fileName[2] = 's';
+	test10.fileName[3] = 'i';
+	test10.fileName[4] = 'c';
+	test10.fileName[5] = '\0';
+	test10.index = 736;
+	d.add(test10);
 
 	// ._.Trashes - 96
 	// .Trashes - 192
@@ -536,9 +563,8 @@ int main(int argc, char const *argv[])
 	std::cout << std::endl;
 
 	d.sort();
-	
-	// d.printList();
-	
+
+	d.printList();
 
 	for(int i=0; i<d.getSize(); i++)
 	{
