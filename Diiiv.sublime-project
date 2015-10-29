@@ -8,24 +8,23 @@
 			"path": "D:\\Documents\\Arduino\\SdFat"
 		},
 		{
-			"follow_symlinks": true,
 			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Adafruit_ILI9341/examples/graphicstest"
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/usr/share/arduino/examples/Teensy/Tutorial1/Blink"
+			"path": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer"
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/home/mitchel/Arduino/libraries/SdFat/examples/SdInfo"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/SdCardTest"
+			"path": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer"
 		},
 		{
 			"follow_symlinks": true,
 			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/WavFilePlayer"
 		}
 	]
 }

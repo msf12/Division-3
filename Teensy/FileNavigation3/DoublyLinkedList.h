@@ -103,6 +103,7 @@ public:
 		}
 		
 		delete head;
+		delete tail;
 	}
 
 	Data getHead()
@@ -249,6 +250,8 @@ public:
 			delete temp;
 			size--;
 		}
+		head = nullptr;
+		tail = nullptr;
 	}
 };
 #endif

@@ -35,6 +35,8 @@ public:
 	Data* getAt(int index);
 	void sort();
 
+	void clearList();
+
 #if DOUBLYLINKEDLIST_DEBUG
 
 	void printList();

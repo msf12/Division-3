@@ -27,6 +27,7 @@ DoublyLinkedList<Data>::~DoublyLinkedList()
 	}
 	
 	delete head;
+	delete tail;
 }
 
 template <typename Data>
@@ -73,10 +74,6 @@ bool DoublyLinkedList<Data>::add(Data data)
 template <typename Data>
 bool DoublyLinkedList<Data>::addAt(Data data,int index)
 {
-	// std::cout<<"Index is "<<index<<std::endl;
-	// std::cout<<"Size is "<<size<<std::endl;
-	// std::cout<<"Size/2 is "<<size/2<<std::endl;
-	// std::cout<<"Index < size/2 is "<<(index<size/2)<<std::endl;
 	if(!size && !index)
 	{
 		Node* node = new Node;
@@ -210,97 +207,17 @@ void DoublyLinkedList<Data>::sort(Node*& node1, Node*& node2,int distance)
 	sort(node1,center,distance/2);
 	sort(centerNext,node2,(distance-1)/2);
 
-	// int i = 0;
-	// Node* test;
-
-	// std::cout << "Sorted" << std::endl;
-	// for (test = node1; test != center; test = test->next)
-	// {
-	// 	std::cout << i << " - ";
-	// 	std::cout << (test->data.fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (test->data.index) << std::endl;
-	// 	i++;
-	// }
-	// std::cout << i << " - ";
-	// std::cout << (test->data.fileName);
-	// std::cout << (" - ");
-	// std::cout << (test->data.index) << std::endl << "-----------------------------------" << std::endl;
-	// i++;
-	// for (test = centerNext; test != node2; test = test->next)
-	// {
-	// 	std::cout << i << " - ";
-	// 	std::cout << (test->data.fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (test->data.index) << std::endl;
-	// 	i++;
-	// }
-	// std::cout << i << " - ";
-	// std::cout << (test->data.fileName);
-	// std::cout << (" - ");
-	// std::cout << (test->data.index);
-	// std::cout << std::endl;
-	// std::cout << std::endl;
-
 	node1 = merge(node1,centerNext);
 	//ensure the tail is the last Node
 	while(tail->next)
 	{
 		tail = tail->next;
 	}
-
-	// i=0;
-	// std::cout << "Merged" << std::endl;
-	// for (test = node1; test; test = test->next)
-	// {
-	// 	std::cout << i << " - ";
-	// 	std::cout << (test->data.fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (test->data.index);
-	// 	std::cout << " - " << test << std::endl;
-	// 	i++;
-	// 	node2 = test;
-	// }
-	// std::cout << i << " - ";
-	// std::cout << (test->data.fileName);
-	// std::cout << (" - ");
-	// std::cout << /*(test->data.index) << std::endl <<*/ "-----------------------------------" << std::endl;
-	// i++;
-	// for (test = centerNext; test; test = test->next)
-	// {
-	// 	std::cout << i << " - ";
-	// 	std::cout << (test->data.fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (test->data.index) << std::endl;
-	// 	i++;
-	// }
-	// std::cout << i << " - ";
-	// std::cout << (test->data.fileName);
-	// std::cout << (" - ");
-	// std::cout << (test->data.index);
-	// std::cout << std::endl;
-	// std::cout << std::endl;
 }
 
 template <typename Data>
 typename DoublyLinkedList<Data>::Node* DoublyLinkedList<Data>::merge(Node* head1, Node* head2)
 {
-	// std::cout << "Merging" << std::endl;
-	// for (Node* test = head1; test; test = test->next)
-	// {
-	// 	std::cout << (test->data.fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (test->data.index) << std::endl;
-	// }
-	// std::cout << "-----------------------------------" << std::endl;
-	// for (Node* test = head2; test; test = test->next)
-	// {
-	// 	std::cout << (test->data.fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (test->data.index) << std::endl;
-	// }
-	// std::cout << std::endl << std::endl;
-
 	if(!head1 || head1==head2)
 	{
 		return head2;
@@ -323,6 +240,22 @@ typename DoublyLinkedList<Data>::Node* DoublyLinkedList<Data>::merge(Node* head1
 		head2->next->previous = head2;
 		return head2;
 	}
+}
+
+template <typename Data>
+void DoublyLinkedList<Data>::clearList()
+{
+	while(size > 1)
+	{
+		Node* temp = head;
+		head = head->next;
+		delete temp;
+	
+		size--;
+	}
+	
+	head = nullptr;
+	tail = nullptr;
 }
 
 #if DOUBLYLINKEDLIST_DEBUG

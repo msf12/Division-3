@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
-				"inc",
+				"in",
 				"include	Arduino include syslib"
+			],
+			[
+				"populate",
+				"populateFiles"
+			],
+			[
+				"repopulate",
+				"repopulateFiles"
+			],
+			[
+				"repopu",
+				"repopulateFiles"
+			],
+			[
+				"inc",
+				"include	Arduino include userlib"
 			],
 			[
 				"add",
@@ -67,7 +83,39 @@
 			"file": "Teensy/FileNavigation3/FileNavigation3.ino",
 			"settings":
 			{
-				"buffer_size": 3852,
+				"buffer_size": 3707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.cpp",
+			"settings":
+			{
+				"buffer_size": 13160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.h",
+			"settings":
+			{
+				"buffer_size": 3016,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/audiobuffer.h",
+			"settings":
+			{
+				"buffer_size": 2564,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Teensy/FileNavigation3/FileInfo.h",
+			"settings":
+			{
+				"buffer_size": 1247,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +123,7 @@
 			"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
 			"settings":
 			{
-				"buffer_size": 3663,
+				"buffer_size": 4068,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +131,7 @@
 			"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.cpp",
 			"settings":
 			{
-				"buffer_size": 9543,
+				"buffer_size": 9649,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,7 +139,7 @@
 			"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
 			"settings":
 			{
-				"buffer_size": 639,
+				"buffer_size": 659,
 				"line_ending": "Unix"
 			}
 		}
@@ -145,10 +193,35 @@
 	},
 	"expanded_folders":
 	[
+		"/home/mitchel/Documents/Division-3/Teensy",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/flac.cpp",
+		"/usr/share/arduino/hardware/teensy/avr/platform.txt",
+		"/usr/share/arduino/hardware/platform.keys.rewrite.txt",
+		"/home/mitchel/.arduino15/preferences.txt",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/SerialFlash/SerialFlash.h",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/--defsym",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/ld:--defsym",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/--defsym",
+		"/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback/VolumeAndPlayback.ino",
+		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/flac/lpc.c",
+		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/flac/private/bitmath.h",
+		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/audiobuffer.h",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/spi_interrupt.h",
+		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer/FlacFilePlayer.ino",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/play_serialflash_raw.h",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep/ToneSweep.ino",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/WavFilePlayer/WavFilePlayer.ino",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/play_sd_raw.h",
+		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.h",
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/main.cpp",
+		"/home/mitchel/Arduino/libraries/Audio/spi_interrupt.h",
+		"/home/mitchel/Arduino/libraries/Audio/play_sd_raw.h",
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/Print.h",
+		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFile.h",
 		"/home/mitchel/Arduino/libraries/SdFat/examples/SdInfo/SdInfo.ino",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/SdCardTest/SdCardTest.ino",
 		"/home/mitchel/Arduino/libraries/SdFat/SdSpiTeensy3.cpp",
@@ -158,8 +231,6 @@
 		"/home/mitchel/Documents/Division-3/Teensy/graphicstest/graphicstest.ino",
 		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/wiring.h",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Adafruit_ILI9341/examples/graphicstest/graphicstest.ino",
-		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/Print.h",
-		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFile.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.cpp",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.tcc",
@@ -177,12 +248,9 @@
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation/FileNavigation.ino",
 		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFileSystem.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNagivation/FileNavigation.ino",
-		"/usr/share/arduino/hardware/teensy/avr/platform.txt",
 		"/home/mitchel/.config/sublime-text-3/Packages/Stino-ST4ArduinoIDE/preset/platform_teensy3.txt",
 		"/usr/share/arduino/hardware/teensy/avr/boards.txt",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNagivation/--defsym",
-		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/--defsym",
-		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/bin/ld:--defsym",
 		"/home/mitchel/.config/sublime-text-3/Packages/Robot-Will-Stino-d5866f3/README.md",
 		"/home/mitchel/.cache/.fr-dP5nVT/Robot-Will-Stino-d5866f3/README.md",
 		"/D/Documents/Arduino/SdFat/SdFat/SdFatConfig.h",
@@ -257,6 +325,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"initplay",
+			"chosenFile[",
+			"chosenFile[^\\[]",
+			"test3",
 			"'\\0'",
 			"\\0",
 			" (",
@@ -345,7 +417,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -354,15 +426,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3852,
+						"buffer_size": 3707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1763,
+								1763
 							]
 						],
 						"settings":
@@ -371,56 +443,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3663,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								905,
-								905
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.cpp",
+					"buffer": 1,
+					"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9543,
+						"buffer_size": 13160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6751,
-								6751
+								3370,
+								3370
 							]
 						],
 						"settings":
@@ -429,7 +472,36 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4465.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1723,
+								1723
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -437,19 +509,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
+					"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/audiobuffer.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 639,
+						"buffer_size": 2564,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								541,
-								541
+								1487,
+								1487
 							]
 						],
 						"settings":
@@ -462,6 +534,122 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Teensy/FileNavigation3/FileInfo.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4037,
+								4037
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2906.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4153,
+								4153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 3192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -498,6 +686,34 @@
 		]
 	},
 	"menu_visible": true,
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446072796.5296748":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446072890.4095323":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446075282.6536443":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446075439.5354598":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/flac/private|1446076775.4504538":
+	{
+		"height": 0.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master|1446072652.2368193":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Audio|1446072827.652189":
+	{
+		"height": 94.0
+	},
 	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNagivation|1445358397.8171978":
 	{
 		"height": 214.0
@@ -858,6 +1074,54 @@
 	{
 		"height": 94.0
 	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051047.564623":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054484.968869":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054576.943638":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054601.3555508":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446072023.395572":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446072115.6815321":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446072128.397436":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446072749.4751492":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446072765.0990868":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446072773.139191":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446075399.6616507":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446077376.9922369":
+	{
+		"height": 94.0
+	},
 	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1445359368.538698":
 	{
 		"height": 94.0
@@ -882,6 +1146,30 @@
 	{
 		"height": 94.0
 	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076472.9658542":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076484.967125":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076754.592984":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076761.657574":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076767.1978714":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076780.9470592":
+	{
+		"height": 94.0
+	},
 	"output.build|/home/mitchel/Documents/Division-3/Teensy/graphicstest|1446001798.3448925":
 	{
 		"height": 94.0
@@ -891,6 +1179,10 @@
 		"height": 94.0
 	},
 	"output.build|/usr/share/arduino/hardware/teensy/avr/libraries/Adafruit_ILI9341/examples/graphicstest|1446001736.5984302":
+	{
+		"height": 94.0
+	},
+	"output.build|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep|1446075721.349825":
 	{
 		"height": 94.0
 	},
@@ -909,6 +1201,22 @@
 	"output.stino_log":
 	{
 		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446072526.5844743":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446075764.3832042":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master|1446072808.7775872":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master|1446076478.863291":
+	{
+		"height": 94.0
 	},
 	"output.upload|/home/mitchel/Arduino/libraries/SdFat/examples/SdInfo|1446003536.0932758":
 	{
@@ -1462,6 +1770,218 @@
 	{
 		"height": 94.0
 	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051379.3775835":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051416.747405":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051486.2456298":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051521.8381736":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051750.099086":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446051999.8074317":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446052022.9274864":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446052035.3244603":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446052040.2681963":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446052048.1732588":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446052080.028955":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446052537.7899506":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054482.2211258":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054575.347589":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054759.645515":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054767.0034616":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054823.904417":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446054847.4820843":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446067811.1160483":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446068140.073071":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446068183.1153126":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446068216.8641465":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446068418.2215855":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446068437.2777598":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446068472.2303174":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069132.4646306":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069147.1226122":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069317.521974":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069348.7845237":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069426.100238":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069583.679384":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069602.986736":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069610.0079694":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069697.870313":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069708.6105392":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069716.3783062":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069724.4554088":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069733.5857646":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069792.0928507":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069808.285745":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446069921.6575482":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446070501.1483264":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446070529.7013187":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446070566.9663627":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446070642.6032517":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446071597.4441285":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446071607.7920024":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446071754.9006224":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446071792.789768":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446071869.5321918":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446075390.4195058":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446076854.178421":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1446077735.601853":
+	{
+		"height": 94.0
+	},
 	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1445359427.139":
 	{
 		"height": 94.0
@@ -1487,6 +2007,18 @@
 		"height": 94.0
 	},
 	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1445393776.60758":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076226.0548751":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076328.7469077":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback|1446076390.1032555":
 	{
 		"height": 94.0
 	},
@@ -1519,6 +2051,18 @@
 		"height": 94.0
 	},
 	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep|1446004727.9560628":
+	{
+		"height": 94.0
+	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep|1446075989.1003056":
+	{
+		"height": 94.0
+	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep|1446076028.0041537":
+	{
+		"height": 94.0
+	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep|1446076080.2450671":
 	{
 		"height": 94.0
 	},
@@ -1568,7 +2112,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 169.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
