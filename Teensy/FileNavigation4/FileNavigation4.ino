@@ -1,6 +1,8 @@
 #include <SdFat.h>
 #include "DoublyLinkedList.h" //based on code from http://www.codeproject.com/Articles/668818/Implementing-a-Doubly-Linked-List-to-be-used-on-an
 #include "FileInfo.h"
+#include "SPI.h"
+#include "ILI9341_t3.h"
 
 #ifndef LFN_LENGTH
 #define LFN_LENGTH 250
@@ -8,12 +10,22 @@
 #define SD_CS_PIN SS
 
 //SdFat SD card
-SdFat sd;
+SdFat SD;
+
+// For optimized ILI9341_t3 library
+#define TFT_DC      20
+#define TFT_CS      21
+#define TFT_RST    255  // 255 = unused, connect to 3.3V
+#define TFT_MOSI     7
+#define TFT_SCLK    14
+#define TFT_MISO    12
+
+ILI9341_t3 tft = ILI9341_t3(TFT_CS, TFT_DC, TFT_RST, TFT_MOSI, TFT_SCLK, TFT_MISO);
 
 //String to hold the current path
 String path;
 
-//because the filesystem is of a predetermined organizational structure		, arrays
+//because the filesystem is of a predetermined organizational structure, arrays
 //involving depth have a predetermined number elements
 
 //locations in the string of the '/' characters that split directory names
@@ -46,14 +58,22 @@ void populateFiles();
 
 void setup()
 {
-	if (!sd.begin(SD_CS_PIN, SPI_HALF_SPEED)) {
-		sd.initErrorHalt();
+	tft.begin();
+	tft.fillScreen(ILI9341_WHITE);
+	tft.setTextColor(ILI9341_BLACK);
+	tft.setTextSize(2);
+	tft.setTextWrap(false);
+	
+	if (!SD.begin(SD_CS_PIN, SPI_HALF_SPEED)) {
+		tft.println("Error: SD not found");
+		SD.initErrorHalt();
 	}
-	sd.chdir();
+	SD.chdir();
 
 	Serial.begin(9600);
 	while(!Serial);
 	Serial.println("Press the any key");
+	tft.println("Press the any key");
 	while(!Serial.available());
 	path = "/";
 
@@ -66,6 +86,7 @@ void loop()
 	clearSerialBuffer();
 
 	Serial.println("M - Up a menu\nU - Up\nD - Down\nP - Play song/select directory");
+	tft.println("M - Up a menu\nU - Up\nD - Down\nP - Play song/select directory");
 
 	while(!Serial.available());
 	char input = tolower(Serial.read());
@@ -78,7 +99,7 @@ void loop()
 				//remove the current directory from the path
 				path.remove(pathSplits[--depth]);
 				//change to the directory above the current directory using the new path
-				sd.chdir(path.c_str());
+				SD.chdir(path.c_str());
 				populateFiles();
 			}
 			break;
@@ -116,17 +137,22 @@ void clearSerialBuffer()
 
 void printDir()
 {
+	tft.fillScreen(ILI9341_WHITE);
+	tft.setCursor(0, 0);
 	for(int i=0; i<files.getSize(); i++)
 	{
 		if(i == chosenFile)
 		{
 			Serial.print("* ");
+			tft.print("* ");
 		}
 		else
 		{
 			Serial.print("  ");
+			tft.print("  ");
 		}
 		Serial.println(files.getAt(i)->fileName);
+		tft.println(files.getAt(i)->fileName);
 	}
 	Serial.println();
 }
@@ -136,7 +162,7 @@ bool changeDir()
 	SdFile newDir;
 	FileInfo file = *files.getAt(chosenFile);
 	
-	newDir.open(sd.vwd(),file.index,O_READ);
+	newDir.open(SD.vwd(),file.index,O_READ);
 
 	if(!newDir.isDir())
 		return false;
@@ -153,7 +179,7 @@ bool changeDir()
 
 	// Serial.println(path);
 	
-	sd.chdir(path.c_str());
+	SD.chdir(path.c_str());
 	return true;
 }
 
@@ -164,12 +190,12 @@ void populateFiles()
 		files.clearList();
 
 	SdFile file;
-	while(file.openNext(sd.vwd(),O_READ))
+	while(file.openNext(SD.vwd(),O_READ))
 	{
 		FileInfo info;
 
 		file.getName(info.fileName,LFN_LENGTH);
-		info.index = sd.vwd()->curPosition()/32-1; //http://forum.arduino.cc/index.php?topic=154033.0
+		info.index = SD.vwd()->curPosition()/32-1; //http://forum.arduino.cc/index.php?topic=154033.0
 
 		// Serial.print(info.fileName);
 		// Serial.print(" - ");

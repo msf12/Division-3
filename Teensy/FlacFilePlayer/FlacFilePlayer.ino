@@ -9,7 +9,8 @@
 #include <Audio.h>
 #include <Wire.h>
 #include <SPI.h>
-#include <SD.h>
+#include <SdFat.h>
+SdFat SD;
 
 #include <play_sd_flac.h>
 
@@ -23,56 +24,61 @@ AudioControlSGTL5000     sgtl5000_1;     //xy=240,153
 // GUItool: end automatically generated code
 
 void setup() {
-  Serial.begin(9600);
+	Serial.begin(9600);
 
-  // Audio connections require memory to work.  For more
-  // detailed information, see the MemoryAndCpuUsage example
-  AudioMemory(6);
+	// Audio connections require memory to work.  For more
+	// detailed information, see the MemoryAndCpuUsage example
+	AudioMemory(20);
 
-  sgtl5000_1.enable();
-  sgtl5000_1.volume(0.5);
+	sgtl5000_1.enable();
+	sgtl5000_1.volume(0.5);
 
-  SPI.setMOSI(7);
-  SPI.setSCK(14);
-  if (!(SD.begin(10))) {
-    // stop here, but print a message repetitively
-    while (1) {
-      Serial.println("Unable to access the SD card");
-      delay(500);
-    }
-  }
+	SPI.setMOSI(7);
+	SPI.setSCK(14);
+	if (!(SD.begin(10))) {
+		// stop here, but print a message repetitively
+		while (1) {
+			Serial.println("Unable to access the SD card");
+			delay(500);
+		}
+	}
 }
 
 void playFile(const char *filename)
 {
-  Serial.print("Playing file: ");
-  Serial.println(filename);
+	Serial.print("Playing file: ");
+	Serial.println(filename);
 
-  // Start playing the file.  This sketch continues to
-  // run while the file plays.
-  playFlac1.play(filename);
+// 	// Start playing the file.  This sketch continues to
+// 	// run while the file plays.
+	playFlac1.play(filename);
 
-  // Simply wait for the file to finish playing.
-  while (playFlac1.isPlaying()) {
-    // uncomment these lines if your audio shield
-    // has the optional volume pot soldered
-    //float vol = analogRead(15);
-    //vol = vol / 1024;
-    // sgtl5000_1.volume(vol);
+	Serial.println(playFlac1.isPlaying());
 
-#if 1	 
-	 Serial.print(AudioProcessorUsageMax());
-	 Serial.println("% Audio");
-	 AudioProcessorUsageMaxReset();
-#endif	
-	 delay(200); 
-  }
-  
+// 	// Simply wait for the file to finish playing.
+	while (playFlac1.isPlaying()) {
+// 		// uncomment these lines if your audio shield
+// 		// has the optional volume pot soldered
+// 		float vol = analogRead(15);
+// 		vol = vol / 1024;
+// 		Serial.print("vol = ");
+		// Serial.println(vol);
+// 		sgtl5000_1.volume(vol);
+
+#if 1
+		Serial.print(AudioProcessorUsageMax());
+		Serial.println("% Audio");
+		AudioProcessorUsageMaxReset();
+#endif
+		delay(200);
+	}
+	
 }
 
 
 void loop() {
-  playFile("/Music/Seth Ect - DiMethylTriptamine/Seth Ect - DiMethylTriptamine - 03 Puparium.flac");
+	playFile("/Music/Seth Ect - DiMethylTriptamine/Seth Ect - DiMethylTriptamine - 01 Warning.flac");
 
-  delay(500);
+	Serial.println("Done!");
+	delay(500);
 }

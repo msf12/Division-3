@@ -25,6 +25,26 @@
 		{
 			"follow_symlinks": true,
 			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/WavFilePlayer"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/SdCardTest"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Adafruit_ILI9341/examples/graphicstest"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest"
 		}
 	]
 }
