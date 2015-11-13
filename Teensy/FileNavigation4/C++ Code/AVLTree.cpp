@@ -7,70 +7,214 @@
 #endif
 
 template <typename Data>
-AVLTree<Data>::AVLTree()
+void AVLTree<Data>::add(Data data)
 {
-	size = 0;
-	root = nullptr;
-}
-
-template <typename Data>
-AVLTree<Data>::~AVLTree()
-{
-	clearTree();
-	delete parent;
-}
-
-template <typename Data>
-int AVLTree<Data>::getSize()
-{
-	return size;
-}
-
-template <typename Data>
-bool AVLTree<Data>::add(Data data)
-{
-	if(root)
+	std::cout << "Adding " << data.fileName << std::endl;
+	Node* newLeaf = add(root, data);
+	std::cout << "New leaf is " << newLeaf->data.fileName << std::endl
+				<< "Parent is " << (newLeaf->parent ? newLeaf->parent->data.fileName : "NULL") << std::endl;
+	if(size>0)
 	{
-		add(root, data);
+		std::cout << "Balancing " << newLeaf->data.fileName << std::endl;
+		balance(newLeaf->parent);
 	}
 	else
 	{
-		root = new Node;
-		root->leftChild = nullptr;
-		root->rightChild = nullptr;
-		root->height = 0;
-		root->data = data;
+		root = newLeaf;
+	}
+	
+	std::cout << "Root is " << root->data.fileName << std::endl;
+	std::cout << "Root's parent is " << (root->parent ? root->parent->data.fileName : "NULL") << std::endl;
+
+	//reset root
+	while(root->parent)
+	{
+		root=root->parent;
+		std::cout << "Root is now " << root->data.fileName << std::endl;
 	}
 	size++;
-	return true;
 }
 
 template <typename Data>
-bool AVLTree<Data>::add(Node*& subTree, Data data)
+typename AVLTree<Data>::Node* AVLTree<Data>::add(Node*& subTree, Data data)
 {
 	if(subTree)
 	{
+		Node* newLeaf;
+		// std::cout << subTree->data.fileName << std::endl;
 		if(subTree->data <= data)
 		{
-			if(!add(subTree->rightChild, data))
-				return false;
+			newLeaf = add(subTree->rightChild, data);
+			if(subTree->rightChild == newLeaf)
+			{
+				newLeaf->parent = subTree;
+			}
 		}
 		else
 		{
-			if(!add(subTree->leftChild, data))
-				return false;
+			newLeaf = add(subTree->leftChild, data);
+			if(subTree->leftChild == newLeaf)
+			{
+				newLeaf->parent = subTree;
+			}
 		}
-		subTree->height++;
+		
+		return newLeaf;
 	}
 	else
 	{
-		Node* node = new Node;
-		node->leftChild = nullptr;
-		node->rightChild = nullptr;
-		node->height = 0;
-		node->data = data;
+		subTree = new Node;
+		subTree->leftChild = nullptr;
+		subTree->rightChild = nullptr;
+		subTree->parent = nullptr;
+		subTree->height = 1;
+		subTree->data = data;
+		return subTree;
 	}
-	return true;
+}
+
+template <typename Data>
+void AVLTree<Data>::balance(Node* node)
+{
+	node->height++;
+	Node* parent = node->parent;
+
+	//balance(Parent_Of_New_Leaf);
+	//https://en.wikipedia.org/wiki/AVL_tree
+	// node is the child of parent whose height increases by 1.
+	while (parent)
+	{
+		std::cout << "Balancing node is " << node->data.fileName << std::endl;
+		// the left subtree increased
+		if (node == parent->leftChild)
+		{
+			std::cout << "Balancing if " << std::endl;
+			if (balanceFactor(parent) == 2)
+			{
+				std::cout << "Left Right Case" << std::endl;
+				// Left Right Case
+				if (balanceFactor(node) == -1)
+				{
+					// Reduce to Left Left Case
+					rotateLeft(node);
+				}
+				std::cout << "Left Left Case" << std::endl;
+				// Left Left Case
+				rotateRight(parent);
+				node->height--;
+				break; // Leave the loop
+			}
+			if (balanceFactor(parent) == -1)
+			{
+				// node’s height increase is absorbed at parent.
+				break;
+			}
+		}
+		// the right subtree increased
+		else
+		{
+			std::cout << "Balancing else " << std::endl;
+			if (balanceFactor(parent) == -2)
+			{
+				std::cout << "Right Left Case" << std::endl;
+				// Right Left Case
+				if (balanceFactor(node) == 1)
+				{
+					// Reduce to Right Right Case
+					rotateRight(node);
+				}
+				std::cout << "Right Right Case" << std::endl;
+				// Right Right Case
+				rotateLeft(parent);
+				node->height--;
+				break; // Leave the loop
+			}
+			if (balanceFactor(parent) == 1)
+			{
+				// node’s height increase is absorbed at parent.
+				break;
+			}
+		}
+		parent->height = node->height+1;
+		node = parent;
+		parent = node->parent;
+		std::cout << "Balancing " << node->data.fileName << std::endl;
+	}
+
+	if(!parent)
+		root = node;
+}
+
+template <typename Data>
+void AVLTree<Data>::rotateRight(Node* node)
+{
+	Node* leftChild = node->leftChild;
+
+	std::cout << "rotateRight " << node->data.fileName << std::endl;
+	std::cout << "leftChild is " << leftChild->data.fileName << std::endl;
+	std::cout << "leftChild->parent is " << leftChild->parent->data.fileName << std::endl;
+
+	Data temp;
+	temp = leftChild->data;
+	leftChild->data = node->data;
+
+	node->data = temp;
+	node->leftChild = leftChild->leftChild;
+	if(node->leftChild)
+	{
+		node->leftChild->parent = node;
+	}
+
+	leftChild->leftChild = leftChild->rightChild;
+	leftChild->rightChild = node->rightChild;
+	if(leftChild->rightChild)
+	{
+		leftChild->rightChild->parent = leftChild;
+	}
+
+	node->rightChild = leftChild;
+
+	std::cout << "node is now " << node->data.fileName << std::endl;
+	std::cout << "leftChild is " << (node->leftChild ? node->leftChild->data.fileName : "NULL") << std::endl;
+	std::cout << "leftChild->parent is " << (node->leftChild ? node->leftChild->parent->data.fileName : "N/A") << std::endl;
+	std::cout << "rightChild is " << (node->rightChild ? node->rightChild->data.fileName : "NULL") << std::endl;
+	std::cout << "rightChild->parent is " << (node->rightChild ? node->rightChild->parent->data.fileName : "N/A") << std::endl;
+}
+
+template <typename Data>
+void AVLTree<Data>::rotateLeft(Node* node)
+{
+	Node* rightChild = node->rightChild;
+
+	std::cout << "rotateLeft " << node->data.fileName << std::endl;
+	std::cout << "rightChild is " << rightChild->data.fileName << std::endl;
+	std::cout << "rightChild->parent is " << rightChild->parent->data.fileName << std::endl;
+
+	Data temp;
+	temp = rightChild->data;
+	rightChild->data = node->data;
+	
+	node->data = temp;
+	node->rightChild = rightChild->rightChild;
+	if(node->rightChild)
+	{
+		node->rightChild->parent = node;
+	}
+	
+	rightChild->rightChild = rightChild->leftChild;
+	rightChild->leftChild = node->leftChild;
+	if(rightChild->leftChild)
+	{
+		rightChild->leftChild->parent = rightChild;
+	}
+
+	node->leftChild = rightChild;
+
+	std::cout << "node is now " << node->data.fileName << std::endl;
+	std::cout << "leftChild is " << (node->leftChild ? node->leftChild->data.fileName : "NULL") << std::endl;
+	std::cout << "leftChild->parent is " << (node->leftChild ? node->leftChild->parent->data.fileName : "N/A") << std::endl;
+	std::cout << "rightChild is " << (node->rightChild ? node->rightChild->data.fileName : "NULL") << std::endl;
+	std::cout << "rightChild->parent is " << (node->rightChild ? node->rightChild->parent->data.fileName : "N/A") << std::endl;
 }
 
 template <typename Data>
@@ -82,33 +226,52 @@ Data* AVLTree<Data>::get(int index)
 template <typename Data>
 void AVLTree<Data>::clearTree()
 {
-	// while(size > 1)
-	// {
-	// 	Node* temp = head;
-	// 	head = head->next;
-	// 	delete temp;
-	
-	// 	size--;
-	// }
-	
-	// head = nullptr;
-	// tail = nullptr;
+	if(root->leftChild)
+	{
+		clearTree(root->leftChild);
+	}
+	if(root->rightChild)
+	{
+		clearTree(root->rightChild);
+	}
+	size = 0;
+	root = nullptr;
 }
 
-#if AVLTree_DEBUG
+template <typename Data>
+void AVLTree<Data>::clearTree(Node*& subTree)
+{
+	if(subTree->leftChild)
+		clearTree(subTree->leftChild);
+	if(subTree->rightChild)
+		clearTree(subTree->rightChild);
+	delete subTree;
+}
+
+#if AVLTREE_DEBUG
 
 template <typename Data>
 void AVLTree<Data>::printTree()
 {
-	printTree(root);
+	if(size)
+	{
+		printTree(root);
+	}
 }
 
 template <typename Data>
 void AVLTree<Data>::printTree(Node*& subTree)
 {
-	printTree(subTree->leftChild);
-	std::cout << subTree->data << " ";
-	printTree(subTree->rightChild);
+	std::cout << subTree->data.fileName << " - Height " << subTree->height
+	<< " - Parent " << (subTree->parent ? subTree->parent->data.fileName : "NULL") << std::endl;
+	if(subTree->leftChild)
+	{
+		printTree(subTree->leftChild);
+	}
+	if(subTree->rightChild)
+	{
+		printTree(subTree->rightChild);
+	}
 }
 
 struct FileInfo {
@@ -163,6 +326,8 @@ int main(int argc, char const *argv[])
 {
 	AVLTree<FileInfo> d;
 
+	d.printTree();
+
 	FileInfo test;
 	test.fileName[0] = '.';
 	test.fileName[1] = '_';
@@ -176,7 +341,6 @@ int main(int argc, char const *argv[])
 	test.fileName[9] = 's';
 	test.fileName[10] = '\0';
 	test.index = 96;
-	d.add(test);
 
 	FileInfo test2;
 	test2.fileName[0] = '.';
@@ -189,7 +353,6 @@ int main(int argc, char const *argv[])
 	test2.fileName[7] = 's';
 	test2.fileName[8] = '\0';
 	test2.index = 192;
-	d.add(test2);
 
 	FileInfo test3;
 	test3.fileName[0] = '.';
@@ -209,7 +372,6 @@ int main(int argc, char const *argv[])
 	test3.fileName[14] = '0';
 	test3.fileName[15] = '\0';
 	test3.index = 288;
-	d.add(test3);
 
 	FileInfo test4;
 	test4.fileName[0] = '.';
@@ -224,7 +386,6 @@ int main(int argc, char const *argv[])
 	test4.fileName[9] = 'd';
 	test4.fileName[10] = '\0';
 	test4.index = 352;
-	d.add(test4);
 
 	FileInfo test5;
 	test5.fileName[0] = 'L';
@@ -237,7 +398,6 @@ int main(int argc, char const *argv[])
 	test5.fileName[7] = 'R';
 	test5.fileName[8] = '\0';
 	test5.index = 384;
-	d.add(test5);
 
 	FileInfo test6;
 	test6.fileName[0] = '.';
@@ -257,7 +417,6 @@ int main(int argc, char const *argv[])
 	test6.fileName[14] = 'e';
 	test6.fileName[15] = '\0';
 	test6.index = 480;
-	d.add(test6);
 
 	FileInfo test7;
 	test7.fileName[0] = 'A';
@@ -269,7 +428,6 @@ int main(int argc, char const *argv[])
 	test7.fileName[6] = 'd';
 	test7.fileName[7] = '\0';
 	test7.index = 544;
-	d.add(test7);
 
 	FileInfo test8;
 	test8.fileName[0] = 'S';
@@ -286,7 +444,6 @@ int main(int argc, char const *argv[])
 	test8.fileName[11] = 't';
 	test8.fileName[12] = '\0';
 	test8.index = 608;
-	d.add(test8);
 
 	FileInfo test9;
 	test9.fileName[0] = 'L';
@@ -299,7 +456,6 @@ int main(int argc, char const *argv[])
 	test9.fileName[7] = 'p';
 	test9.fileName[8] = '\0';
 	test9.index = 672;
-	d.add(test9);
 
 	FileInfo test10;
 	test10.fileName[0] = 'M';
@@ -309,7 +465,6 @@ int main(int argc, char const *argv[])
 	test10.fileName[4] = 'c';
 	test10.fileName[5] = '\0';
 	test10.index = 736;
-	d.add(test10);
 
 	// ._.Trashes - 96
 	// .Trashes - 192
@@ -321,30 +476,48 @@ int main(int argc, char const *argv[])
 	// SizeTest.txt - 608
 	// LGBackup - 672
 	// Music - 736
-	
-	// d.printList();
+	d.add(test);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
 
+	d.add(test2);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
 
-	// for(int i=0; i<d.getSize(); i++)
-	// {
-	// 	std::cout << i << " - ";
-	// 	std::cout << (d.getAt(i)->fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (d.getAt(i)->index) << std::endl;
-	// }
-	// std::cout << std::endl;
+	d.add(test3);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
 
-	// d.sort();
+	d.add(test4);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
+	d.add(test5);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
+	d.add(test6);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
+	d.add(test7);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
+	d.add(test8);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
+	d.add(test9);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
+	d.add(test10);
+	d.printTree();
+	std::cout << std::endl << "----------------------------------------------------------------------------------" << std::endl << std::endl;
+
 
 	d.printTree();
-
-	// for(int i=0; i<d.getSize(); i++)
-	// {
-	// 	std::cout << i << " - ";
-	// 	std::cout << (d.getAt(i)->fileName);
-	// 	std::cout << (" - ");
-	// 	std::cout << (d.getAt(i)->index) << std::endl;
-	// }
 
 	return 0;
 }

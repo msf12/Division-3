@@ -19,22 +19,40 @@ class AVLTree
 	Node* root;
 	uint32_t size;
 
-	bool add(Node*& subTree, Data data);
+	int8_t balanceFactor(Node* node)
+	{
+		return (node->leftChild ? node->leftChild->height : 0) - (node->rightChild ? node->rightChild->height : 0);
+	}
+
+	Node* add(Node*& subTree, Data data);
+	void balance(Node* node);
+	void rotateRight(Node* node);
+	void rotateLeft(Node* node);
 
 	void printTree(Node*& subTree);
+	void clearTree(Node*& subTree);
 
 public:
-	AVLTree();
-	~AVLTree();
+	AVLTree()
+	{
+		size = 0;
+		root = nullptr;
+	}
+	~AVLTree()
+	{
+		if(size)
+			clearTree();
+		delete root;
+	}
 
-	int getSize();
-	bool add(Data data);
+	int getSize(){return size;}
+	void add(Data data);
 
 	Data* get(int index);
 
 	void clearTree();
 
-#if DOUBLYLINKEDLIST_DEBUG
+#if AVLTREE_DEBUG
 
 	void printTree();
 
