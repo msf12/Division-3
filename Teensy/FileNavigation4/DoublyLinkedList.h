@@ -123,9 +123,8 @@ public:
 
 	bool add(Data data)
 	{
-		if(size<size+1)
+		if(size<size+1) //ensures no overflow of size
 		{
-
 			Node* node = new Node;
 			node->data = data;
 			node->previous = tail;

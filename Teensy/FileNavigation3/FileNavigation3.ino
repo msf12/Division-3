@@ -171,12 +171,14 @@ void populateFiles()
 		file.getName(info.fileName,LFN_LENGTH);
 		info.index = sd.vwd()->curPosition()/32-1; //http://forum.arduino.cc/index.php?topic=154033.0
 
-		// Serial.print(info.fileName);
-		// Serial.print(" - ");
-		// Serial.println(info.index);
+		Serial.print(info.fileName);
+		Serial.print(" - ");
+		Serial.println(info.index);
 		
 		files.add(info);
 		file.close();
+		// Serial.println("Added");
+		// Serial.print("Free RAM = ");
 	}
 
 	files.sort();

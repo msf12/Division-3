@@ -1,4 +1,5 @@
 #include <SdFat.h>
+#include <SdFatUtil.h>
 #include "DoublyLinkedList.h" //based on code from http://www.codeproject.com/Articles/668818/Implementing-a-Doubly-Linked-List-to-be-used-on-an
 #include "FileInfo.h"
 #include "SPI.h"
@@ -68,62 +69,21 @@ void setup()
 		tft.println("Error: SD not found");
 		SD.initErrorHalt();
 	}
-	SD.chdir();
 
 	Serial.begin(9600);
 	while(!Serial);
 	Serial.println("Press the any key");
 	tft.println("Press the any key");
 	while(!Serial.available());
-	path = "/";
+
+	SD.chdir("/Music");
 
 	populateFiles();
+	// printDir();
 }
 
 void loop()
 {
-	printDir();
-	clearSerialBuffer();
-
-	Serial.println("M - Up a menu\nU - Up\nD - Down\nP - Play song/select directory");
-	tft.println("M - Up a menu\nU - Up\nD - Down\nP - Play song/select directory");
-
-	while(!Serial.available());
-	char input = tolower(Serial.read());
-
-	switch (input)
-	{
-		case 'm':
-			if(depth>-1)
-			{
-				//remove the current directory from the path
-				path.remove(pathSplits[--depth]);
-				//change to the directory above the current directory using the new path
-				SD.chdir(path.c_str());
-				populateFiles();
-			}
-			break;
-		case 'u':
-			if(chosenFile > 0)
-				chosenFile--;
-			break;
-		case 'd':
-			if(chosenFile < files.getSize()-1)
-				chosenFile++;
-			break;
-		case 'p':
-			if(changeDir())
-			{
-				populateFiles();
-			}
-			else
-			{
-				//play song if not a directory
-			}
-			break;
-		default:
-			Serial.println("Invalid input");
-	}
 }
 
 void clearSerialBuffer()
@@ -133,6 +93,52 @@ void clearSerialBuffer()
 	{
 		Serial.read();
 	}
+}
+
+void populateFiles()
+{
+	chosenFile = 0;
+	if(files.getSize())
+		files.clearList();
+
+	SdFile file;
+	uint16_t count = 0;
+	while(file.openNext(SD.vwd(),O_READ))
+	{
+		static FileInfo info;
+		static char fileName[250];
+
+		file.getName(fileName,LFN_LENGTH);
+		info.fileName = new char[strlen(fileName)+1];
+		strcpy(info.fileName,fileName);
+
+		if(file.isDir())
+		{
+			SdFile nestedFile;
+			uint32_t numFiles = 0;
+			while(nestedFile.openNext(&file,O_READ))
+			{
+				numFiles++;
+				nestedFile.close();
+			}
+			file.rewind();
+			char* files[numFiles];
+			for(int i = 0; nestedFile.openNext(&file,O_READ); i++)
+			{
+				file.getName(fileName,LFN_LENGTH);
+				files[i] = new char[strlen(fileName)+1];
+				strcpy(files[i],fileName);
+			}
+		}
+
+		Serial.println(info.fileName);
+		Serial.println(count++);
+
+		files.add(info);
+		file.close();
+	}
+
+	files.sort();
 }
 
 void printDir()
@@ -161,8 +167,9 @@ bool changeDir()
 {
 	SdFile newDir;
 	FileInfo file = *files.getAt(chosenFile);
+	String temp2 = path + '/' + file.fileName;
 	
-	newDir.open(SD.vwd(),file.index,O_READ);
+	newDir.open(SD.vwd(),temp2.c_str(),O_READ);
 
 	if(!newDir.isDir())
 		return false;
@@ -181,29 +188,4 @@ bool changeDir()
 	
 	SD.chdir(path.c_str());
 	return true;
-}
-
-void populateFiles()
-{
-	chosenFile = 0;
-	if(files.getSize())
-		files.clearList();
-
-	SdFile file;
-	while(file.openNext(SD.vwd(),O_READ))
-	{
-		FileInfo info;
-
-		file.getName(info.fileName,LFN_LENGTH);
-		info.index = SD.vwd()->curPosition()/32-1; //http://forum.arduino.cc/index.php?topic=154033.0
-
-		// Serial.print(info.fileName);
-		// Serial.print(" - ");
-		// Serial.println(info.index);
-		
-		files.add(info);
-		file.close();
-	}
-
-	files.sort();
 }

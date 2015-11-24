@@ -1,21 +1,21 @@
 #ifndef FILEINFO_H
 #define FILEINFO_H
 
-#ifndef LFN_LENGTH
-#define LFN_LENGTH 250
-#endif
-
 //used to store information about files when they are first listed
 //http://forum.arduino.cc/index.php?topic=173562.0
 struct FileInfo {
-	uint32_t index;
 	//pointer to an array to be created at runtime
-	char fileName[LFN_LENGTH] = {};
+	char* fileName;
+	char** relatedFiles;
 };
 
 bool operator==(const FileInfo &left, const FileInfo &right)
 {
-	for (uint i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	if(strlen(left.fileName) != strlen(right.fileName))
+	{
+		return false;
+	}
+	for (uint i = 0; i < strlen(left.fileName) && i < strlen(right.fileName); ++i)
 	{
 		if(tolower(left.fileName[i]) != tolower(right.fileName[i]))
 			return false;
@@ -30,12 +30,16 @@ bool operator!=(const FileInfo &left, const FileInfo &right)
 
 bool operator<(const FileInfo &left, const FileInfo &right)
 {
-	for (uint i = 0; i < sizeof(left.fileName)/sizeof(*(left.fileName)); ++i)
+	for (uint i = 0; i < strlen(left.fileName) && i < strlen(right.fileName); ++i)
 	{
 		if(tolower(left.fileName[i]) > tolower(right.fileName[i]))
 			return false;
 		else if(tolower(left.fileName[i]) < tolower(right.fileName[i]))
 			return true;
+	}
+	if(strlen(left.fileName) < strlen(right.fileName))
+	{
+		return true;
 	}
 	return false;
 }
