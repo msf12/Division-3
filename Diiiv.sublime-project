@@ -45,6 +45,18 @@
 		{
 			"follow_symlinks": true,
 			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/mitchel/Arduino/libraries/MemoryFree-master/examples/FreeMemory"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest"
 		}
 	]
 }

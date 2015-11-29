@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"uint",
+				"uint32_t"
+			],
+			[
+				"inc",
+				"include	Arduino include userlib"
+			],
+			[
+				"A",
+				"AVLTREE_DEBUG"
+			],
+			[
+				"Parent",
+				"parent"
+			],
+			[
+				"bala",
+				"balanceFactor"
+			],
+			[
+				"new",
+				"newLeaf"
+			],
+			[
+				"pre",
+				"prevLeft"
+			],
+			[
+				"prev",
+				"prevRight"
+			],
+			[
+				"bn",
+				"balanceFactor"
+			],
+			[
+				"balance",
+				"balanceFactor"
+			],
+			[
+				"r",
+				"rightChild"
+			],
+			[
+				"ope",
+				"openSlot"
+			],
+			[
+				"op",
+				"openSlot"
+			],
+			[
+				"print",
+				"printbuffer"
+			],
+			[
+				"add",
+				"addToLeft"
+			],
+			[
+				"sub",
+				"subTree"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"left",
+				"leftChild"
+			],
+			[
+				"right",
+				"rightChild"
+			],
+			[
 				"ILI",
 				"ILI9341_BLACK"
 			],
@@ -13,10 +89,6 @@
 			],
 			[
 				"include",
-				"include	Arduino include syslib"
-			],
-			[
-				"inc",
 				"include	Arduino include syslib"
 			],
 			[
@@ -44,10 +116,6 @@
 				"repopulateFiles"
 			],
 			[
-				"add",
-				"addAt"
-			],
-			[
 				"D",
 				"DOUBLYLINKEDLIST_DEBUG"
 			],
@@ -62,10 +130,6 @@
 			[
 				"d",
 				"def	#ifndef … #define … #endif"
-			],
-			[
-				"print",
-				"printList"
 			],
 			[
 				"i",
@@ -88,10 +152,6 @@
 				"selectedFile"
 			],
 			[
-				"uint",
-				"uint32_t"
-			],
-			[
 				"time",
 				"timeToCheckForTastes"
 			]
@@ -100,26 +160,68 @@
 	"buffers":
 	[
 		{
+			"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer/FlacFilePlayer.ino",
+			"settings":
+			{
+				"buffer_size": 1885,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Teensy/FileNavigation4/AVLTree.h",
+			"settings":
+			{
+				"buffer_size": 5607,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "data files storing sorted lists of artists, albums, and songs and their relations\nload into doubly linked list only the currently navigated to information and those nearby for the current view\nload also the currently playing, previously played in this playlist, and next up? or store somehow?\navltree of lines in data files for jumps between letters in alphabet?",
+			"settings":
+			{
+				"buffer_size": 362,
+				"line_ending": "Unix",
+				"name": "data files storing sorted lists of artists, albums"
+			}
+		},
+		{
 			"file": "Teensy/FileNavigation4/FileNavigation4.ino",
 			"settings":
 			{
-				"buffer_size": 4467,
+				"buffer_size": 4084,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Teensy/FileNavigation3/FileInfo.h",
+			"file": "Teensy/FileNavigation4/DoublyLinkedList.h",
 			"settings":
 			{
-				"buffer_size": 1247,
+				"buffer_size": 4097,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
+			"file": "Teensy/FileNavigation4/FileInfo.h",
 			"settings":
 			{
-				"buffer_size": 4068,
+				"buffer_size": 1344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\"?;:/\\+*|<>!\nnumFiles\nfileNameLength	fileName	associatedFiles",
+			"settings":
+			{
+				"buffer_size": 61,
+				"line_ending": "Unix",
+				"name": "\"?;:/\\+*|<>!"
+			}
+		},
+		{
+			"file": "Teensy/FileNavigation4/MusicInfo.h",
+			"settings":
+			{
+				"buffer_size": 153,
 				"line_ending": "Unix"
 			}
 		}
@@ -173,13 +275,36 @@
 	},
 	"expanded_folders":
 	[
+		"/home/mitchel/Documents/Division-3/Teensy",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3"
 	],
 	"file_history":
 	[
+		"/home/mitchel/.config/autostart/Guake.desktop",
+		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFile.h",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest/graphicstest.ino",
+		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFileSystem.h",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/include/ctype.h",
+		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/include/string.h",
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/Print.h",
+		"/home/mitchel/Arduino/libraries/MemoryFree-master/MemoryFree.cpp",
+		"/home/mitchel/Arduino/libraries/MemoryFree-master/examples/FreeMemory/FreeMemory.ino",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/FileNavigation3.ino",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation4/C++ Code/AVLTree.cpp",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation4/C++ Code/AVLTree.h",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.h",
+		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/FileInfo.h",
+		"/var/log/Xorg.0.log",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/control_sgtl5000.h",
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/main.cpp",
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/usb_serial.c",
+		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/pins_teensy.c",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage/MemoryAndCpuUsage.ino",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/control_sgtl5000.cpp",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/play_sd_raw.h",
+		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/play_sd_wav.h",
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer/FlacFilePlayer.ino",
 		"/home/mitchel/Documents/Division-3/Teensy/FlacFilePlayer/FlacFilePlayer.ino",
-		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/FileNavigation3.ino",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Adafruit_ILI9341/examples/graphicstest/graphicstest.ino",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/C++ Code/SDWrapper.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/C++ Code/SDWrapper.cpp",
@@ -188,8 +313,6 @@
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.h",
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/play_sd_flac.cpp",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/HardwareTesting/ToneSweep/ToneSweep.ino",
-		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/play_sd_raw.h",
-		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/play_sd_wav.h",
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/codecs.h",
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/codecs.cpp",
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/flac/stream_decoder.c",
@@ -222,7 +345,6 @@
 		"/usr/share/arduino/hardware/teensy/avr/platform.txt",
 		"/home/mitchel/.config/sublime-text-3/Packages/Stino-ST4ArduinoIDE/preset/platform_teensy3.txt",
 		"/Applications/Arduino.app/Contents/Java/hardware/teensy/avr/boards.txt",
-		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage/MemoryAndCpuUsage.ino",
 		"/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/audiobuffer.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Leftover/DoublyLinkedList.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Leftover/DoublyLinkedList.cpp",
@@ -233,11 +355,8 @@
 		"/home/mitchel/Documents/Division-3/Teensy/VolumeAndPlayback/VolumeAndPlayback.ino",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/spi_interrupt.h",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/WavFilePlayer/WavFilePlayer.ino",
-		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/main.cpp",
 		"/home/mitchel/Arduino/libraries/Audio/spi_interrupt.h",
 		"/home/mitchel/Arduino/libraries/Audio/play_sd_raw.h",
-		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/Print.h",
-		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFile.h",
 		"/home/mitchel/Arduino/libraries/SdFat/examples/SdInfo/SdInfo.ino",
 		"/usr/share/arduino/hardware/teensy/avr/libraries/SD/utility/Sd2PinMap.h",
 		"/usr/share/arduino/examples/Teensy/Tutorial1/Blink/Blink.pde",
@@ -246,7 +365,6 @@
 		"/usr/share/arduino/hardware/teensy/avr/cores/teensy3/wiring.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.cpp",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.tcc",
-		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/DoublyLinkedList.h",
 		"/usr/share/arduino/hardware/tools/arm/arm-none-eabi/include/c++/4.8.4/iostream",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Implementing_A_List_Source/AList.cpp",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation3/Implementing_A_List_Source/AList.h",
@@ -257,7 +375,6 @@
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation2/FileNavigation2.ino",
 		"/home/mitchel/Documents/Division-3/Teensy/sketch_oct17a/sketch_oct17a.ino",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNavigation/FileNavigation.ino",
-		"/home/mitchel/Arduino/libraries/SdFat/utility/FatFileSystem.h",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNagivation/FileNavigation.ino",
 		"/home/mitchel/Documents/Division-3/Teensy/FileNagivation/--defsym",
 		"/home/mitchel/.config/sublime-text-3/Packages/Robot-Will-Stino-d5866f3/README.md",
@@ -290,20 +407,7 @@
 		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{d13935f5-559f-4975-a9fe-de4452c2ca0d}.prf",
 		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{368ef33a-2c44-4241-81e8-0ec1f385074c}.prf",
 		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{82c3198f-05d9-4a04-9289-fbaaeed895be}.prf",
-		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{9e623fc5-af1a-4ba7-ac27-62568b820e4c}.prf",
-		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Lightings/{0cfa1795-65f6-4f06-a1d2-1084a77cc75e}.lght",
-		"/D/Downloads/TestProfile.prf",
-		"/D/Documents/{9e623fc5-af1a-4ba7-ac27-62568b820e4c}.prf",
-		"/D/Documents/7 Days to Die.prf",
-		"/D/Documents/Default.prf",
-		"/D/Documents/All profiles.prf",
-		"/D/Documents/{82c3198f-05d9-4a04-9289-fbaaeed895be}.prf",
-		"/D/Documents/Division 2/Semester 6/Database Driven Websites/First Site/my_operation.txt",
-		"/D/Steam Library/steamapps/common/Dark Souls Prepare to Die Edition/DATA/fmodex.dll",
-		"/D/Documents/Division 2/Semester 6/Algorithms/Week1/Day1/Homework1.txt",
-		"/D/Stuff/Stuff/Man in the Family/game.xml",
-		"/D/Steam Library/SteamApps/common/PAYDAY 2/dieselx.cfg",
-		"/D/Steam Library/SteamApps/common/7 Days To Die/serverconfig.xml"
+		"/C/Users/Mitchel/AppData/Roaming/Corsair/HID/Profiles/{9e623fc5-af1a-4ba7-ac27-62568b820e4c}.prf"
 	],
 	"find":
 	{
@@ -319,9 +423,89 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"(\"",
+			"tft",
+			"fileName[i]",
+			"->fileName",
+			".fileName",
+			"tft",
+			"length",
+			"data",
+			"Data",
+			"d.printTree();\n	std",
+			"std",
+			"subTree",
+			"root",
+			"d.printTree();",
+			"lChild",
+			"leftChild",
+			"right",
+			"rightChild",
+			"leftChild",
+			"node",
+			"leftChild",
+			"fileName",
+			"d.add(",
+			"rightChild",
+			".",
+			"rChild",
+			"rightChild",
+			"leftChild",
+			"rotate_right",
+			"rotate_left",
+			"newLeaf",
+			"(WW)",
+			"(EE)",
+			"ee",
+			"balance_factor",
+			"newLeaf",
+			"P",
+			"N",
+			"std",
+			"subTree->rightChild",
+			"std",
+			"endl",
+			"subTree->rightChild",
+			"subTree",
+			"rightChild",
+			"subTree",
+			"*& ",
+			"rightChild",
+			"RightChild",
+			"rightChild",
+			"RightChild",
+			"Left",
+			"left",
+			"Left",
+			"left",
+			"Left",
+			"left",
+			"Left",
+			"left",
+			"Left",
+			"left",
+			"leftChild",
+			"prevLeft",
+			"left",
+			"prevLeft->rightChild",
+			"std",
+			"rightChild",
+			"leftChild",
+			"bool",
+			"right",
+			"left",
+			"subTree->leftChild",
+			"node",
+			"root",
+			"RBTree",
+			"RB",
+			"RBTree",
+			"DoublyLinkedList",
+			"DOUBLYLINKEDLIST_H",
+			"doublylinkedlist",
 			"black",
 			"sd",
 			"\\t ",
@@ -369,38 +553,7 @@
 			"tail",
 			"Tail",
 			"tail",
-			"head",
-			"Head",
-			"head",
-			"Head",
-			"head",
-			"	printList",
-			"typename",
-			"list2",
-			"list1",
-			"temp",
-			"node",
-			"prev",
-			"temp",
-			"-1",
-			"char",
-			"clear serial buffer",
-			"'0'",
-			"c",
-			"sowpods",
-			"mouse1",
-			"raw",
-			"k9",
-			"k7",
-			"7.*\\n.*7",
-			"5	",
-			"{\n",
-			"tasteDictionary",
-			"tasteglow",
-			"TasteGlow",
-			"timeToCheckForTastes",
-			"variables.timeToCheckForTastes",
-			"timeToHighlightTaste"
+			"head"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -420,24 +573,111 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Teensy/FileNavigation4/FileNavigation4.ino",
+					"file": "/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer/FlacFilePlayer.ino",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4467,
+						"buffer_size": 1885,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3339,
-								3339
+								1239,
+								1239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/Stino/Arduino.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Teensy/FileNavigation4/AVLTree.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5607,
+								5607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"auto_name": "data files storing sorted lists of artists, albums",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Teensy/FileNavigation4/FileNavigation4.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2954,
+								2954
 							]
 						],
 						"settings":
@@ -446,27 +686,56 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1935.0,
+						"translation.y": 1282.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Teensy/FileNavigation3/FileInfo.h",
+					"buffer": 4,
+					"file": "Teensy/FileNavigation4/DoublyLinkedList.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1247,
+						"buffer_size": 4097,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								80,
-								80
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Teensy/FileNavigation4/FileInfo.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								245,
+								245
 							]
 						],
 						"settings":
@@ -482,32 +751,60 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Teensy/FileNavigation3/DoublyLinkedList.h",
+					"buffer": 6,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4068,
+						"buffer_size": 61,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4037,
-								4037
+								61,
+								61
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_name": "\"?;:/\\+*|<>!",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Teensy/FileNavigation4/MusicInfo.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -515,7 +812,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -587,6 +884,18 @@
 	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446593022.4627066":
 	{
 		"height": 100.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205903.3934612":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447206122.62792":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447206153.7967951":
+	{
+		"height": 94.0
 	},
 	"output.build|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/flac/private|1446076775.4504538":
 	{
@@ -1044,6 +1353,166 @@
 	{
 		"height": 100.0
 	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551332.0799088":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551374.9380677":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551398.0444963":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551478.1750991":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551506.925171":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551570.673824":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553222.9911823":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553238.5035694":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554727.0573356":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554763.8279495":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554776.7329447":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554783.814268":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554789.138054":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555100.6153722":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555132.1647723":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555199.544":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555473.6303706":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555484.5877345":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555495.6550593":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555506.0907354":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448218160.958425":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221755.2716746":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221782.640339":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221986.1586902":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221998.540374":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222032.212682":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222349.6306977":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222360.1639955":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222370.1773632":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222378.4115417":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222383.2257566":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222462.7074583":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222473.449859":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222526.0978115":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222612.4757814":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222617.0265126":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448232682.3027363":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448232692.6978486":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448232719.1163795":
+	{
+		"height": 94.0
+	},
+	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448232823.7896214":
+	{
+		"height": 94.0
+	},
 	"output.build|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1445359368.538698":
 	{
 		"height": 94.0
@@ -1220,6 +1689,22 @@
 	{
 		"height": 94.0
 	},
+	"output.build|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447203139.5703475":
+	{
+		"height": 94.0
+	},
+	"output.build|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447203170.9084928":
+	{
+		"height": 94.0
+	},
+	"output.build|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447204582.3975933":
+	{
+		"height": 94.0
+	},
+	"output.build|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447204585.1664577":
+	{
+		"height": 94.0
+	},
 	"output.build|/usr/share/arduino/hardware/teensy/avr|1445358527.9949727":
 	{
 		"height": 0.0
@@ -1307,6 +1792,54 @@
 	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1446752579.727831":
 	{
 		"height": 100.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205058.8730795":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205196.5690627":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205361.617776":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205446.657388":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205519.4553313":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205678.5778098":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205706.0228558":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447205782.6776884":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447206155.9708633":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447206160.6622221":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1447206218.146246":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master/examples/FlacFilePlayer|1448218630.2929435":
+	{
+		"height": 94.0
 	},
 	"output.upload|/home/mitchel/Arduino/libraries/Arduino-Teensy-Codec-lib-master|1446072808.7775872":
 	{
@@ -2100,6 +2633,30 @@
 	{
 		"height": 100.0
 	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1447535225.7830932":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1447535284.7683966":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1447535337.134706":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1447535464.6715887":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1447535476.7640426":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation3|1447535494.725876":
+	{
+		"height": 94.0
+	},
 	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1446781895.1903262":
 	{
 		"height": 100.0
@@ -2144,6 +2701,602 @@
 	{
 		"height": 100.0
 	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447204920.4458616":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447204966.2141306":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447205030.9490945":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447205155.6881707":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447205341.2846904":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447205418.5625274":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447205582.3118358":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447534977.9572961":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447536855.27423":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447536930.192396":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447536952.4460292":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537262.4566507":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537350.5595617":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537366.4555821":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537461.1218445":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537473.8156643":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537480.3325078":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537485.5876398":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537495.4621093":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537595.4520802":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537621.3608117":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537686.557695":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537703.5088034":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447537747.9787776":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538005.3398955":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538045.703125":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538057.170282":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538066.5474095":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538076.281287":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538108.6550298":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538154.9917662":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538252.284164":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538266.1467862":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538275.6917834":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538497.4744744":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538526.0991836":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538574.677662":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447538655.0537643":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447550472.6378334":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551577.1916616":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551655.9299285":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551673.078546":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551737.3727422":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551769.0698528":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551815.5979884":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551856.860195":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551884.0069454":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551949.5930603":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447551979.572476":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552037.1063838":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552059.1787457":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552080.2324781":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552094.6827898":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552117.2422385":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552133.6984293":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552163.8069139":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552178.1110613":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552201.4805155":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552222.0455458":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552249.802427":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552512.9238875":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552521.575421":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447552554.2710705":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553039.873126":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553099.0386488":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553240.2531796":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553445.9622607":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553536.7685359":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553577.6374106":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553623.158569":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553641.2552383":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553652.0257523":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553755.4427588":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553808.2215135":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553823.9772322":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553849.4153185":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553877.083372":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553881.5457654":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553903.2760057":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553927.5025594":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553945.0243602":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553974.2966764":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447553997.7141304":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554020.989571":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554054.2092867":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554073.520766":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554082.7580667":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554097.9279783":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554119.8121455":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554150.8243372":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554170.4100432":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554193.444154":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554207.1322186":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554248.0568976":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554346.479171":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554373.6396582":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554400.5211859":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554674.97249":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554790.8174732":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554823.498543":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447554861.472964":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555138.5986915":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555161.2363868":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555185.0876849":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555202.5491006":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555216.0250027":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555258.2571673":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1447555271.5850568":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448218581.7437594":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448218595.842968":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219024.543596":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219037.228553":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219253.4460435":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219391.736156":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219694.2140603":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219700.7580607":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219779.1736429":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448219796.5373707":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448220956.7603922":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448220968.4159555":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448220979.1031282":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221040.0510228":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221126.473989":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221150.822898":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221167.1948166":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221230.463827":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221233.6316526":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221257.228017":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221268.3524678":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221270.50586":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221292.9999301":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221317.9238052":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221338.2664785":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221341.0731146":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221389.4362936":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221401.7914603":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221403.9797819":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221416.0914073":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221422.1627498":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221568.3507514":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448221605.042997":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222001.0094159":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222032.768456":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222081.7961152":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222206.6835392":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222475.0440276":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222527.7981675":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222613.77717":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation4|1448222618.4309285":
+	{
+		"height": 94.0
+	},
 	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1445359427.139":
 	{
 		"height": 94.0
@@ -2169,6 +3322,10 @@
 		"height": 94.0
 	},
 	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1445393776.60758":
+	{
+		"height": 94.0
+	},
+	"output.upload|/home/mitchel/Documents/Division-3/Teensy/FileNavigation|1447535034.7740777":
 	{
 		"height": 94.0
 	},
@@ -2352,6 +3509,22 @@
 	{
 		"height": 100.0
 	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447203210.1602137":
+	{
+		"height": 94.0
+	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447204025.653585":
+	{
+		"height": 94.0
+	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447204059.949297":
+	{
+		"height": 94.0
+	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/Audio/examples/MemoryAndCpuUsage|1447204119.571137":
+	{
+		"height": 94.0
+	},
 	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest|1446757396.1114318":
 	{
 		"height": 100.0
@@ -2376,11 +3549,15 @@
 	{
 		"height": 100.0
 	},
+	"output.upload|/usr/share/arduino/hardware/teensy/avr/libraries/ILI9341_t3/examples/graphicstest|1448219886.9076142":
+	{
+		"height": 94.0
+	},
 	"pinned_build_system": "",
 	"project": "Diiiv.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
