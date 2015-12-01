@@ -1,4 +1,5 @@
 #include "Settings.h"
+#include "SongPlayer.h"
 
 void setup()
 {
@@ -23,8 +24,8 @@ void setup()
 	menu = MAIN_MENU; //typedef enum MenuType
 
 	//User Input interrupts
-	attachInterrupt(PREVIOUS_SONG, previousSongInterrupt, LOW);
-	attachInterrupt(NEXT_SONG, nextSongInterrupt, LOW);
+	attachInterrupt(PREVIOUS_SONG, previousSongInterrupt, RISING);
+	attachInterrupt(NEXT_SONG, nextSongInterrupt, RISING);
 	attachInterrupt(PREVIOUS_MENU_ITEM, previousItemInterrupt, LOW);
 	attachInterrupt(NEXT_MENU_ITEM, nextItemInterrupt, LOW);
 	attachInterrupt(PLAY_SELECT, playSelectInterrupt, LOW);
@@ -38,45 +39,84 @@ void loop()
 	displayMenu(menu);
 }
 
-//PREVIOUS SONG NEEDS DOUBLE CLICK FIXED
 void previousSongInterrupt()
 {
-	//two presses in PREVIOUS_SONG_DELAY milliseconds means previous song
-	//a single press means restart the current song
-	static unsigned long timer;
-	timer = millis();
-
-	//check for the PREVIOUS_SONG button to be pressed again within PREVIOUS_SONG_DELAY milliseconds
-	while(timer+PREVIOUS_SONG_DELAY < millis())
+	noInterrupts();
+	if(longPress)
 	{
-		//checks the input buffer for a button press
-		if(checkForInput())
+		longPress = false;
+	}
+	else
+	{
+		Serial.println("Previous song");
+		/*
+		if(current song has been playing for longer that 2 seconds)
 		{
-			//get the button that was pressed and update pressed
-			if(getInput() == PREVIOUS_SONG)
-			{
-				//if the button was PREVIOUS_SONG play the previous song
-				//if the previous song does not exist stop playing altogether
-				if(exists(previousSong))
-					playNewSong(previousSong);
-				else
-					stopPlaying();
-				break;
-			}
+			restartCurrentSong();
+		}
+		else if(previousSong)
+		{
+			playNewSong(previousSong);
+		}
+		else
+		{
+			stopPlaying();
+		}
+		*/
+	}
+	interrupts();
+}
+
+void backwardsTrackingInterrupt()
+{
+	noInterrupts();
+	pauseSong();
+	longPress = true;
+	while(digitalRead(PREVIOUS_SONG) == LOW)
+	{
+		if(!(millis()%1000))
+		{
+			Serial.println("Tracking backwards");
 		}
 	}
-	//if PREVIOUS_SONG was not pressed twice in time restart the current song
-	restartCurrentSong();
+	interrupts();
 }
 
 void nextSongInterrupt()
 {
 	noInterrupts();
-	//if the next song exists play it otherwise stop playing music altogether
-	if(nextSong != "")
-		playNewSong(nextSong);
+	if(longPress)
+	{
+		longPress = false;
+	}
 	else
-		stopPlaying();
+	{
+		Serial.println("Next song");
+		//if the next song exists play it otherwise stop playing music altogether
+		if(nextSong != "")
+		{
+			playNewSong(nextSong);
+		}
+		else
+		{
+			stopPlaying();
+		}
+	}
+	interrupts();
+}
+
+void forwardsTrackingInterrupt()
+{
+	noInterrupts();
+	pauseSong();
+	longPress = true;
+	while(digitalRead(NEXT_SONG) == LOW)
+	{
+		if(!(millis()%1000))
+		{
+			Serial.println("Tracking forwards");
+		}
+	}
 	interrupts();
 }
 
@@ -85,10 +125,13 @@ void previousItemInterrupt()
 	noInterrupts();
 	//if the current view displays a menu
 	if(!songView)
-	{	
+	{
+		Serial.println("Previous menu item");
 		//if there is a previous menu item update which item is selected
 		if(exists(previousItem))
+		{
 			selectedItem = previousItem;
+		}
 	}
 	interrupts();
 }
@@ -99,6 +142,7 @@ void nextItemInterrupt()
 	//if the current view displays a menu
 	if(!songView)
 	{
+		Serial.println("Next menu item");
 		//if there is a next menu item update which item is selected
 		if(exists(nextItem))
 			selectedItem = nextItem;

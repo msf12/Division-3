@@ -3,7 +3,7 @@
 #define SETTINGS_H
 
 #include <SdFat.h>
-#include <string>
+#include <string.h>
 #include <SPI.h>
 #include <font_Arial.h>
 #include <font_ArialBold.h>
@@ -30,6 +30,7 @@
 
 uint16_t PREVIOUS_SONG_DELAY = 1000;
 bool songView = false;
+bool longPress = false;
 
 typedef enum MenuTypeEnum {
 	MAIN_MENU,
