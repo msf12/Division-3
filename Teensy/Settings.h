@@ -1,8 +1,13 @@
+
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
 #include <SdFat.h>
 #include <string>
+#include <SPI.h>
+#include <font_Arial.h>
+#include <font_ArialBold.h>
+#include <ILI9341_t3.h>
 
 #define SD_CS_PIN SS
 
@@ -15,7 +20,15 @@
 #define PREVIOUS_MENU 10
 #define SWITCH_VIEW_MODE 10
 
-const uint16_t PREVIOUS_SONG_DELAY = 1000;
+// For optimized ILI9341_t3 library
+#define TFT_DC      20
+#define TFT_CS      21
+#define TFT_RST    255  // 255 = unused, connect to 3.3V
+#define TFT_MOSI     7
+#define TFT_SCLK    14
+#define TFT_MISO    12
+
+uint16_t PREVIOUS_SONG_DELAY = 1000;
 bool songView = false;
 
 typedef enum MenuTypeEnum {
@@ -41,5 +54,36 @@ typedef enum MenuTypeEnum {
 
 SdFat SD;
 MenuType menu;
+ILI9341_t3 tft = ILI9341_t3(TFT_CS, TFT_DC, TFT_RST, TFT_MOSI, TFT_SCLK, TFT_MISO);
+String previousSong, nextSong, previousMenu, nextMenu, previousItem, nextItem, selectedItem;
+
+inline void clearScreen()
+{
+	tft.fillScreen(ILI9341_WHITE);
+	tft.setCursor(0, 0);
+}
+
+inline void printToScreen(String s)
+{
+	tft.println(s);
+}
+
+bool checkForInput();
+int getInput();
+void eraseScreen();
+void printToScreen(String s);
+void displayMenu(MenuType menu);
+bool songDatabaseExists();
+void buildSongDatabase();
+void rebuildSongDatabase();
+void playNewSong(String s);
+void stopPlaying();
+void pauseSong();
+void restartCurrentSong();
+void changeMenu(String s);
+void changeToMenuView();
+void changeToMenuView(String s);
+void changeToSongView();
+bool exists(String s);
 
 #endif

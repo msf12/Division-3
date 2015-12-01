@@ -1,27 +1,9 @@
 #include "Settings.h"
 
-bool checkForInput();
-int getInput();
-void eraseScreen();
-void printToScreen(String s);
-void displayMenu(MenuType menu);
-bool songDatabaseExists();
-void buildSongDatabase();
-void rebuildSongDatabase();
-void playNewSong(String s);
-void stopPlaying();
-void pauseSong();
-void restartCurrentSong();
-void changeMenu(String s);
-void changeToMenuView();
-void changeToMenuView(String s);
-void changeToSongView();
-bool exists(String s);
-
-String previousSong, nextSong, previousMenu, nextMenu, previousItem, nextItem, selectedItem;
-
 void setup()
 {
+	clearScreen();
+	tft.setTextColor(ILI9341_BLACK);
 	printToScreen("Booting...");
 	if(!SD.begin(SD_CS_PIN, SPI_HALF_SPEED))
 	{
