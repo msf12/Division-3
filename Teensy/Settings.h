@@ -12,12 +12,12 @@
 #define SD_CS_PIN SS
 
 //User Input pins
-#define PREVIOUS_SONG 10
-#define NEXT_SONG 10
-#define PREVIOUS_MENU_ITEM 10
-#define NEXT_MENU_ITEM 10
-#define PLAY_SELECT 10
-#define PREVIOUS_MENU 10
+#define PREVIOUS_SONG 2
+#define NEXT_SONG 3
+#define PREVIOUS_MENU_ITEM 4
+#define NEXT_MENU_ITEM 5
+#define PLAY_SELECT 23
+#define PREVIOUS_MENU 22
 #define SWITCH_VIEW_MODE 10
 
 // For optimized ILI9341_t3 library
@@ -29,6 +29,7 @@
 #define TFT_MISO    12
 
 uint16_t PREVIOUS_SONG_DELAY = 1000;
+uint32_t lastInterrupt = 0;
 bool songView = false;
 bool longPress = false;
 
@@ -53,26 +54,10 @@ typedef enum MenuTypeEnum {
 // 	NOW_PLAYING
 // } Button;
 
-SdFat SD;
-MenuType menu;
-ILI9341_t3 tft = ILI9341_t3(TFT_CS, TFT_DC, TFT_RST, TFT_MOSI, TFT_SCLK, TFT_MISO);
-String previousSong, nextSong, previousMenu, nextMenu, previousItem, nextItem, selectedItem;
-
-inline void clearScreen()
-{
-	tft.fillScreen(ILI9341_WHITE);
-	tft.setCursor(0, 0);
-}
-
-inline void printToScreen(String s)
-{
-	tft.println(s);
-}
-
 bool checkForInput();
 int getInput();
-void eraseScreen();
-void printToScreen(String s);
+// void eraseScreen();
+// void printToScreen(String s);
 void displayMenu(MenuType menu);
 bool songDatabaseExists();
 void buildSongDatabase();
