@@ -43,7 +43,7 @@ void setup()
 	printToScreen("Initializing audio device");
 	audioSetup();
 	
-	printToScreen("Preparing user input")
+	printToScreen("Preparing user input");
 	userInputSetup();
 }
 

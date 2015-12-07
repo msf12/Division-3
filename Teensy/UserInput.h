@@ -3,18 +3,6 @@
 
 #include "Settings.h"
 
-String previousSong, nextSong, previousMenu, nextMenu, previousItem, nextItem, selectedItem;
-
-void previousSongInterrupt();
-void nextSongInterrupt();
-// void backwardsTrackingInterrupt();
-// void forwardsTrackingInterrupt();
-void previousItemInterrupt();
-void nextItemInterrupt();
-void playSelectInterrupt();
-void previousMenuInterrupt();
-// void switchViewInterrupt();
-
 void userInputSetup()
 {
 	pinMode(PREVIOUS_SONG, INPUT_PULLUP);

@@ -34,6 +34,8 @@ uint32_t lastInterrupt = 0;
 bool songView = false;
 bool longPress = false;
 
+String previousSong, nextSong, previousMenu, nextMenu, previousItem, nextItem, selectedItem;
+
 typedef enum MenuTypeEnum {
 	MAIN_MENU,
 	ARTIST_MENU,
@@ -44,16 +46,6 @@ typedef enum MenuTypeEnum {
 	SONG_MENU,
 	SETTINGS_MENU
 } MenuType;
-
-// typedef enum ButtonEnum {
-// 	PREVIOUS_SONG,
-// 	NEXT_SONG,
-// 	PREVIOUS_MENU_ITEM,
-// 	NEXT_MENU_ITEM,
-// 	PLAY_SELECT,
-// 	PREVIOUS_MENU,
-// 	NOW_PLAYING
-// } Button;
 
 bool checkForInput();
 int getInput();
@@ -72,5 +64,15 @@ void changeToMenuView();
 void changeToMenuView(String s);
 void changeToSongView();
 bool exists(String s);
+
+void previousSongInterrupt();
+void nextSongInterrupt();
+// void backwardsTrackingInterrupt();
+// void forwardsTrackingInterrupt();
+void previousItemInterrupt();
+void nextItemInterrupt();
+void playSelectInterrupt();
+void previousMenuInterrupt();
+// void switchViewInterrupt();
 
 #endif
