@@ -3,11 +3,12 @@
 #define SETTINGS_H
 
 #include <SdFat.h>
-#include <string.h>
 #include <SPI.h>
 #include <font_Arial.h>
 #include <font_ArialBold.h>
 #include <ILI9341_t3.h>
+
+SdFat SD;
 
 #define SD_CS_PIN SS
 
