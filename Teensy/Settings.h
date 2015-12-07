@@ -21,6 +21,9 @@ SdFat SD;
 #define PREVIOUS_MENU 22
 #define SWITCH_VIEW_MODE 10
 
+//Input Handling type
+#define USE_INTERRUPTS 1
+
 // For optimized ILI9341_t3 library
 #define TFT_DC      20
 #define TFT_CS      21
@@ -64,15 +67,5 @@ void changeToMenuView();
 void changeToMenuView(String s);
 void changeToSongView();
 bool exists(String s);
-
-void previousSongInterrupt();
-void nextSongInterrupt();
-// void backwardsTrackingInterrupt();
-// void forwardsTrackingInterrupt();
-void previousItemInterrupt();
-void nextItemInterrupt();
-void playSelectInterrupt();
-void previousMenuInterrupt();
-// void switchViewInterrupt();
 
 #endif

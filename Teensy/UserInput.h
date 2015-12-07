@@ -3,6 +3,22 @@
 
 #include "Settings.h"
 
+#if USE_INTERRUPTS
+#include "InterruptHandler.h"
+#else
+#include "PollingHandler.h"
+#endif
+
+void previousSongInterrupt();
+void nextSongInterrupt();
+// void backwardsTrackingInterrupt();
+// void forwardsTrackingInterrupt();
+void previousItemInterrupt();
+void nextItemInterrupt();
+void playSelectInterrupt();
+void previousMenuInterrupt();
+// void switchViewInterrupt();
+
 void userInputSetup()
 {
 	pinMode(PREVIOUS_SONG, INPUT_PULLUP);
@@ -11,17 +27,11 @@ void userInputSetup()
 	pinMode(NEXT_MENU_ITEM, INPUT_PULLUP);
 	pinMode(PLAY_SELECT, INPUT_PULLUP);
 	pinMode(PREVIOUS_MENU, INPUT_PULLUP);
+	// pinMode(SWITCH_VIEW_MODE, INPUT_PULLUP);
 
-	//User Input interrupts
-	attachInterrupt(PREVIOUS_SONG, previousSongInterrupt, RISING);
-	attachInterrupt(NEXT_SONG, nextSongInterrupt, RISING);
-	// attachInterrupt(PREVIOUS_SONG, backwardsTrackingInterrupt, LOW);
-	// attachInterrupt(NEXT_SONG, forwardsTrackingInterrupt, LOW);
-	attachInterrupt(PREVIOUS_MENU_ITEM, previousItemInterrupt, FALLING);
-	attachInterrupt(NEXT_MENU_ITEM, nextItemInterrupt, FALLING);
-	attachInterrupt(PLAY_SELECT, playSelectInterrupt, FALLING);
-	attachInterrupt(PREVIOUS_MENU, previousMenuInterrupt, FALLING);
-	// attachInterrupt(SWITCH_VIEW_MODE, switchViewInterrupt, FALLING);
+#if USE_INTERRUPTS
+	interruptHandlerSetup();
+#endif
 }
 
 void previousSongInterrupt()

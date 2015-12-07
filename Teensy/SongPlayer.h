@@ -23,7 +23,6 @@ uint32_t startTime = 0;
 
 void audioSetup()
 {
-
 	AudioMemory(6);
 	sgtl5000.enable();
 	sgtl5000.volume(0.2);

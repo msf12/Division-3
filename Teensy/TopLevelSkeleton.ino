@@ -44,6 +44,13 @@ void setup()
 	audioSetup();
 	
 	printToScreen("Preparing user input");
+
+#if USE_INTERRUPTS
+	printToScreen("Using interrupts for button input");
+#else
+	printToScreen("Using polling for button input");
+#endif
+
 	userInputSetup();
 }
 
@@ -52,4 +59,8 @@ void loop()
 	//print the current view to the screen
 	// displayMenu(menu);
 	// Serial.println(digitalRead(PLAY_SELECT));
+
+#if !(USE_INTERRUPTS)
+	pollForInput();
+#else
 }
