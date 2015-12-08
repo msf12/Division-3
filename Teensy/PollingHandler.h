@@ -2,6 +2,7 @@
 #define POLLINGHANDLER_H
 
 #include "DoublyLinkedList.h"
+#include <Bounce2.h>
 
 struct InputPin
 {
@@ -11,47 +12,89 @@ struct InputPin
 
 DoublyLinkedList<InputPin> inputQueue;
 
+Bounce PrevSo_debouncer;
+Bounce NextSo_debouncer;
+Bounce PrevIt_debouncer;
+Bounce NextIt_debouncer;
+Bounce PlaySe_debouncer;
+Bounce PrevMe_debouncer;
+Bounce SwitVi_debouncer;
+
+void pollingHandlerSetup()
+{
+	PrevSo_debouncer = Bounce();
+	NextSo_debouncer = Bounce();
+	PrevIt_debouncer = Bounce();
+	NextIt_debouncer = Bounce();
+	PlaySe_debouncer = Bounce();
+	PrevMe_debouncer = Bounce();
+	SwitVi_debouncer = Bounce();
+
+	PrevSo_debouncer.attach(PREVIOUS_SONG);
+	NextSo_debouncer.attach(NEXT_SONG);
+	PrevIt_debouncer.attach(PREVIOUS_MENU_ITEM);
+	NextIt_debouncer.attach(NEXT_MENU_ITEM);
+	PlaySe_debouncer.attach(PLAY_SELECT);
+	PrevMe_debouncer.attach(PREVIOUS_MENU);
+	SwitVi_debouncer.attach(SWITCH_VIEW_MODE);
+
+	PrevSo_debouncer.interval(10);
+	NextSo_debouncer.interval(10);
+	PrevIt_debouncer.interval(10);
+	NextIt_debouncer.interval(10);
+	PlaySe_debouncer.interval(10);
+	PrevMe_debouncer.interval(10);
+	SwitVi_debouncer.interval(10);
+}
+
 void pollForInput()
 {
-	//poll for which button is pressed and call an interrupt function to handle the button pressed
 	static InputPin input;
-	if(digitalRead(PREVIOUS_SONG))
+	PrevSo_debouncer.update();
+	NextSo_debouncer.update();
+	PrevIt_debouncer.update();
+	NextIt_debouncer.update();
+	PlaySe_debouncer.update();
+	PrevMe_debouncer.update();
+	SwitVi_debouncer.update();
+	
+	if(PrevSo_debouncer.read())
 	{
 		input.pin = PREVIOUS_SONG;
 		input.time = millis();
 		inputQueue.add(input);
 	}
-	if(digitalRead(NEXT_SONG))
+	if(NextSo_debouncer.read())
 	{
 		input.pin = NEXT_SONG;
 		input.time = millis();
 		inputQueue.add(input);
 	}
-	if(digitalRead(PREVIOUS_MENU_ITEM))
+	if(PrevIt_debouncer.read())
 	{
 		input.pin = PREVIOUS_MENU_ITEM;
 		input.time = millis();
 		inputQueue.add(input);
 	}
-	if(digitalRead(NEXT_MENU_ITEM))
+	if(NextIt_debouncer.read())
 	{
 		input.pin = NEXT_MENU_ITEM;
 		input.time = millis();
 		inputQueue.add(input);
 	}
-	if(digitalRead(PLAY_SELECT))
+	if(PlaySe_debouncer.read())
 	{
 		input.pin = PLAY_SELECT;
 		input.time = millis();
 		inputQueue.add(input);
 	}
-	if(digitalRead(PREVIOUS_MENU))
+	if(PrevMe_debouncer.read())
 	{
 		input.pin = PREVIOUS_MENU;
 		input.time = millis();
 		inputQueue.add(input);
 	}
-	if(digitalRead(SWITCH_VIEW_MODE))
+	if(SwitVi_debouncer.read())
 	{
 		input.pin = SWITCH_VIEW_MODE;
 		input.time = millis();
@@ -92,6 +135,7 @@ void executeInput()
 				break;
 			default:
 		}
+		
 	}
 }
 
