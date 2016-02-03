@@ -9,24 +9,24 @@
 \maketitle
 \begin{itemize}
 
-	\item [2.2]
+	\item [\textbf{2.2}]
 	\begin{itemize}
-		\item [(b)] $(x + y) (x + \overline{y}) = x(y + \overline{y}) = x(1) = x$
-		\item [(c)] $xyz + \overline{x}y + xy\overline{z} = y(xz + \overline{x} + x\overline{z}) = y(\overline{x} + x(z + \overline{z})) = y(\overline{x} + x(1)) = y(1) = y$
-		\item [(d)] $(A + B)(\overline{A} + \overline{B}) = (A + B)\overline{(AB)} = A\overline{B} + \overline{A}B = A \oplus B$
-		\item [(e)] $(a + b + \overline{c})(\overline{a}.\overline{b} + c) = (a + b + \overline{c})(\overline{a + b} + c) = (a + b) \oplus c$
-		\item [(f)] $\overline{a}bc + ab\overline{c} + abc + \overline{a}b\overline{c} = b(\overline{a}c + a\overline{c} + ac + \overline{a}\overline{c}) = b(1) = b$
+		\item [\textbf{(b)}] $(x + y) (x + \overline{y}) = x(y + \overline{y}) = x(1) = x$
+		\item [\textbf{(c)}] $xyz + \overline{x}y + xy\overline{z} = y(xz + \overline{x} + x\overline{z}) = y(\overline{x} + x(z + \overline{z})) = y(\overline{x} + x(1)) = y(1) = y$
+		\item [\textbf{(d)}] $(A + B)(\overline{A} + \overline{B}) = (A + B)\overline{(AB)} = A\overline{B} + \overline{A}B = A \oplus B$
+		\item [\textbf{(e)}] $(a + b + \overline{c})(\overline{a}.\overline{b} + c) = (a + b + \overline{c})(\overline{a + b} + c) = (a + b) \oplus c$
+		\item [\textbf{(f)}] $\overline{a}bc + ab\overline{c} + abc + \overline{a}b\overline{c} = b(\overline{a}c + a\overline{c} + ac + \overline{a}\overline{c}) = b(1) = b$
 	\end{itemize}
 
-	\item [2.10]
+	\item [\textbf{2.10}]
 	\begin{itemize}
-		\item [(a)] The Boolean function $E = F_1 + F_2$ is true when either $F_1$ or $F_2$ or both are true. Thus it contains the union of their minterm sets.
-		\item [(b)] The Boolean function $G = F_1F_2$ is true only when both $F_1$ and $F_2$ are true. Thus it contains the intersection of their minterm sets.
+		\item [\textbf{(a)}] The Boolean function $E = F_1 + F_2$ is true when either $F_1$ or $F_2$ or both are true. Thus it contains the union of their minterm sets.
+		\item [\textbf{(b)}] The Boolean function $G = F_1F_2$ is true only when both $F_1$ and $F_2$ are true. Thus it contains the intersection of their minterm sets.
 	\end{itemize}
 
-	\item [2.11]
+	\item [\textbf{2.11}]
 	\begin{itemize}
-		\item [(a)] $F = xy + x\overline{y} + \overline{y}z$\\
+		\item [\textbf{(a)}] $F = xy + x\overline{y} + \overline{y}z$\\
 		\begin{tabular}{c | c | c | c | c | c | c}
 		$x$ & $y$ & $z$ & $xy$ & $x\overline{y}$ & $\overline{y}z$ & $xy + x\overline{y} + \overline{y}z$\\ \hline
 		$0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
@@ -38,7 +38,7 @@
 		$1$ & $1$ & $0$ & $1$ & $0$ & $0$ & $1$ \\
 		$1$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ \\
 		\end{tabular}
-		\item [(b)] $F = bc + \overline{a}.\overline{c}$\\
+		\item [\textbf{(b)}] $F = bc + \overline{a}.\overline{c}$\\
 		\begin{tabular}{c | c | c | c | c | c}
 		$a$ & $b$ & $c$ & $bc$ & $\overline{a}.\overline{c}$ & $bc + \overline{a}.\overline{c}$\\ \hline
 		$0$ & $0$ & $0$ & $0$ & $1$ & $1$ \\
@@ -52,12 +52,17 @@
 		\end{tabular}
 	\end{itemize}
 
-	\item [2.14]
+	\item [\textbf{2.14}]
 	\begin{itemize}
-		\item [(a)] With AND, OR, and inverter gates
-		\item [(b)] With OR and inverter gates
-		\item [(c)] With AND and inverter gates
+		\item [\textbf{(a)}] With AND, OR, and inverter gates\\
+		\includegraphics{214a}
+		\item [\textbf{(b)}] With OR and inverter gates\\
+		\includegraphics{214b}
+		\item [\textbf{(c)}] With AND and inverter gates\\
+		\includegraphics{214c}
 	\end{itemize}
+
+	\item [\textbf{Homework Problem}] Write a Python or Java program (whichever language is easier for you to use), to generate the truth table of the function F3 of Figure 2.4 in Mano.
 
 \end{itemize}
 

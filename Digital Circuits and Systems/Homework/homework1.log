@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  3 FEB 2016 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  3 FEB 2016 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -141,27 +141,60 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 14.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./homework1.aux) ) 
+<214a.png, id=1, 383.4325pt x 187.70125pt>
+File: 214a.png Graphic file (type png)
+ <use 214a.png>
+Package pdftex.def Info: 214a.png used on input line 58.
+(pdftex.def)             Requested size: 383.43156pt x 187.70079pt.
+
+Overfull \hbox (85.4316pt too wide) in paragraph at lines 57--59
+[] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<214b.png, id=14, 383.4325pt x 189.70876pt>
+File: 214b.png Graphic file (type png)
+ <use 214b.png>
+Package pdftex.def Info: 214b.png used on input line 60.
+(pdftex.def)             Requested size: 383.43156pt x 189.70828pt.
+
+Overfull \hbox (85.4316pt too wide) in paragraph at lines 59--61
+[] 
+ []
+
+<214c.png, id=15, 408.52625pt x 187.70125pt>
+File: 214c.png Graphic file (type png)
+ <use 214c.png>
+Package pdftex.def Info: 214c.png used on input line 62.
+(pdftex.def)             Requested size: 408.52525pt x 187.70079pt.
+
+Overfull \hbox (110.52528pt too wide) in paragraph at lines 61--63
+[] 
+ []
+
+[2 <./214a.png (PNG copy)> <./214b.png (PNG copy)>] [3 <./214c.png (PNG copy)>]
+(./homework1.aux) ) 
 Here is how much of TeX's memory you used:
- 1479 strings out of 493054
- 20730 string characters out of 6140585
+ 1497 strings out of 493054
+ 20932 string characters out of 6140585
  91370 words of memory out of 5000000
- 5015 multiletter control sequences out of 15000+600000
- 6675 words of font info for 24 fonts, out of 8000000 for 9000
+ 5028 multiletter control sequences out of 15000+600000
+ 6983 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,23p,235b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
-</u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on homework1.pdf (2 pages, 64487 bytes).
+ 37i,8n,23p,235b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on homework1.pdf (3 pages, 85580 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
