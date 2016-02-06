@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{graphicx}
+\usepackage{listings}
 
 \title{Homework 1}
 \author{Mitchel Fields}
@@ -62,11 +63,46 @@
 		\includegraphics{214c}
 	\end{itemize}
 
-	\item [\textbf{Homework Problem}] Write a Python or Java program (whichever language is easier for you to use), to generate the truth table of the function F3 of Figure 2.4 in Mano.
-
-	(a) AB + C(D + E) (b) AB + CD + CE
+	\item [\textbf{Homework Problem}] Write a Python or Java program (whichever language is easier for you to use), to generate the truth table of the function F3 of Figure 2.4 in Mano.\\\\
+	F3 a is f() and F3 b is g()\\\\
+	\lstinputlisting[language=Python]{homework1.py}\\
+	\begin{tabular}{  c  c  c  c  c | c  c }
+		A & B & C & D & E & f & g\\ \hline
+		0 & 0 & 0 & 0 & 0 & 0 & 0\\
+		0 & 0 & 0 & 0 & 1 & 0 & 0\\
+		0 & 0 & 0 & 1 & 0 & 0 & 0\\
+		0 & 0 & 0 & 1 & 1 & 0 & 0\\
+		0 & 0 & 1 & 0 & 0 & 0 & 0\\
+		0 & 0 & 1 & 0 & 1 & 1 & 1\\
+		0 & 0 & 1 & 1 & 0 & 1 & 1\\
+		0 & 0 & 1 & 1 & 1 & 1 & 1\\
+		0 & 1 & 0 & 0 & 0 & 0 & 0\\
+		0 & 1 & 0 & 0 & 1 & 0 & 0\\
+		0 & 1 & 0 & 1 & 0 & 0 & 0\\
+		0 & 1 & 0 & 1 & 1 & 0 & 0\\
+		0 & 1 & 1 & 0 & 0 & 0 & 0\\
+		0 & 1 & 1 & 0 & 1 & 1 & 1\\
+		0 & 1 & 1 & 1 & 0 & 1 & 1\\
+		0 & 1 & 1 & 1 & 1 & 1 & 1\\
+		1 & 0 & 0 & 0 & 0 & 0 & 0\\
+		1 & 0 & 0 & 0 & 1 & 0 & 0\\
+		1 & 0 & 0 & 1 & 0 & 0 & 0\\
+		1 & 0 & 0 & 1 & 1 & 0 & 0\\
+		1 & 0 & 1 & 0 & 0 & 0 & 0\\
+		1 & 0 & 1 & 0 & 1 & 1 & 1\\
+		1 & 0 & 1 & 1 & 0 & 1 & 1\\
+		1 & 0 & 1 & 1 & 1 & 1 & 1\\
+		1 & 1 & 0 & 0 & 0 & 1 & 1\\
+		1 & 1 & 0 & 0 & 1 & 1 & 1\\
+		1 & 1 & 0 & 1 & 0 & 1 & 1\\
+		1 & 1 & 0 & 1 & 1 & 1 & 1\\
+		1 & 1 & 1 & 0 & 0 & 1 & 1\\
+		1 & 1 & 1 & 0 & 1 & 1 & 1\\
+		1 & 1 & 1 & 1 & 0 & 1 & 1\\
+		1 & 1 & 1 & 1 & 1 & 1 & 1\\
+	\end{tabular}
 
 \end{itemize}
 
-	
+
 \end{document}
