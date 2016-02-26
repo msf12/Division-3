@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2016-02-17T13:30:00" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2016-02-26T09:32:44" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -38,6 +38,7 @@
         <UML:Class visibility="public" isSpecification="false" namespace="wFhttam41GRm" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="yyJQIQsvv05J" name="microSD Card"/>
         <UML:Class visibility="public" isSpecification="false" namespace="wFhttam41GRm" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="QJjddjtHvVbK" name="microSD Module"/>
         <UML:Class visibility="public" isSpecification="false" namespace="wFhttam41GRm" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="UiHr8cAebdRG" name="UI Module"/>
+        <UML:Class visibility="public" isSpecification="false" namespace="wFhttam41GRm" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="aHPkOqCxGOr3" name="Input Module"/>
        </UML:Namespace.ownedElement>
       </UML:Package>
      </UML:Namespace.ownedElement>
@@ -48,7 +49,7 @@
         <messages/>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="power on sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="684" canvaswidth="1831" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5mslO8aMCbyH" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="power on sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="490" canvaswidth="804" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5mslO8aMCbyH" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
         <widgets>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1825" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="SAwjeHWyn6Gu" width="50" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="P1Eqapvczaor" height="25" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1525" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="FTkvq0InBCq3" width="108" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="25" drawasactor="0"/>
@@ -61,7 +62,7 @@
          <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="WlhKAvWDNZoC" textid="IGoJvzX192JX" operation="Power button" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1799" showstereotype="1" y="122" widgetaid="SAwjeHWyn6Gu" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="7Rzz0VFKOd9i" width="160" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="G2JJk0RmrDbh" height="8" sequencemessagetype="1001">
           <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1716" showstereotype="1" y="105" text="Power button" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="KYB3X2TeM7v1" pretext="" role="704" width="73" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="IGoJvzX192JX" height="17"/>
          </messagewidget>
-         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="FTkvq0InBCq3" textid="qaU9GdUsyVFi" operation="Setup()" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1637" showstereotype="1" y="132" widgetaid="WlhKAvWDNZoC" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="k2DOfglOhQZN" width="165" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="Ezxae8FT4F61" height="20" sequencemessagetype="1001">
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="FTkvq0InBCq3" textid="qaU9GdUsyVFi" operation="Setup()" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1637" showstereotype="1" y="132" widgetaid="WlhKAvWDNZoC" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="k2DOfglOhQZN" width="165" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="Ezxae8FT4F61" height="8" sequencemessagetype="1001">
           <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1523" showstereotype="1" y="115" text="Setup()" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="aajOsSsK8Fey" pretext="" role="704" width="44" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="qaU9GdUsyVFi" height="17"/>
          </messagewidget>
          <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="2yDneYmO1byy" textid="uAeD3GFqmEFg" operation="Initialize song database" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1471" showstereotype="1" y="336" widgetaid="FTkvq0InBCq3" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="gt7lkPDXqRtJ" width="273" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="vWucZeCidx0Z" height="94" sequencemessagetype="1000">
@@ -75,6 +76,59 @@
          </messagewidget>
          <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="jvXfelSf3S0F" textid="3dQJKq7zYwuP" operation="Display Main Menu" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1471" showstereotype="1" y="449" widgetaid="FTkvq0InBCq3" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="iecvuqycfqUb" width="149" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="aJOdXqZO7VcW" height="46" sequencemessagetype="1000">
           <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1431" showstereotype="1" y="432" text="Display Main Menu" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="YoFDYlO4CZBG" pretext="" role="704" width="96" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="3dQJKq7zYwuP" height="17"/>
+         </messagewidget>
+        </messages>
+        <associations/>
+       </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="general input sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="315" canvaswidth="477" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="3CC8KigBcsTW" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+        <widgets>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-925" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="bbUjcgmButvh" width="108" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="25" drawasactor="0"/>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1009" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="gLES5Rcf1i6z" width="50" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="P1Eqapvczaor" height="25" drawasactor="0"/>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-590" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="sKEMMXSuupck" width="58" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="0MpbnXeKxWLw" height="25" drawasactor="0"/>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-753" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="eOGVEAMHBFuF" width="89" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="aHPkOqCxGOr3" height="25" drawasactor="0"/>
+        </widgets>
+        <messages>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="sKEMMXSuupck" textid="FuEmN23RjJgA" operation="Press button" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-983" showstereotype="1" y="138" widgetaid="gLES5Rcf1i6z" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="j0gKXMbIGIyn" width="421" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="ctUz7eShNpaH" height="8" sequencemessagetype="1001">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-635" showstereotype="1" y="121" text="Press button" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="HB8sTqWm7zfd" pretext="" role="704" width="69" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="FuEmN23RjJgA" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="eOGVEAMHBFuF" textid="DhnrKJaFsLZo" operation="pollInput()" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-871" showstereotype="1" y="168" widgetaid="bbUjcgmButvh" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="qCqdQL2A5Csg" width="171" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="JQWvcHhcuOnQ" height="152" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-803" showstereotype="1" y="151" text="pollInput()" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="LHqttklDpWvy" pretext="" role="704" width="58" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="DhnrKJaFsLZo" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="sKEMMXSuupck" textid="oRELjEFoyLE3" operation="get pin states" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-708" showstereotype="1" y="206" widgetaid="eOGVEAMHBFuF" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="ib6DfTKbBBVg" width="155" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="bMybiFqxEZJ6" height="83" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-649" showstereotype="1" y="189" text="get pin states" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="Qqx5jXVaFbmR" pretext="" role="704" width="74" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="oRELjEFoyLE3" height="17"/>
+         </messagewidget>
+        </messages>
+        <associations/>
+       </diagram>
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="play button sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="661" canvaswidth="1022" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="Eh3zPWRbAdla" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+        <widgets>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1050" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="a0pgIEo0qvFo" width="89" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="aHPkOqCxGOr3" height="25" drawasactor="0"/>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-636" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="ou0DqcTV6Vin" width="74" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UiHr8cAebdRG" height="25" drawasactor="0"/>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-856" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="CbwOAB6NH1aC" width="110" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="QJjddjtHvVbK" height="25" drawasactor="0"/>
+         <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-424" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="tL2jIM9ah6to" width="58" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="0MpbnXeKxWLw" height="25" drawasactor="0"/>
+         <combinedFragmentwidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1150" showstereotype="1" y="148" font="Sans Serif,9,-1,0,50,0,0,0,0,0" CombinedFragmenttype="7" localid="A4nU6MWObSNJ" combinedFragmentname="menuView - new song" width="809" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="nH5gInJybDyd" documentation="" height="513">
+          <floatingdashlinewidget linecolor="none" usesdiagramfillcolor="1" maxY="661" minY="148" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1150" showstereotype="1" y="330" text="menuView - select item" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="TsI7LnIRZ9BE" width="809" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="KzR4PkGLUssN" height="20"/>
+          <floatingdashlinewidget linecolor="none" usesdiagramfillcolor="0" maxY="661" minY="148" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1150" showstereotype="1" y="545" text="songView" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="b9qf56PLxPCx" width="809" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="3MOSmoiBpRxV" height="20"/>
+         </combinedFragmentwidget>
+        </widgets>
+        <messages>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="CbwOAB6NH1aC" textid="FMMHSPL3fG1L" operation="getSongInfo()" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1005" showstereotype="1" y="188" widgetaid="a0pgIEo0qvFo" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="LD7TYmWjs2GT" width="212" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="7aDKzgvqdTj8" height="41" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-911" showstereotype="1" y="171" text="getSongInfo()" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="Kmbfb3Dk5Ahf" pretext="" role="704" width="76" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="FMMHSPL3fG1L" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="ou0DqcTV6Vin" textid="wEASlPKZEEj2" operation="changeToSongView(SongInfo)" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1005" showstereotype="1" y="231" widgetaid="a0pgIEo0qvFo" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="yyA3kq3IZMEo" width="414" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="aIuX0pqvoyeM" height="43" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-784" showstereotype="1" y="214" text="changeToSongView(SongInfo)" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="giGilSkCbi2j" pretext="" role="704" width="151" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="wEASlPKZEEj2" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="tL2jIM9ah6to" textid="0y3NaJ4n0j0J" operation="play song" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1005" showstereotype="1" y="278" widgetaid="a0pgIEo0qvFo" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="L8xEYKQNB5Et" width="618" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="ivKGXQiP512K" height="34" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-474" showstereotype="1" y="261" text="play song" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="JODJh4pYm70k" pretext="" role="704" width="54" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="0y3NaJ4n0j0J" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="CbwOAB6NH1aC" textid="snDLwTke9uwG" operation="getSubItems()" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1005" showstereotype="1" y="362" widgetaid="a0pgIEo0qvFo" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="3CoEDadTpOn6" width="212" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="M2uZtUXsuy21" height="58" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-900" showstereotype="1" y="345" text="getSubItems()" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="GyxJIUwFwG9r" pretext="" role="704" width="77" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="snDLwTke9uwG" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="ou0DqcTV6Vin" textid="rcderwAXTduh" operation="changeMenu(Items)" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1005" showstereotype="1" y="434" widgetaid="a0pgIEo0qvFo" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="FfALMan3TAzt" width="414" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="paLnX0Lqc7sp" height="53" sequencemessagetype="1000">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-715" showstereotype="1" y="417" text="changeMenu(Items)" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="oJUo8uoIzQEz" pretext="" role="704" width="104" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="rcderwAXTduh" height="17"/>
+         </messagewidget>
+         <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="tL2jIM9ah6to" textid="JkAWDODzlSGa" operation="pause or resume song" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1004" showstereotype="1" y="587" widgetaid="a0pgIEo0qvFo" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="N5qlrlzopE1L" width="608" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="DC155eSsDugp" height="8" sequencemessagetype="1001">
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-514" showstereotype="1" y="570" text="pause or resume song" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="mi0d9kTz5ObV" pretext="" role="704" width="114" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="JkAWDODzlSGa" height="17"/>
          </messagewidget>
         </messages>
         <associations/>
@@ -264,7 +318,7 @@
      </UML:Namespace.ownedElement>
      <XMI.extension xmi.extender="umbrello">
       <diagrams>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="use case diagram" font="Noto Sans,10,-1,0,50,0,0,0,0,0" canvasheight="703" canvaswidth="622" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="84" xmi.id="5yCvZXVjVAFT" documentation="" showscope="1" snapgrid="1" showatts="1" type="2">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="use case diagram" font="Noto Sans,10,-1,0,50,0,0,0,0,0" canvasheight="703" canvaswidth="622" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="84" xmi.id="5yCvZXVjVAFT" documentation="" showscope="1" snapgrid="1" showatts="1" type="2">
         <widgets>
          <actorwidget width="77" showstereotype="1" x="-1625" usesdiagramusefillcolor="0" y="-725" usesdiagramfillcolor="0" isinstance="0" localid="1PaLV3ua04TZ" fillcolor="#ffff00" height="77" linecolor="none" xmi.id="SjuoyGBkglde" textcolor="#000000" usefillcolor="1" linewidth="0" font="Noto Sans,10,-1,0,50,0,0,0,0,0"/>
          <usecasewidget width="167" showstereotype="1" x="-1500" usesdiagramusefillcolor="0" y="-775" usesdiagramfillcolor="0" isinstance="0" localid="yg6D9QOqtKA7" fillcolor="#ffff00" height="53" linecolor="none" xmi.id="bR4bVWA4VQ9a" textcolor="#000000" usefillcolor="1" linewidth="0" font="Noto Sans,10,-1,0,50,0,0,0,0,0"/>
@@ -450,7 +504,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="5yCvZXVjVAFT" uniqueid="3dQJKq7zYwuP" documentation=""/>
+  <docsettings viewid="Eh3zPWRbAdla" uniqueid="JkAWDODzlSGa" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component View"/>
@@ -471,10 +525,13 @@
       <listitem open="1" type="829" id="A0fW0JUROHMM"/>
       <listitem open="1" type="829" id="07LWG0VdpcNc"/>
      </listitem>
-     <listitem open="0" type="803" id="wFhttam41GRm">
+     <listitem open="1" type="803" id="wFhttam41GRm">
+      <listitem open="0" type="810" id="3CC8KigBcsTW" label="general input sequence diagram"/>
+      <listitem open="0" type="813" id="aHPkOqCxGOr3"/>
       <listitem open="1" type="813" id="5f2b9Vc7ujOP"/>
       <listitem open="0" type="813" id="yyJQIQsvv05J"/>
       <listitem open="0" type="813" id="QJjddjtHvVbK"/>
+      <listitem open="0" type="810" id="Eh3zPWRbAdla" label="play button sequence diagram"/>
       <listitem open="0" type="810" id="5mslO8aMCbyH" label="power on sequence diagram"/>
       <listitem open="1" type="813" id="0MpbnXeKxWLw"/>
       <listitem open="0" type="813" id="UiHr8cAebdRG"/>
