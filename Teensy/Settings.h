@@ -5,9 +5,13 @@
 #include <SPI.h>
 #include <font_Arial.h>
 #include <font_ArialBold.h>
-#include <ILI9341_t3.h>
+#include "UIHandler.h"
 
 SdFat SD;
+UIHandler ui;
+DatabaseHandler db;
+AudioHandler audio;
+InputHandler input;
 
 #define SD_CS_PIN SS
 
@@ -30,41 +34,5 @@ SdFat SD;
 #define TFT_MOSI     7
 #define TFT_SCLK    14
 #define TFT_MISO    12
-
-uint16_t PREVIOUS_SONG_DELAY = 1000;
-uint32_t lastInterrupt = 0;
-bool songView = false;
-bool longPress = false;
-
-String previousSong, nextSong, previousMenu, nextMenu, previousItem, nextItem, selectedItem;
-
-typedef enum MenuTypeEnum {
-	MAIN_MENU,
-	ARTIST_MENU,
-	ARTIST_ALBUM_MENU,
-	ARTIST_SONG_MENU,
-	ALBUM_MENU,
-	ALBUM_SONG_MENU,
-	SONG_MENU,
-	SETTINGS_MENU
-} MenuType;
-
-bool checkForInput();
-int getInput();
-// void eraseScreen();
-// void printToScreen(String s);
-void displayMenu(MenuType menu);
-bool songDatabaseExists();
-void buildSongDatabase();
-void rebuildSongDatabase();
-void playNewSong(String s);
-void stopPlaying();
-void pauseSong();
-void restartCurrentSong();
-void changeMenu(String s);
-void changeToMenuView();
-void changeToMenuView(String s);
-void changeToSongView();
-bool exists(String s);
 
 #endif
