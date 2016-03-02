@@ -1,8 +1,6 @@
 #ifndef INPUTHANDLER_H
 #define INPUTHANDLER_H
 
-#include <string>
-
 class InputHandler
 {
 public:

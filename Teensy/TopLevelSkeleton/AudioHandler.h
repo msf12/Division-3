@@ -1,7 +1,6 @@
 #ifndef AUDIOHANDLER_H
 #define AUDIOHANDLER_H
 
-#include <string>
 #include <Audio.h>
 #include <SerialFlash.h>
 #include <Wire.h>
@@ -29,7 +28,7 @@ public:
 	virtual ~AudioHandler ()
 	{}
 
-	bool playSong (string songPath)
+	bool playSong (String songPath)
 	{
 	}
 

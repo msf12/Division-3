@@ -5,6 +5,9 @@
 #include <SPI.h>
 #include <font_Arial.h>
 #include <font_ArialBold.h>
+#include "AudioHandler.h"
+#include "DatabaseHandler.h"
+#include "InputHandler.h"
 #include "UIHandler.h"
 
 SdFat SD;
@@ -34,5 +37,9 @@ InputHandler input;
 #define TFT_MOSI     7
 #define TFT_SCLK    14
 #define TFT_MISO    12
+
+typedef struct {
+	
+} SongInfo;
 
 #endif

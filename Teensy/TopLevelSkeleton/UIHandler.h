@@ -1,8 +1,6 @@
 #ifndef UIHANDLER_H
 #define UIHANDLER_H
 
-#include <string>
-
 class UIHandler
 {
 private:
@@ -19,13 +17,13 @@ public:
 	virtual ~UIHandler()
 	{}
 
-	bool songView(SongInfo newSong)
-	{
-	}
+	// bool songView(SongInfo newSong)
+	// {
+	// }
 
-	bool changeMenu(DoublyLinkedList menuItems)
-	{
-	}
+	// bool changeMenu(DoublyLinkedList menuItems)
+	// {
+	// }
 
 	bool clearScreen()
 	{
@@ -34,7 +32,7 @@ public:
 		return true;
 	}
 
-	bool printToScreen(string s)
+	bool printToScreen(String s)
 	{
 		tft.println(s);
 		return true;
