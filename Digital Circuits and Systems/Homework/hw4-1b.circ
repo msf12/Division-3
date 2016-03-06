@@ -21,7 +21,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="g(A, B, C, D)"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -54,23 +54,27 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
+  <circuit name="g(A, B, C, D)">
+    <a name="circuit" val="g(A, B, C, D)"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(60,100)" to="(120,100)"/>
     <wire from="(60,110)" to="(120,110)"/>
+    <wire from="(160,110)" to="(170,110)"/>
+    <wire from="(200,110)" to="(210,110)"/>
     <wire from="(110,120)" to="(120,120)"/>
     <wire from="(70,120)" to="(80,120)"/>
     <wire from="(60,110)" to="(60,120)"/>
     <wire from="(60,100)" to="(60,110)"/>
     <wire from="(70,80)" to="(70,90)"/>
     <wire from="(140,130)" to="(140,160)"/>
-    <wire from="(160,110)" to="(180,110)"/>
     <wire from="(70,90)" to="(120,90)"/>
     <wire from="(70,90)" to="(70,120)"/>
     <comp lib="1" loc="(110,120)" name="NOT Gate"/>
+    <comp lib="6" loc="(254,115)" name="Text">
+      <a name="text" val="g(A, B, C, D)"/>
+    </comp>
     <comp lib="0" loc="(70,80)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
@@ -86,8 +90,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="2" loc="(160,110)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
-    <comp lib="6" loc="(215,114)" name="Text">
-      <a name="text" val="f(A, B, C, D)"/>
-    </comp>
+    <comp lib="1" loc="(200,110)" name="NOT Gate"/>
   </circuit>
 </project>

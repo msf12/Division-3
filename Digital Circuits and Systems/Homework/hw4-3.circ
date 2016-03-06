@@ -5,7 +5,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -53,29 +59,39 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(110,120)" to="(120,120)"/>
-    <wire from="(110,90)" to="(120,90)"/>
-    <wire from="(100,90)" to="(110,90)"/>
-    <wire from="(100,100)" to="(100,110)"/>
-    <wire from="(100,110)" to="(100,120)"/>
-    <wire from="(140,130)" to="(140,160)"/>
-    <wire from="(100,100)" to="(120,100)"/>
-    <wire from="(100,110)" to="(120,110)"/>
-    <wire from="(160,110)" to="(180,110)"/>
-    <wire from="(110,90)" to="(110,120)"/>
-    <comp lib="2" loc="(160,110)" name="Multiplexer">
-      <a name="select" val="2"/>
+    <wire from="(70,40)" to="(100,40)"/>
+    <wire from="(40,120)" to="(100,120)"/>
+    <wire from="(40,20)" to="(100,20)"/>
+    <wire from="(80,60)" to="(80,100)"/>
+    <wire from="(70,40)" to="(70,80)"/>
+    <wire from="(80,100)" to="(100,100)"/>
+    <wire from="(150,30)" to="(170,30)"/>
+    <wire from="(150,110)" to="(170,110)"/>
+    <wire from="(70,80)" to="(150,80)"/>
+    <wire from="(140,30)" to="(150,30)"/>
+    <wire from="(140,110)" to="(150,110)"/>
+    <wire from="(80,60)" to="(150,60)"/>
+    <wire from="(150,30)" to="(150,60)"/>
+    <wire from="(150,80)" to="(150,110)"/>
+    <comp lib="6" loc="(31,124)" name="Text">
+      <a name="text" val="1"/>
     </comp>
-    <comp lib="0" loc="(100,90)" name="Power"/>
-    <comp lib="0" loc="(100,120)" name="Ground"/>
-    <comp lib="6" loc="(221,114)" name="Text">
-      <a name="text" val="f(A, B, C, D)"/>
+    <comp lib="6" loc="(181,116)" name="Text">
+      <a name="text" val="1"/>
     </comp>
-    <comp lib="0" loc="(140,160)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="B D"/>
+    <comp lib="6" loc="(180,35)" name="Text">
+      <a name="text" val="0"/>
+    </comp>
+    <comp lib="6" loc="(31,24)" name="Text">
+      <a name="text" val="1"/>
+    </comp>
+    <comp lib="1" loc="(140,110)" name="NAND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(140,30)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>

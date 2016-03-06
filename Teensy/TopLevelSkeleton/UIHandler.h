@@ -8,9 +8,8 @@ private:
 
 public:
 
-	UIHandler()
+	UIHandler() : tft(TFT_CS, TFT_DC, TFT_RST, TFT_MOSI, TFT_SCLK, TFT_MISO)
 	{
-		tft = ILI9341_t3(TFT_CS, TFT_DC, TFT_RST, TFT_MOSI, TFT_SCLK, TFT_MISO);
 		tft.begin();
 	}
 
@@ -41,7 +40,9 @@ public:
 	bool setup()
 	{
 		tft.setTextColor(ILI9341_BLACK);
+		tft.setTextSize(2);
 		clearScreen();
+		return true;
 	}
 
 };

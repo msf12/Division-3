@@ -2,14 +2,14 @@
 
 void setup()
 {
-// 	while(!Serial);
-// 	ui.setup();
-// 	ui.printToScreen("Screen connected");
+	while(!Serial);
+	ui.setup();
+	ui.printToScreen("Screen connected");
 	
-// 	ui.printToScreen("Building song database");
-// 	db.setup();
+	ui.printToScreen("Building song database");
+	db.setup();
 
-// 	ui.printToScreen("Initializing audio device");
+	ui.printToScreen("Initializing audio device");
 // 	audio.setup();
 	
 // 	ui.printToScreen("Preparing user input");

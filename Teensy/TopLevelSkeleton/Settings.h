@@ -1,21 +1,6 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
-#include <SdFat.h>
-#include <SPI.h>
-#include <font_Arial.h>
-#include <font_ArialBold.h>
-#include "AudioHandler.h"
-#include "DatabaseHandler.h"
-#include "InputHandler.h"
-#include "UIHandler.h"
-
-SdFat SD;
-UIHandler ui;
-DatabaseHandler db;
-AudioHandler audio;
-InputHandler input;
-
 #define SD_CS_PIN SS
 
 //User Input pins
@@ -38,8 +23,26 @@ InputHandler input;
 #define TFT_SCLK    14
 #define TFT_MISO    12
 
+#include <SdFat.h>
+SdFat SD;
+
+#include <SPI.h>
+#include <font_Arial.h>
+#include <font_ArialBold.h>
+#include "DoublyLinkedList.h"
+
 typedef struct {
 	
 } SongInfo;
+
+// #include "AudioHandler.h"
+#include "DatabaseHandler.h"
+// #include "InputHandler.h"
+#include "UIHandler.h"
+
+UIHandler ui;
+DatabaseHandler db;
+// AudioHandler audio;
+// InputHandler input;
 
 #endif
