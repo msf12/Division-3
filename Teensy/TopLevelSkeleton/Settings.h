@@ -35,6 +35,16 @@ typedef struct {
 	
 } SongInfo;
 
+//MenuNavigationDirection represents whether the menu is traversed upwards or downwards
+//This is passed to the UIHandler with a menu item to display
+//The UIHandler adjusts its internal DoublyLinkedList of menu items appropriately
+//adding the new item at the head or tail, updating the display, and removing the hidden item
+enum MenuNavigationDirection
+{
+	UP,
+	DOWN
+};
+
 // #include "AudioHandler.h"
 #include "DatabaseHandler.h"
 // #include "InputHandler.h"

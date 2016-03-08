@@ -45,6 +45,29 @@ public:
 		return true;
 	}
 
+	bool newMenu(DoublyLinkedList<String> newItems)
+	{
+		//todo: replace current internal list with visible elements of new list
+		return false;
+	}
+
+	bool scrollMenu(MenuNavigationDirection navDirect)
+	{
+		//todo: update highlighted menu item
+		//this method is called in the case where the menu is navigated in a direction
+		//and there are no more elements to display in that direction
+		return false;
+	}
+
+	bool scrollMenu(MenuNavigationDirection navDirect, String newItem)
+	{
+		//todo: add newItem to tail of visible items if navDirect == DOWN or
+		//to head if navDirect == UP
+		//update display (center item remains highlighted)
+		//remove hidden item from list of visible items
+		return false;
+	}
+
 };
 
 #endif // UIHANDLER_H
