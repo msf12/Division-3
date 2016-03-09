@@ -1,5 +1,12 @@
 #include "Settings.h"
 
+/*
+TODO:
+store info of currently displayed files
+main menu?
+interpret and handle inputs
+*/
+
 void setup()
 {
 	while(!Serial);

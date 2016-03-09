@@ -46,40 +46,59 @@ public:
 		String currDir = "/Music/";
 		SD.chdir(currDir.c_str());
 
-		//SD.vwd() returns an SdBaseFile
-		//Thus I should be able to iterate through subdirectories recursively using the directory file as a parameter
-		//This will take time and memory so it should only be run if the database is not currently populated or if the user says to
-		//This requires a "Rebuild Song Database" option in the main menu
-		//In the future this should be modified to determine the delta between the database and the filesystem and adjust appropriately
-		/*
-		while(tempFile.openNext(baseFileOfDir,O_READ))
-		{
-			if(tempFile.isSong())
-			{
-				songs.println(songTitle);
-				albums.println(albumTitle + \t + songTitle);
-				artists.println(artist + \t + albumTitle);
-			}
-			else //tempFile is dir
-			{
-				recur(tempFile)
-			}
-		}
-		*/
-
-		SdFile file;
-
-		while(file.openNext(SD.vwd(),O_READ))
-		{
-			static char fileName[250];
-			static char *fileNamePtr;
-			file.getName(fileName,250);
-			fileNamePtr = new char[strlen(fileName)+1];
-			strcpy(fileNamePtr,fileName);
-			artistsIndex.println(*fileNamePtr);
-		}
+		populateTempFiles(SD.vwd());
+		sortDatabase();
 
 		return true;
+	}
+
+private:
+
+	//SD.vwd() returns an SdBaseFile
+	//Thus I should be able to iterate through subdirectories recursively using the directory file as a parameter
+	//This will take time and memory so it should only be run if the database is not currently populated or if the user says to
+	//This requires a "Rebuild Song Database" option in the main menu
+	//In the future this should be modified to determine the delta between the database and the filesystem and adjust appropriately
+	/*
+	while(tempFile.openNext(baseFileOfDir,O_READ))
+	{
+		if(tempFile.isSong())
+		{
+			songs.println(songTitle);
+			albums.println(albumTitle + \t + songTitle);
+			artists.println(artist + \t + albumTitle);
+		}
+		else //tempFile is dir
+		{
+			recur(tempFile)
+		}
+	}
+	*/
+	bool populateTempFiles(SdFile directory, String path = "")
+	{
+		SdFile file;
+		while(file.openNext(directory,O_READ))
+		{
+			static char fileName[250];
+
+			if(!file.isDir())
+			{
+
+				// songs.println(songTitle + \t + path + *fileNamePtr);
+				// albums.println(albumTitle + \t + songTitle);
+				// artists.println(artist + \t + albumTitle);
+			}
+			else
+			{
+				populateTempFiles(file, (path + fileName))
+			}
+		}
+		return true;
+	}
+
+	bool sortDatabase()
+	{
+		
 	}
 
 };
