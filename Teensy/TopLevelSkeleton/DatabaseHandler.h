@@ -49,7 +49,11 @@ public:
 		SD.chdir(currDir.c_str());
 
 		populateTempFiles(SD.vwd());
-		sortDatabase();
+		sortDatabase(artists);
+		createIndexTable(artists,artistsIndex);
+		sortDatabase(albums);
+		createIndexTable(albums,albumsIndex);
+		sortDatabase(songs);
 
 		return true;
 	}
@@ -101,19 +105,12 @@ private:
 		return true;
 	}
 
-	bool sortDatabase()
+	bool sortDatabase(SdFile &database)
 	{
-		//TODO: sort artists
-		//TODO: create artist indexing table
-		//TODO: sort albums
-		//TODO: create album indexing table
-		//TODO: sort songs
-
 		//PSEUDOCODE
 
-		SdFile file; //file is the current master database file (EX. artists)
-		uint8_t tempCount = 0; //count of temporary database files created from the contents of file
-		ifstream fin(file); //input stream for reading from file
+		uint8_t tempCount = 0; //count of temporary database files created from the contents of database
+		ifstream fin(database); //input stream for reading from database
 		/*
 		usage example
 
@@ -137,7 +134,7 @@ private:
 		}
 		*/
 
-		//LOOP: for the entirety of file
+		//LOOP: for the entirety of database
 		while(fin.getline())
 		{
 			//Struct is a placeholder name for a struct holding a single term and a single associated piece of information (EX. album - song)
@@ -188,9 +185,15 @@ private:
 				tempCount-1;
 			}
 		}
-		//create index file on the final merge
 		//manually merge into new artists.db file
-		//create artistsIndex.db after each artist is done
+	}
+
+	bool createIndexTable(SdFile &database, SdFile &indexfile)
+	{
+		//LOOP: loop through database using ifstream
+		//REFERENCE: tellg and seekg in ifstream get and seek to locations in files
+		String field = line.substring(0,line.firstIndexOf('\t'));
+		indexfile.println(field + '\t' + ifstream::tellg());
 	}
 
 };
