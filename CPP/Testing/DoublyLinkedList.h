@@ -254,21 +254,11 @@ public:
 		tail = nullptr;
 	}
 
-	iterator begin()
-	{
-		return iterator(head);
-	}
-
-	iterator end()
-	{
-		return iterator(tail);
-	}
-
 	class iterator
 	{
-		Node* node;
+		Node *node;
 		public:
-		iterator(Node n) : node(n) {}
+		iterator(Node *n) : node(n) {}
 		
 		iterator& operator++()
 		{
@@ -293,12 +283,32 @@ public:
 			return node!=rhs.node;
 		}
 		
-		int& operator*()
+		Data& operator*()
 		{
-			return *node;
+			return node->data;
+		}
+
+		iterator next()
+		{
+			return iterator(node->next);
+		}
+
+		bool isNull()
+		{
+			return node == nullptr;
 		}
 		
 	};
+
+	iterator begin()
+	{
+		return iterator(head);
+	}
+
+	iterator end()
+	{
+		return iterator(tail);
+	}
 
 };
 #endif

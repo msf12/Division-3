@@ -2,12 +2,17 @@ import random, string
 
 f = open("test.db","w")
 a = []
-for x in range(0,5000):
-	field1 = ''.join(random.choice(['a','b','c','d','e','f']) for i in range(4))
+for x in range(1,5000):
+	field1 = ''.join(random.choice(['a','b','c','d','e']) for i in range(4))
 	field2 = ''.join(random.choice(string.ascii_lowercase) for i in range(random.choice([7,8,9,10,11])))
 	s = field1 + "\t" + field2 + "\n"
 	a.append(field1)
 	f.write(s)
+field1 = ''.join(random.choice(['a','b','c','d','e']) for i in range(4))
+field2 = ''.join(random.choice(string.ascii_lowercase) for i in range(random.choice([7,8,9,10,11])))
+s = field1 + "\t" + field2
+a.append(field1)
+f.write(s)
 a.sort()
 wordcount={}
 
