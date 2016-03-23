@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <cstdio>
 #include "DoublyLinkedList.h"
 
 #define LINE_BUFFER_SIZE 50
@@ -25,6 +26,8 @@ int splitDatabase(string &database, const char delim = '\t', const char conn = '
 //merges two files
 //eliminates duplicate entries by comparing substrings up to the first occurance of delim
 //then combines the lines after delim by concatenating with conn
-bool mergeFiles(const string &f1, const string &f2, const char delim = '\t', const char conn = ',');
+//returns a reference to the mergeCount for use by larger programs can update it
+//so that mergeFiles will not overwrite externally created merge files
+int& mergeFiles(const string &f1, const string &f2, const char delim = '\t', const char conn = ',');
 
 #endif

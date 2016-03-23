@@ -1,26 +1,34 @@
 #include "DatabaseCodeTesting2.h"
 
-using std::string; using std::to_string; using std::cout; using std::endl; using std::ifstream; using std::ofstream;
+using std::string; using std::to_string; using std::cout; using std::endl; using std::ifstream; using std::ofstream; using std::fstream;
 
 //splits the database into temp files and then merges the files in pairs
 //takes optional arguments for primary field delimiter and secondary field list separators
 bool sortDatabase(string database, const char delim, const char conn)
 {
 	const int tempFileCount = splitDatabase(database,delim,conn);
-	int mergeFileCount = 0;
+	int mergeFileCount;
 	for (int i = 0; i < tempFileCount-1; i+=2)
 	{
-		mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn);
+		mergeFileCount = mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn);
+		std::remove((string("temp")+to_string(i)+".db").c_str());
+		std::remove((string("temp")+to_string(i+1)+".db").c_str());
 	}
 
 	//if there are an odd number of temporary files
-	//merge the remaining file with the final merged file
-	//this merge file will always have the name merge[tempFileCount/2-1].db
+	//rename the final temporary file to a merge file for automated merging later
+	//this merge file will always have the name merge[tempFileCount/2].db
 	//this results from every pair of temp files being merged (tempFileCount/2 merge files)
-	//and -1 because the file names start at 0 
+	//and file names starting at merge0.db 
 	if(tempFileCount%2)
 	{
-		mergeFiles(string("temp")+to_string(tempFileCount-1)+".db",string("merge")+to_string(tempFileCount/2-1)+".db");
+		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),(string("merge")+to_string(mergeFileCount++)+".db").c_str());
+	}
+	for (int i = 0; i < mergeFileCount-1; i+=2)
+	{
+		mergeFileCount = mergeFiles(string("merge")+to_string(i)+".db",string("merge")+to_string(i+1)+".db",delim,conn);
+		// std::remove((string("merge")+to_string(i)+".db").c_str());
+		// std::remove((string("merge")+to_string(i+1)+".db").c_str());
 	}
 
 	return true;
@@ -92,7 +100,11 @@ int splitDatabase(string &database, const char delim, const char conn)
 //merges two files
 //eliminates duplicate entries by comparing substrings up to the first occurance of delim
 //then combines the lines after delim by concatenating with conn
-bool mergeFiles(const string &f1, const string &f2, const char delim, const char conn)
+//returns a reference to the mergeCount for use by larger programs can update it
+//so that mergeFiles will not overwrite externally created merge files
+//note that mergeCount is equal to the number in the current merge file upon function start
+//and is off by 1 upon function completion
+int& mergeFiles(const string &f1, const string &f2, const char delim, const char conn)
 {
 	static int mergeCount = 0;
 	ifstream file1(f1), file2(f2);
@@ -195,7 +207,7 @@ bool mergeFiles(const string &f1, const string &f2, const char delim, const char
 	file2.close();
 	mergedFile.close();
 
-	return true;
+	return mergeCount;
 }
 
 int main(int argc, char const *argv[])
