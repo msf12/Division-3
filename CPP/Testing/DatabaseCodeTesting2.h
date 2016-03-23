@@ -25,6 +25,6 @@ int splitDatabase(string &database, const char delim = '\t', const char conn = '
 //merges two files
 //eliminates duplicate entries by comparing substrings up to the first occurance of delim
 //then combines the lines after delim by concatenating with conn
-bool mergeFiles(const string &file1, const string &file2, const char delim = '\t', const char conn = ',');
+bool mergeFiles(const string &f1, const string &f2, const char delim = '\t', const char conn = ',');
 
 #endif
