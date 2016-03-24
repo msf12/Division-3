@@ -28,6 +28,6 @@ int splitDatabase(string &database, const char delim = '\t', const char conn = '
 //then combines the lines after delim by concatenating with conn
 //returns a reference to the mergeCount for use by larger programs can update it
 //so that mergeFiles will not overwrite externally created merge files
-int& mergeFiles(const string &f1, const string &f2, const char delim = '\t', const char conn = ',');
+int& mergeFiles(const string &f1, const string &f2, const char delim = '\t', const char conn = ',', string mergeFileName = "merge.db");
 
 #endif

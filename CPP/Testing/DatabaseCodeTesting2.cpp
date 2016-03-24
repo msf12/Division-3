@@ -2,15 +2,18 @@
 
 using std::string; using std::to_string; using std::cout; using std::endl; using std::ifstream; using std::ofstream; using std::fstream;
 
+//----> TODO: change mergeFiles to take a string for the merged file name <----
+//----> TODO: move mergeCount to sortDatabase <----
+
 //splits the database into temp files and then merges the files in pairs
 //takes optional arguments for primary field delimiter and secondary field list separators
 bool sortDatabase(string database, const char delim, const char conn)
 {
 	const int tempFileCount = splitDatabase(database,delim,conn);
-	int* mergeFileCount;
+	int mergeCount = 0;
 	for (int i = 0; i < tempFileCount-1; i+=2)
 	{
-		mergeFileCount = &mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn);
+		mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn,string("merge")+to_string(mergeCount++)+".db");
 		std::remove((string("temp")+to_string(i)+".db").c_str());
 		std::remove((string("temp")+to_string(i+1)+".db").c_str());
 	}
@@ -22,17 +25,17 @@ bool sortDatabase(string database, const char delim, const char conn)
 	//and file names starting at merge0.db 
 	if(tempFileCount%2)
 	{
-		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),(string("merge")+to_string((*mergeFileCount)++)+".db").c_str());
+		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),(string("merge")+to_string(mergeCount++)+".db").c_str());
 	}
 
-	for (int i = 0; i < (*mergeFileCount)-1; i+=2)
+	for (int i = 0; i < mergeCount-1; i+=2)
 	{
-		mergeFileCount = &mergeFiles(string("merge")+to_string(i)+".db",string("merge")+to_string(i+1)+".db",delim,conn);
+		mergeFiles(string("merge")+to_string(i)+".db",string("merge")+to_string(i+1)+".db",delim,conn,string("merge")+to_string(mergeCount++)+".db");
 		std::remove((string("merge")+to_string(i)+".db").c_str());
 		std::remove((string("merge")+to_string(i+1)+".db").c_str());
 	}
 
-	std::rename((string("merge")+to_string((*mergeFileCount)-1)+".db").c_str(),(database.substr(0,database.find('.')) + "sorted.db").c_str());
+	std::rename((string("merge")+to_string(mergeCount-1)+".db").c_str(),(database.substr(0,database.find('.')) + "sorted.db").c_str());
 
 	return true;
 }
@@ -105,11 +108,11 @@ int splitDatabase(string &database, const char delim, const char conn)
 //so that mergeFiles will not overwrite externally created merge files
 //note that mergeCount is equal to the number in the current merge file upon function start
 //and is off by 1 upon function completion
-int& mergeFiles(const string &f1, const string &f2, const char delim, const char conn)
+int& mergeFiles(const string &f1, const string &f2, const char delim, const char conn, string mergeFileName)
 {
 	static int mergeCount = 0;
 	ifstream file1(f1), file2(f2);
-	ofstream mergedFile(string("merge") + to_string(mergeCount++) + ".db");
+	ofstream mergedFile(mergeFileName);
 	char buffer1[LINE_BUFFER_SIZE], buffer2[LINE_BUFFER_SIZE];
 	string line1 = "", line2 = "";
 
