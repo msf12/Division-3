@@ -1,8 +1,8 @@
 db = open("test.db")
-f = open("merge12.db")
+f = open("testsorted.db")
 
-s = set([line[0:4] for line in db])
-s2 = set([line[0:4] for line in f])
+s = set([line[0:line.index('\t')] for line in db])
+s2 = set([line[0:line.index('\t')] for line in f])
 
 # print(s2)
 # print()
@@ -12,9 +12,9 @@ print(s^s2)
 
 # testset = set([])
 
-# for i in range(25,28,2):
-# 	f1 = open("temp"+str(i)+".db")
+# for i in range(0,8):
+# 	f1 = open("merge"+str(i)+".db")
 
-# 	testset = testset | set(line[0:4] for line in f1)
+# 	testset = testset | set(line[0:line.index('\t')] for line in f1)
 
 # print(s^testset)

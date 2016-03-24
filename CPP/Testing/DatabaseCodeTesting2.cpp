@@ -7,10 +7,10 @@ using std::string; using std::to_string; using std::cout; using std::endl; using
 bool sortDatabase(string database, const char delim, const char conn)
 {
 	const int tempFileCount = splitDatabase(database,delim,conn);
-	int mergeFileCount;
+	int* mergeFileCount;
 	for (int i = 0; i < tempFileCount-1; i+=2)
 	{
-		mergeFileCount = mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn);
+		mergeFileCount = &mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn);
 		std::remove((string("temp")+to_string(i)+".db").c_str());
 		std::remove((string("temp")+to_string(i+1)+".db").c_str());
 	}
@@ -22,14 +22,17 @@ bool sortDatabase(string database, const char delim, const char conn)
 	//and file names starting at merge0.db 
 	if(tempFileCount%2)
 	{
-		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),(string("merge")+to_string(mergeFileCount++)+".db").c_str());
+		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),(string("merge")+to_string((*mergeFileCount)++)+".db").c_str());
 	}
-	for (int i = 0; i < mergeFileCount-1; i+=2)
+
+	for (int i = 0; i < (*mergeFileCount)-1; i+=2)
 	{
-		mergeFileCount = mergeFiles(string("merge")+to_string(i)+".db",string("merge")+to_string(i+1)+".db",delim,conn);
-		// std::remove((string("merge")+to_string(i)+".db").c_str());
-		// std::remove((string("merge")+to_string(i+1)+".db").c_str());
+		mergeFileCount = &mergeFiles(string("merge")+to_string(i)+".db",string("merge")+to_string(i+1)+".db",delim,conn);
+		std::remove((string("merge")+to_string(i)+".db").c_str());
+		std::remove((string("merge")+to_string(i+1)+".db").c_str());
 	}
+
+	std::rename((string("merge")+to_string((*mergeFileCount)-1)+".db").c_str(),(database.substr(0,database.find('.')) + "sorted.db").c_str());
 
 	return true;
 }
@@ -53,8 +56,6 @@ int splitDatabase(string &database, const char delim, const char conn)
 
 		lineRead += buffer;
 		charsRead += fin.gcount();
-
-		// cout << lineRead << endl;
 
 		//if \n was not found by getline
 		if(fin.fail())
@@ -213,5 +214,6 @@ int& mergeFiles(const string &f1, const string &f2, const char delim, const char
 int main(int argc, char const *argv[])
 {
 	sortDatabase(string("test.db"));
+	//TODO: createIndex()
 	return 0;
 }
