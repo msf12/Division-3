@@ -94,7 +94,7 @@ public:
 
 	~DoublyLinkedList()
 	{
-		while(size > 1)
+		while(head != tail)
 		{
 			Node* temp = head;
 			head = head->next;
@@ -104,7 +104,6 @@ public:
 		}
 		
 		delete head;
-		delete tail;
 	}
 
 	Data getHead()

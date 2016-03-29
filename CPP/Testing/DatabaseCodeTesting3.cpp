@@ -1,14 +1,17 @@
-#include "DatabaseCodeTesting2.h"
+#include "DatabaseCodeTesting3.h"
 
 //splits the database into temp files and then merges the files in pairs
 //takes optional arguments for primary field delimiter and secondary field list separators
-bool sortDatabase(string database, const char delim, const char conn)
+bool sortDatabase(string database, const char delim)
 {
-	const int tempFileCount = splitDatabase(database,delim,conn);
+	const int tempFileCount = splitDatabase(database,delim);
 	int mergeCount = 0;
 	for (int i = 0; i < tempFileCount-1; i+=2)
 	{
-		mergeFiles(string("temp")+to_string(i)+".db",string("temp")+to_string(i+1)+".db",delim,conn,string("merge")+to_string(mergeCount++)+".db");
+		mergeFiles(string("temp")+to_string(i)+".db",
+			string("temp")+to_string(i+1)+".db",
+			delim,
+			string("merge")+to_string(mergeCount++)+".db");
 		std::remove((string("temp")+to_string(i)+".db").c_str());
 		std::remove((string("temp")+to_string(i+1)+".db").c_str());
 	}
@@ -20,38 +23,42 @@ bool sortDatabase(string database, const char delim, const char conn)
 	//and file names starting at merge0.db 
 	if(tempFileCount%2)
 	{
-		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),(string("merge")+to_string(mergeCount++)+".db").c_str());
+		std::rename((string("temp")+to_string(tempFileCount-1)+".db").c_str(),
+			(string("merge")+to_string(mergeCount++)+".db").c_str());
 	}
 
 	for (int i = 0; i < mergeCount-1; i+=2)
 	{
-		mergeFiles(string("merge")+to_string(i)+".db",string("merge")+to_string(i+1)+".db",delim,conn,string("merge")+to_string(mergeCount++)+".db");
+		mergeFiles(string("merge")+to_string(i)+".db",
+			string("merge")+to_string(i+1)+".db",
+			delim,
+			string("merge")+to_string(mergeCount++)+".db");
 		std::remove((string("merge")+to_string(i)+".db").c_str());
 		std::remove((string("merge")+to_string(i+1)+".db").c_str());
 	}
 
-	std::rename((string("merge")+to_string(mergeCount-1)+".db").c_str(),(database.substr(0,database.find('.')) + "sorted.db").c_str());
+	std::rename((string("merge")+to_string(mergeCount-1)+".db").c_str(),
+		(database.substr(0,database.find('.')) + "sorted.db").c_str());
 
 	return true;
 }
 
-//reads a subset of database determined by memory capacity into a DoublyLinkedList
-//subsequently sorts the list, iterates through it to merge entries with duplicate primary fields separated by delim
-//and concatenate secondary fields using conn as the separator
-//and exports it into a temp file
+//reads a subset of database determined by memory capacity into a DoublyLinkedList,
+//sorts it, and exports it into a temp file
 //returns the count of temporary files
-int splitDatabase(string &database, const char delim, const char conn)
+int splitDatabase(string &database, const char delim)
 {
 	ifstream fin(database);
 	ofstream fout;
 	int tempFileCount = 0;
-	for (char buffer[LINE_BUFFER_SIZE]; fin.getline(buffer,LINE_BUFFER_SIZE,'\n');)
-	{
-		static int charsRead;
-		static string tempFileName = string("temp") + to_string(tempFileCount++) + ".db";
-		static string lineRead = "";
-		static DoublyLinkedList<string> lines;
+	int charsRead;
+	string tempFileName = string("temp") + to_string(tempFileCount++) + ".db";
+	string lineRead = "";
+	DoublyLinkedList<string> lines;
 
+	//because getline is evaluated first, eof is set before it's checked
+	for (char buffer[LINE_BUFFER_SIZE]; fin.getline(buffer,LINE_BUFFER_SIZE,'\n') || !fin.eof();)
+	{
 		lineRead += buffer;
 		charsRead += fin.gcount();
 
@@ -69,18 +76,9 @@ int splitDatabase(string &database, const char delim, const char conn)
 				fout.open(tempFileName);
 				lines.sort();
 
-				for (DoublyLinkedList<string>::iterator iter = lines.begin(), jter = iter.next();
-					!iter.isNull(); iter = jter, jter = iter.next())
+				for (DoublyLinkedList<string>::iterator iter = lines.begin();
+					!iter.isNull(); ++iter)
 				{
-					//if jter is not a null node
-					//and the first field of iter (iter[0] -> iter.find(delim)) is equal to the first field of jter
-					//append the second field of jter to the second field of iter separated by conn
-					//repeat until the first fields differ or jter goes out of the bounds of the list
-					while(!jter.isNull() && (*iter).substr(0,(*iter).find(delim)) == (*jter).substr(0,(*jter).find(delim)))
-					{
-						*iter += conn + (*jter).substr((*jter).find(delim)+1);
-						++jter;
-					}
 					//store iter in the current temporary database file
 					fout << *iter << endl;
 				}
@@ -97,13 +95,11 @@ int splitDatabase(string &database, const char delim, const char conn)
 }
 
 //merges two files
-//eliminates duplicate entries by comparing substrings up to the first occurance of delim
-//then combines the lines after delim by concatenating with conn
 //returns a reference to the mergeCount for use by larger programs can update it
 //so that mergeFiles will not overwrite externally created merge files
 //note that mergeCount is equal to the number in the current merge file upon function start
 //and is off by 1 upon function completion
-int& mergeFiles(const string &f1, const string &f2, const char delim, const char conn, string mergeFileName)
+int& mergeFiles(const string &f1, const string &f2, const char delim, const string mergeFileName)
 {
 	static int mergeCount = 0;
 	ifstream file1(f1), file2(f2);
@@ -149,16 +145,7 @@ int& mergeFiles(const string &f1, const string &f2, const char delim, const char
 			line2 += buffer2;
 		}
 
-		static int delim1, delim2;
-		delim1 = line1.find(delim);
-		delim2 = line2.find(delim);
-
-		if(line1.substr(0,delim1) == line2.substr(0,delim2))
-		{
-			line1 += conn + line2.substr(delim2+1);
-			line2 = "";
-		}
-		else if(line1.substr(0,delim1) > line2.substr(0,delim2))
+		if(line1 > line2)
 		{
 			mergedFile << line2 << endl;
 			line2 = "";
@@ -209,9 +196,84 @@ int& mergeFiles(const string &f1, const string &f2, const char delim, const char
 	return mergeCount;
 }
 
+int generateIDFiles(const string &database, const char delim)
+{
+	ifstream fin(database);
+
+	//field0 -> artist
+	//field1 -> album
+	//field2 -> song	path
+	string prevFields[2], currFields[3];
+
+	//artist	artistid
+	//album	albumid
+	//song	path	songid
+	//artistid	albumid
+	//albumid	songid
+	ofstream tables[5];
+	
+	//fieldID[0] -> artistid
+	//fieldID[1] -> albumid
+	//fieldID[2] -> songid
+	int fieldID[3] = {-1,-1,-1}, delim1Index, delim2Index;
+
+	for(int i = 0; i < 5; ++i)
+	{
+		tables[i].open(string("table") + to_string(i) + ".db");
+	}
+
+	for(char buffer[LINE_BUFFER_SIZE]; fin.getline(buffer,LINE_BUFFER_SIZE,'\n') || !fin.eof();)
+	{
+		static string lineRead = "", prevArtist, prevAlbum;
+
+		lineRead += buffer;
+
+		if(fin.fail())
+		{
+			fin.clear();
+		}
+		else
+		{
+			delim1Index = lineRead.find(delim);
+			delim2Index = lineRead.find(delim,delim1Index+1);
+			currFields[0] = lineRead.substr(0,delim1Index);
+			currFields[1] = lineRead.substr(delim1Index+1, delim2Index-(delim1Index+1));
+			currFields[2] = lineRead.substr(delim2Index+1);
+
+			if(prevFields[0] != currFields[0])
+			{
+				tables[0] << currFields[0] << '\t' << ++fieldID[0] << '\n';
+				prevFields[0] = currFields[0];
+			}
+			if(prevFields[1] != currFields[1])
+			{
+				tables[1] << currFields[1] << '\t' << ++fieldID[1] << '\n';
+				tables[3] << fieldID[0] << '\t' << fieldID[1] << '\n';
+				prevFields[1] = currFields[1];
+			}
+
+			tables[2] << currFields[2] << '\t' << ++fieldID[2] << '\n';
+			tables[4] << fieldID[1] << '\t' << fieldID[2] << '\n';
+
+			lineRead = "";
+		}
+	}
+
+	fin.close();
+
+	return 3; //return count of ID definition files 
+}
+
 int main(int argc, char const *argv[])
 {
 	// sortDatabase(string("test.db"));
-	//TODO: createIndex()
+	int numIDTables = generateIDFiles(string("testsorted.db"));
+	
+	//artist table is already sorted due to the order of the database after the initial sort
+	for(int i = 1; i < numIDTables; ++i)
+	{
+		sortDatabase(string("table") + to_string(i) + ".db");
+	}
+
 	return 0;
 }
