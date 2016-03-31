@@ -4,6 +4,7 @@
 template <typename Data>
 class DoublyLinkedList
 {
+	//TODO: add comparision operators to Node simplify sorting code
 	struct Node
 	{
 		Node* previous;
@@ -93,7 +94,7 @@ public:
 
 	~DoublyLinkedList()
 	{
-		while(size > 1)
+		while(head != tail)
 		{
 			Node* temp = head;
 			head = head->next;
@@ -103,7 +104,6 @@ public:
 		}
 		
 		delete head;
-		delete tail;
 	}
 
 	Data getHead()
@@ -252,5 +252,64 @@ public:
 		head = nullptr;
 		tail = nullptr;
 	}
+
+	class iterator
+	{
+		Node *node;
+		public:
+		iterator(Node *n) : node(n) {}
+		
+		iterator& operator++()
+		{
+			node = node->next;
+			return *this;
+		}
+		
+		iterator operator++(int)
+		{
+			iterator tmp(*this);
+			operator++();
+			return tmp;
+		}
+		
+		bool operator==(const iterator& rhs)
+		{
+			return node==rhs.node;
+		}
+
+		bool operator!=(const iterator& rhs)
+		{
+			return node!=rhs.node;
+		}
+		
+		Data& operator*()
+		{
+			return node->data;
+		}
+
+		//returns an iterator for the next list element if this iterator is not null (and therefor out of bounds)
+		//otherwise returns this iterator
+		iterator next()
+		{
+			return (*this).isNull()? *this : iterator(node->next);
+		}
+
+		bool isNull()
+		{
+			return node == nullptr;
+		}
+		
+	};
+
+	iterator begin()
+	{
+		return iterator(head);
+	}
+
+	iterator end()
+	{
+		return iterator(tail);
+	}
+
 };
 #endif

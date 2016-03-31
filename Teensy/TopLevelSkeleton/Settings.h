@@ -23,6 +23,9 @@
 #define TFT_SCLK    14
 #define TFT_MISO    12
 
+#define LINE_BUFFER_SIZE 50
+#define CHARS_ALLOWED_IN_MEMORY 5000
+
 #include <SdFat.h>
 SdFat SD;
 
