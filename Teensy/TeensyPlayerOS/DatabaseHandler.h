@@ -61,23 +61,47 @@ public:
 			return 2;
 		}
 
-		if(SD.exists("sorted.db"))
+		//artist album; album songnumber; songnumber song; song path;
+		if(SD.exists("aral.db") && SD.exists("alsn.db") && SD.exists("snsg.db") && SD.exists("sgpa.db"))
 		{
-			// return 0;
+			return 0;
 		}
 
-		// if(!SD.exists("init.db"))
-		// {
+		if(!SD.exists("init.db"))
+		{
 			populateInitDatabase(String("/Music"));
-		// }
-		sortDatabase("init.db","sorted.db");
+			SD.remove("sorted.db");
+			SD.remove("aral.db");
+			SD.remove("alsn.db");
+			SD.remove("snsg.db");
+			SD.remove("sgpa.db");
+		}
+
+		if(!SD.exists("sorted.db"))
+		{
+			sortDatabase("init.db","sorted.db");
+		}
 		uint8_t assocFileCount = generateAssociations("sorted.db");
 		
 		// assoc0.db is already sorted when init is sorted
-		// for(int i = 1; i < assocFileCount; ++i)
-		// {
-		// 	sortDatabase("assoc" + String(i) + ".db", "assoc" + String(i) + "sorted.db");
-		// }
+		for(int i = 1; i < assocFileCount; ++i)
+		{
+			sortDatabase("assoc" + String(i) + ".db", "assoc" + String(i) + "sorted.db");
+			SD.remove(("assoc" + String(i) + ".db").c_str());
+		}
+		SdFile file;
+		file.open("assoc0.db");
+		file.rename(SD.vwd(),"aral.db");
+		file.close();
+		file.open("assoc1sorted.db");
+		file.rename(SD.vwd(),"alsn.db");
+		file.close();
+		file.open("assoc2sorted.db");
+		file.rename(SD.vwd(),"snsg.db");
+		file.close();
+		file.open("assoc3sorted.db");
+		file.rename(SD.vwd(),"sgpa.db");
+		file.close();
 	
 		return 1;
 	}
@@ -148,6 +172,13 @@ bool DatabaseHandler::populateInitDatabase(const String path, ofstream &db)
 				split2 = song.lastIndexOf('-',split1-1);
 
 				songNumber = song.substring(split1+1,song.lastIndexOf('.'));
+
+				while(songNumber.length() < 3)
+				{
+					songNumber = '0' + songNumber;
+					// Serial.println(songNumber);
+				}
+
 				song = song.substring(0,split2);
 				
 				db << artist.c_str() << '\t' << album.c_str() << '\t' <<
@@ -168,7 +199,7 @@ bool DatabaseHandler::populateInitDatabase(const String path, ofstream &db)
 
 bool DatabaseHandler::sortDatabase(const String &database, const String &target, const char delim)
 {
-	Serial.println("Sorting " + database + " into " + target);
+	// Serial.println("Sorting " + database + " into " + target);
 
 	const uint16_t tempFileCount = splitDatabase(database,delim);
 	uint16_t mergeCount = 0;
@@ -317,6 +348,17 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 			line2 += buffer2;
 		}
 
+		if(line1 == "\n")
+		{
+			line1 = "";
+			continue;
+		}
+		else if(line2 == "\n")
+		{
+			line2 = "";
+			continue;
+		}
+
 		if(line1 > line2)
 		{
 			mergedFile << line2.c_str() << '\n';
@@ -353,6 +395,11 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 				file1.getline(buffer1,LINE_BUFFER_SIZE,'\n');
 				line1 += buffer1;
 			}
+			if(line1 == "\n" || line1 == "")
+			{
+				line1 = "";
+				continue;
+			}
 			mergedFile << line1.c_str() << '\n';
 			line1 = "";
 		}
@@ -374,6 +421,11 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 				file2.getline(buffer2,LINE_BUFFER_SIZE,'\n');
 				line2 += buffer2;
 			}
+			if(line2 == "\n" || line2 == "")
+			{
+				line2 = "";
+				continue;
+			}
 			// Serial.println(line2);
 			mergedFile << line2.c_str() << '\n';
 		}
@@ -389,7 +441,7 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 
 uint16_t DatabaseHandler::generateAssociations(const String &database, const char delim)
 {
-	Serial.println("Generating associations from " + database);
+	// Serial.println("Generating associations from " + database);
 
 	ifstream db(database.c_str());
 	char buffer[LINE_BUFFER_SIZE];
@@ -412,22 +464,22 @@ uint16_t DatabaseHandler::generateAssociations(const String &database, const cha
 	}
 	db.seekg(0);
 
-	Serial.println(numFields);
+	// Serial.println(numFields);
 
 	ofstream assocFiles[numFields]; //one association file per field
 
 	for(int i = 0; i < numFields-1; ++i)
 	{
-		Serial.println(String("Opening file: ") + "assoc" + String(i) + ".db");
+		// Serial.println(String("Opening file: ") + "assoc" + String(i) + ".db");
 		SD.remove((String("Opening file: ") + "assoc" + String(i) + ".db").c_str());
 		assocFiles[i].open(("assoc" + String(i) + ".db").c_str());
 	}
-	Serial.println("test");
 	
 	uint16_t IDcount[numFields-2], //numFields-1 pairs and the final one doesn't need an ID
 		delimLocs[numFields-1]; //there are numFields-1 delimiters in each line
 	String fields[numFields], //array to store the field values
-		prevFields[numFields]; //previous field values for comparison
+		prevFields[numFields], //previous field values for comparison
+		IDbuilder; //string to build the final ID number to standardize the length of ID strings
 
 	for(int i = 0; i < numFields; ++i)
 	{
@@ -467,7 +519,12 @@ uint16_t DatabaseHandler::generateAssociations(const String &database, const cha
 			if(fields[0] != prevFields[0] || fields[1] != prevFields[1])
 			{
 				++IDcount[0];
-				assocFiles[0] << fields[0].c_str() << '\t' << fields[1].c_str() << '\t' << String(IDcount[0]).c_str() << '\n';
+				IDbuilder = String(IDcount[0]);
+				while(IDbuilder.length() < 7)
+				{
+					IDbuilder = '0' + IDbuilder;
+				}
+				assocFiles[0] << fields[0].c_str() << '\t' << fields[1].c_str() << '\t' << IDbuilder.c_str() << '\n';
 				prevFields[0] = fields[0];
 			}
 
@@ -477,8 +534,21 @@ uint16_t DatabaseHandler::generateAssociations(const String &database, const cha
 				if(fields[i] != prevFields[i] || fields[i+1] != prevFields[i+1])
 				{
 					++IDcount[i];
-					assocFiles[i] << fields[i].c_str() << '\t' << String(IDcount[i-1]).c_str() << '\t' <<
-						fields[i+1].c_str() << '\t' << String(IDcount[i]).c_str() << '\n';
+					IDbuilder = String(IDcount[i-1]);
+					while(IDbuilder.length() < 7)
+					{
+						IDbuilder = '0' + IDbuilder;
+					}
+
+					assocFiles[i] << fields[i].c_str() << '\t' << IDbuilder.c_str() << '\t';
+
+					IDbuilder = String(IDcount[i]);
+					while(IDbuilder.length() < 7)
+					{
+						IDbuilder = '0' + IDbuilder;
+					}
+					assocFiles[i] << fields[i+1].c_str() << '\t' << IDbuilder.c_str() << '\n';
+
 					prevFields[i] = fields[i];
 					prevFields[i+1] = fields[i+1];
 				}
@@ -486,7 +556,12 @@ uint16_t DatabaseHandler::generateAssociations(const String &database, const cha
 			
 			//numFields-1 association files so the final one is at index numFields-2
 
-			assocFiles[numFields-2] << fields[numFields-2].c_str() << '\t' << String(IDcount[numFields-3]).c_str() << '\t' <<
+			IDbuilder = String(IDcount[numFields-3]);
+			while(IDbuilder.length() < 7)
+			{
+				IDbuilder = '0' + IDbuilder;
+			}
+			assocFiles[numFields-2] << fields[numFields-2].c_str() << '\t' << IDbuilder.c_str() << '\t' <<
 				fields[numFields-1].c_str() << '\n';
 
 			line = "";
