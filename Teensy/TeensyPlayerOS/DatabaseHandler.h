@@ -87,6 +87,9 @@ public:
 bool DatabaseHandler::populateInitDatabase(const String path)
 {
 	ofstream initdb("init.db");
+	//Field titles start with " # " as ' ' and '#' are two of the earliest ASCII values
+	//and that combination cannot reasonably be expected to appear at the beginning of any field value
+	initdb << " # Artist	 # Album	 # Song Number	 # Song	 # Path\n";
 	populateInitDatabase(path,initdb);
 	initdb.close();
 	return true;
@@ -118,7 +121,8 @@ bool DatabaseHandler::populateInitDatabase(const String path, ofstream &db)
 	FatFile directory(path.c_str(), O_READ);
 	String artist = "",
 		album = "",
-		song = "";
+		song = "",
+		songNumber = ""; //placement in album
 
 	uint8_t split1,split2;
 
@@ -143,10 +147,11 @@ bool DatabaseHandler::populateInitDatabase(const String path, ofstream &db)
 				split1 = song.lastIndexOf('-');
 				split2 = song.lastIndexOf('-',split1-1);
 
-				song = song.substring(split1+1,song.lastIndexOf('.')) + '-' + song.substring(0,split2);
-				// Serial.println(artist + '\t' + album + '\t' + song);
+				songNumber = song.substring(split1+1,song.lastIndexOf('.'));
+				song = song.substring(0,split2);
 				
-				db << artist.c_str() << '\t' << album.c_str() << '\t' << song.c_str() << '\t' << (path + '/' + fileName).c_str() << '\n';
+				db << artist.c_str() << '\t' << album.c_str() << '\t' <<
+					songNumber.c_str() << '\t' << song.c_str() << '\t' << (path + '/' + fileName).c_str() << '\n';
 			}
 
 		}
