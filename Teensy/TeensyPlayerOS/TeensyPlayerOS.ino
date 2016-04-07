@@ -17,8 +17,16 @@ void setup()
 	
 	ui.println("Locating song database");
 	delay(1000);
-	if(db.setup())
+	uint8_t dbfailed = db.setup();
+	if(dbfailed)
 	{
+		if(dbfailed == 2)
+		{
+			ui.println("ERROR: MicroSD card not found!!!");
+			while(1);
+
+		}
+		
 		ui.println("Database not found and was rebuilt");
 		delay(1000);
 	}

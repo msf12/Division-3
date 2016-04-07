@@ -18,19 +18,13 @@ class DatabaseHandler
 	//read the database file from the current location and load the following block into nextBlock
 	//main OS treats the database as if it is entirely in memory
 	//so the current index as the OS would store is is converted to index%200 in whichever of the three blocks the user is currently in
-	//TODO: methods (datatype to be replaced with an enum for each type of data: artist, album, or song)
-	//String getNext(datatype)
-	//String getPrevious(datatype)
-	//String getPath()
 
-	//number of songs, albums, and artists on the device
-	uint16_t numSongs = 0, numAlbums = 0, numArtists = 0;
-
-	bool populateInitDatabase(const FatFile *directory, const String path = "");
+	bool populateInitDatabase(const String path = "");
+	bool populateInitDatabase(const String path, ofstream &db);
 
 	//splits the database into temp files and then merges the files in pairs
-	//takes optional arguments for field delimiter
-	bool sortDatabase(const String database, const char delim = '\t');
+	//takes optional arguments for name of the target file and the field delimiter
+	bool sortDatabase(const String &database, const String &target, const char delim = '\t');
 
 	//reads a subset of database determined by memory capacity into a DoublyLinkedList
 	//subsequently sorts the list, iterates through it to merge entries with duplicate primary fields separated by delim
@@ -64,24 +58,39 @@ public:
 	{
 		if(!SD.begin(SD_CS_PIN, SPI_HALF_SPEED))
 		{
-			return false;
+			return 2;
 		}
 
 		if(SD.exists("sorted.db"))
 		{
-			return 0;
+			// return 0;
 		}
 
-		// FatFile *musicRoot = new FatFile("/Music/", O_READ);
-
-		// populateInitDatabase(musicRoot);
-		sortDatabase("/init.db");
-		generateAssociations("sorted.db");
-
+		// if(!SD.exists("init.db"))
+		// {
+			populateInitDatabase(String("/Music"));
+		// }
+		sortDatabase("init.db","sorted.db");
+		uint8_t assocFileCount = generateAssociations("sorted.db");
+		
+		// assoc0.db is already sorted when init is sorted
+		// for(int i = 1; i < assocFileCount; ++i)
+		// {
+		// 	sortDatabase("assoc" + String(i) + ".db", "assoc" + String(i) + "sorted.db");
+		// }
+	
 		return 1;
 	}
 
 };
+
+bool DatabaseHandler::populateInitDatabase(const String path)
+{
+	ofstream initdb("init.db");
+	populateInitDatabase(path,initdb);
+	initdb.close();
+	return true;
+}
 
 //SD.vwd() returns an SdBaseFile
 //Thus I should be able to iterate through subdirectories recursively using the directory file as a parameter
@@ -103,45 +112,62 @@ while(tempFile.openNext(baseFileOfDir,O_READ))
 	}
 }
 */
-bool DatabaseHandler::populateInitDatabase(const FatFile *directory, const String path)
+bool DatabaseHandler::populateInitDatabase(const String path, ofstream &db)
 {
-	ofstream db("/init.db");
 	char fileName[250];
+	FatFile directory(path.c_str(), O_READ);
+	String artist = "",
+		album = "",
+		song = "";
 
-	for(SdFile file; file.openNext(directory,O_READ);)
+	uint8_t split1,split2;
+
+	for(SdFile file; file.openNext(&directory,O_READ);)
 	{
-		file.printName(&Serial);
+		file.getName(fileName,250);
+
 		if(!file.isDir())
 		{
-			file.getName(fileName,250);
-			// Serial.println(fileName);
-			numSongs++;
-			//reduced to accurate number in sorting
-			numAlbums++;
-			numArtists++;
-			// db << artist << '\t' << album << '\t' << song << '\n' << path + String(fileName) << '\n';
-			// songs.println(songTitle + \t + path + *fileNamePtr);
-			// albums.println(albumTitle + \t + songTitle);
-			// artists.println(artist + \t + albumTitle);
+			String extension = fileName;
+			extension = extension.substring(extension.lastIndexOf('.'));
+			if(extension.equalsIgnoreCase(".mp3") ||
+				extension.equalsIgnoreCase(".flac") ||
+				extension.equalsIgnoreCase(".aac"))
+			{
+				split1 = path.indexOf('/',1);
+				split2 = path.indexOf('/',split1+1);
+				artist = path.substring(split1+1,split2);
+				album = path.substring(split2+1);
+
+				song = fileName;
+				split1 = song.lastIndexOf('-');
+				split2 = song.lastIndexOf('-',split1-1);
+
+				song = song.substring(split1+1,song.lastIndexOf('.')) + '-' + song.substring(0,split2);
+				// Serial.println(artist + '\t' + album + '\t' + song);
+				
+				db << artist.c_str() << '\t' << album.c_str() << '\t' << song.c_str() << '\t' << (path + '/' + fileName).c_str() << '\n';
+			}
+
 		}
 		else
 		{
-			FatFile *subDir = new FatFile(fileName,O_READ);
-			populateInitDatabase(subDir, (path + fileName));
+			populateInitDatabase(path + "/" + fileName,db);
 		}
+		file.close();
 	}
+	db.flush();
+	directory.close();
 	return true;
 }
 
-//splits the database into temp files and then merges the files in pairs
-//takes optional arguments for primary field delimiter and secondary field list separators
-bool DatabaseHandler::sortDatabase(const String database, const char delim)
+bool DatabaseHandler::sortDatabase(const String &database, const String &target, const char delim)
 {
+	Serial.println("Sorting " + database + " into " + target);
+
 	const uint16_t tempFileCount = splitDatabase(database,delim);
 	uint16_t mergeCount = 0;
 	SdFile fileToRename;
-
-	Serial.println("here");
 
 	for (uint16_t i = 0; i < tempFileCount-1; i+=2)
 	{
@@ -161,9 +187,6 @@ bool DatabaseHandler::sortDatabase(const String database, const char delim)
 	//and file names starting at merge0.db 
 	if(tempFileCount%2)
 	{
-		Serial.println("Renaming " + (String("temp")+String(tempFileCount-1)+".db") +
-			" " + String("merge")+String(mergeCount)+".db");
-
 		SD.remove((String("merge")+String(mergeCount)+".db").c_str());
 
 		fileToRename.open((String("temp")+String(tempFileCount-1)+".db").c_str(), O_READ | O_WRITE | O_CREAT);
@@ -182,9 +205,9 @@ bool DatabaseHandler::sortDatabase(const String database, const char delim)
 		SD.remove((String("merge")+String(i+1)+".db").c_str());
 	}
 
-	SD.remove("sorted.db");
+	SD.remove(target.c_str());
 	fileToRename.open((String("merge")+String(mergeCount-1)+".db").c_str(), O_READ | O_WRITE | O_CREAT);
-	fileToRename.rename(SD.vwd(),"sorted.db");
+	fileToRename.rename(SD.vwd(),target.c_str());
 	fileToRename.close();
 
 	return true;
@@ -193,7 +216,7 @@ bool DatabaseHandler::sortDatabase(const String database, const char delim)
 //reads a subset of database determined by memory capacity into a DoublyLinkedList,
 //sorts it, and exports it into a temp file
 //returns the count of temporary files
-uint16_t DatabaseHandler::splitDatabase(String &database, const char delim)
+uint16_t DatabaseHandler::splitDatabase(const String &database, const char delim)
 {
 	ifstream fin(database.c_str());
 	ofstream fout;
@@ -280,7 +303,7 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 				break;
 			}
 
-			while(file2.fail())
+			while(file2.fail() && !file2.eof())
 			{
 				line2 += buffer2;
 				file2.clear();
@@ -308,33 +331,45 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 		}
 	}
 
+
 	if(file1.good())
 	{
-		mergedFile << line1.c_str() << '\n';
-		while(file1.getline(buffer1,LINE_BUFFER_SIZE,'\n'))
+		if(line1 != "")
 		{
+			mergedFile << line1.c_str() << '\n';
+		}
+		while(!file1.eof())
+		{
+			file1.getline(buffer1,LINE_BUFFER_SIZE,'\n');
 			line1 = buffer1;
 			while(file1.fail() && !file1.eof())
 			{
-				line1 += buffer1;
 				file1.clear();
 				file1.getline(buffer1,LINE_BUFFER_SIZE,'\n');
+				line1 += buffer1;
 			}
 			mergedFile << line1.c_str() << '\n';
+			line1 = "";
 		}
 	}
 	else if(file2.good())
 	{
-		mergedFile << line2.c_str() << '\n';
-		while(file2.getline(buffer2,LINE_BUFFER_SIZE,'\n'))
+		// Serial.println(line2);
+		if(line2 != "")
 		{
+			mergedFile << line2.c_str() << '\n';
+		}
+		while(!file2.eof())
+		{
+			file2.getline(buffer2,LINE_BUFFER_SIZE,'\n');
 			line2 = buffer2;
-			while(file2.fail())
+			while(file2.fail() && !file2.eof())
 			{
-				line2 += buffer2;
 				file2.clear();
 				file2.getline(buffer2,LINE_BUFFER_SIZE,'\n');
+				line2 += buffer2;
 			}
+			// Serial.println(line2);
 			mergedFile << line2.c_str() << '\n';
 		}
 
@@ -347,13 +382,21 @@ bool DatabaseHandler::mergeFiles(const String &f1, const String &f2, const char 
 	return true;
 }
 
-bool generateAssociations(const String &database, const char delim)
+uint16_t DatabaseHandler::generateAssociations(const String &database, const char delim)
 {
+	Serial.println("Generating associations from " + database);
+
 	ifstream db(database.c_str());
 	char buffer[LINE_BUFFER_SIZE];
-	db.getline(buffer,LINE_BUFFER_SIZE,'\n');
-	String line = buffer;
-	uint8_t numFields = 1;
+	String line = "";
+	do
+	{
+		db.clear();
+		db.getline(buffer,LINE_BUFFER_SIZE,'\n');
+		line += buffer;
+	} while(db.fail());
+
+	uint8_t numFields = 1; //number of fields in the sorted database
 
 	for(int i = 0; i < line.length(); ++i)
 	{
@@ -362,19 +405,95 @@ bool generateAssociations(const String &database, const char delim)
 			++numFields;
 		}
 	}
+	db.seekg(0);
 
-	ofstream assocFiles[numFields];
+	Serial.println(numFields);
 
-	for(int i = 0; i < numFields; i++)
+	ofstream assocFiles[numFields]; //one association file per field
+
+	for(int i = 0; i < numFields-1; ++i)
 	{
-		assocFiles[i].open("assoc" + String(i) + ".db");
+		Serial.println(String("Opening file: ") + "assoc" + String(i) + ".db");
+		SD.remove((String("Opening file: ") + "assoc" + String(i) + ".db").c_str());
+		assocFiles[i].open(("assoc" + String(i) + ".db").c_str());
+	}
+	Serial.println("test");
+	
+	uint16_t IDcount[numFields-2], //numFields-1 pairs and the final one doesn't need an ID
+		delimLocs[numFields-1]; //there are numFields-1 delimiters in each line
+	String fields[numFields], //array to store the field values
+		prevFields[numFields]; //previous field values for comparison
+
+	for(int i = 0; i < numFields; ++i)
+	{
+		if(i < numFields-1)
+		{
+			IDcount[i] = 0;
+		}
+		prevFields[i] = "";
 	}
 
-	//loop through db (assume 4 fields for now)
-	//exclude ID from the final association
-	//assoc[0] << field0 << '\t' << field1 << '\t' << assoc0ID << '\n'
-	//assoc[1] << assoc0ID++ << '\t' << field2 << '\t' << assoc1ID << '\n'
-	//assoc[2] << assoc1ID++ << '\t' << field3 << '\n'
+	line = "";
+	while(db.getline(buffer, LINE_BUFFER_SIZE, '\n') || !db.eof())
+	{
+		line += buffer;
+		if(db.fail())
+		{
+			db.clear();
+		}
+		else
+		{
+			//get first field before the loop because it requires a set first value
+			delimLocs[0] = line.indexOf(delim);
+			fields[0] = line.substring(0,delimLocs[0]);	
+			for(int i = 1; i < numFields-1; ++i)
+			{
+				delimLocs[i] = line.indexOf(delim,delimLocs[i-1]+1);
+				fields[i] = line.substring(delimLocs[i-1]+1,delimLocs[i]);
+			}
+			//get last field after the loop because there is no second delimiter
+			fields[numFields-1] = line.substring(delimLocs[numFields-2]+1);
+
+			//assocFiles[0] << fields[0] << '\t' << fields[1] << '\t' << IDcount[0] << '\n'
+			//assocFiles[1] << fields[1] << '\t' << IDcount[0]++ << '\t' << fields[2] << '\t' << IDcount[1] << '\n'
+			//assocFiles[2] << fields[2] << '\t' << IDcount[1]++ << '\t' << fields[3] << '\n'
+
+			//if field 0 or field 1 have changed there is a new association to add to assoc[0]
+			if(fields[0] != prevFields[0] || fields[1] != prevFields[1])
+			{
+				++IDcount[0];
+				assocFiles[0] << fields[0].c_str() << '\t' << fields[1].c_str() << '\t' << String(IDcount[0]).c_str() << '\n';
+				prevFields[0] = fields[0];
+			}
+
+			for(int i = 1; i < numFields-2; ++i)
+			{
+				//if fields i or field i+1 have changed there is a new association to add to assoc[0]
+				if(fields[i] != prevFields[i] || fields[i+1] != prevFields[i+1])
+				{
+					++IDcount[i];
+					assocFiles[i] << fields[i].c_str() << '\t' << String(IDcount[i-1]).c_str() << '\t' <<
+						fields[i+1].c_str() << '\t' << String(IDcount[i]).c_str() << '\n';
+					prevFields[i] = fields[i];
+					prevFields[i+1] = fields[i+1];
+				}
+			}
+			
+			//numFields-1 association files so the final one is at index numFields-2
+
+			assocFiles[numFields-2] << fields[numFields-2].c_str() << '\t' << String(IDcount[numFields-3]).c_str() << '\t' <<
+				fields[numFields-1].c_str() << '\n';
+
+			line = "";
+		}
+	}
+
+	for(int i = 0; i < numFields-1; ++i)
+	{
+		assocFiles[i].close();
+	}
+
+	return numFields-1;
 }
 
 // bool createIndexTable(SdFile &database, SdFile &indexfile)
