@@ -1,0 +1,41 @@
+
+0000 03
+0001 04
+0002 ??
+0003 ??
+0004 ??
+0005 ??
+
+
+0006 96 01
+0008 91 02
+000A 2F 09
+000C 97 03
+000E D6 02
+0010 D7 04
+0012 7E 001B
+0015 97 04
+0017 D6 02
+0019 D7 03
+001B 7E 0006
+
+	ORG	0000
+a	DB	03
+b	DB	04
+c	DB	??
+d	DB	??
+e	DB	??
+f	DB	??
+
+	ORG 0006
+	LDAA	b
+	CMPA	c
+	BLE	9 ;BLE skips 9 bytes
+	STAA	d
+	LDAB	c
+	STAB	e
+	JMP	001B
+	STAA	e ;branch goes to here
+	LDAB	c
+	STAB	d
+	JMP	0006
