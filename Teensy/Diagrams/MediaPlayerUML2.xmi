@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2016-04-17T19:12:25" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2016-04-18T16:39:47" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -94,7 +94,6 @@
           <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ageV1SyARznN" name="displayNext">
            <UML:BehavioralFeature.parameter>
             <UML:Parameter kind="return" xmi.id="5VhScLci3RMp" type="GzSqkP0K74x7"/>
-            <UML:Parameter visibility="private" isSpecification="false" xmi.id="hpDITTLeb2cA" type="mPcv0FmyK7TY" value="" name="nextElement"/>
            </UML:BehavioralFeature.parameter>
           </UML:Operation>
           <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="NgIsTgrn1OPU" name="displayMenu">
@@ -157,7 +156,7 @@
         <messages/>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="power on sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="663" canvaswidth="1066" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5mslO8aMCbyH" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="power on sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="663" canvaswidth="1066" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5mslO8aMCbyH" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
         <widgets>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1825" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="SAwjeHWyn6Gu" width="50" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="P1Eqapvczaor" height="28" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1525" decon="0" showstereotype="1" y="75" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="FTkvq0InBCq3" width="142" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="28" drawasactor="0"/>
@@ -203,7 +202,7 @@
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-753" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="eOGVEAMHBFuF" width="101" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="aHPkOqCxGOr3" height="28" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-593.9387817382813" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="037pddZsA1ep" width="93" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="iGLcjrl6N25O" height="25" drawasactor="0"/>
          <combinedFragmentwidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-997.9796142578125" showstereotype="1" y="326" font="Sans Serif,9,-1,0,50,0,0,0,0,0" CombinedFragmenttype="7" localid="vpvz8MF5iCAj" combinedFragmentname="input detected" width="631.9591674804688" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="JiRKwWILgES2" documentation="" height="146.2244873046875">
-          <floatingdashlinewidget linecolor="none" usesdiagramfillcolor="0" maxY="472" minY="326" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-997.9796142578125" showstereotype="1" y="399" text="volume pin changed" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="9iiTKmr40dN9" width="631" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="KwL4Q0nbJxXT" height="20"/>
+          <floatingdashlinewidget linecolor="none" usesdiagramfillcolor="0" maxY="472" minY="326" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-997.9796142578125" showstereotype="1" y="0" text="volume pin changed" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="9iiTKmr40dN9" width="631" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="KwL4Q0nbJxXT" height="20"/>
          </combinedFragmentwidget>
          <combinedFragmentwidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-674.4898071289063" showstereotype="1" y="335.7142944335938" font="Sans Serif,9,-1,0,50,0,0,0,0,0" CombinedFragmenttype="0" localid="15SoOG7qwMy3" combinedFragmentname="See: various input diagrams (Ex. play button)" width="313" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="7bD6PYeOShyv" documentation="" height="60"/>
         </widgets>
@@ -238,7 +237,7 @@
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1049" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="mSSfNl5ZTXhv" width="142" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="28" drawasactor="0"/>
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-341" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="qYj4HRkdhSIn" width="148" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="iGLcjrl6N25O" height="28" drawasactor="0"/>
          <combinedFragmentwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1111" showstereotype="1" y="544" font="Sans Serif,9,-1,0,50,0,0,0,0,0" CombinedFragmenttype="7" localid="qf6mGoTPKFRu" combinedFragmentname="isPlaying() : true" width="964" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="atgajMnlfpMj" documentation="" height="114">
-          <floatingdashlinewidget linecolor="#ff0000" usesdiagramfillcolor="1" maxY="658" minY="544" linewidth="0" textcolor="none" usesdiagramusefillcolor="1" x="-1111" showstereotype="1" y="601" text="else" font="Noto Sans,10,-1,0,50,0,0,0,0,0" localid="H8YwWnbMSf6h" width="964" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UX6mlVeLPIt6" height="20"/>
+          <floatingdashlinewidget linecolor="#ff0000" usesdiagramfillcolor="1" maxY="658" minY="544" linewidth="0" textcolor="none" usesdiagramusefillcolor="1" x="-1111" showstereotype="1" y="0" text="else" font="Noto Sans,10,-1,0,50,0,0,0,0,0" localid="H8YwWnbMSf6h" width="964" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UX6mlVeLPIt6" height="20"/>
          </combinedFragmentwidget>
         </widgets>
         <messages>
@@ -279,15 +278,12 @@
         </messages>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="menu navigation sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="660" canvaswidth="2824" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5nMAyiie4HKz" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="menu navigation sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="250" canvaswidth="698" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5nMAyiie4HKz" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
         <widgets>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-2048" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="S79XGyTfUSQ9" width="120" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="25" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1690" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="G4BI6SuinrlD" width="117" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="QJjddjtHvVbK" height="25" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1547" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="FBeBSP5HMT4c" width="75" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UiHr8cAebdRG" height="25" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1447" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="y7eE8nge2jLy" width="97" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="yyJQIQsvv05J" height="25" drawasactor="0"/>
-         <combinedFragmentwidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-2156" showstereotype="1" y="180" font="Sans Serif,9,-1,0,50,0,0,0,0,0" CombinedFragmenttype="7" localid="LNH6N96TICZW" combinedFragmentname="getNext did not return &quot;&quot;" width="812" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="lW3Kg1SDfIWO" documentation="" height="178">
-          <floatingdashlinewidget linecolor="none" usesdiagramfillcolor="1" maxY="358" minY="180" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-2156" showstereotype="1" y="273" text="else" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="Uwoiu95K9xyy" width="812" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="PxeTXnfGtls2" height="20"/>
-         </combinedFragmentwidget>
         </widgets>
         <messages>
          <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="G4BI6SuinrlD" textid="P1crBfzF5K1i" operation="rwoAsB6byMj1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1988" showstereotype="1" y="132" widgetaid="S79XGyTfUSQ9" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="aCWG70mTDNBY" width="365" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="rwoAsB6byMj1" height="30" sequencemessagetype="1000">
@@ -297,12 +293,12 @@
           <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1481" showstereotype="1" y="121" text="read next item" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="xKUTz1gY2ELx" pretext="" role="704" width="78" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Q5bEcqGl2f5n" height="17"/>
          </messagewidget>
          <messagewidget linecolor="none" usesdiagramfillcolor="1" widgetbid="FBeBSP5HMT4c" textid="Ok7nhqdUSQLw" operation="ageV1SyARznN" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" x="-1988" showstereotype="1" y="203" widgetaid="S79XGyTfUSQ9" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="RozlQe58ih0W" width="487" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="ageV1SyARznN" height="20" sequencemessagetype="1000">
-          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1713" showstereotype="1" y="186" text="displayNext(nextElement : string) : bool" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="6Bs6SqgoU2Jz" pretext="" role="704" width="199" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Ok7nhqdUSQLw" height="17"/>
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" textcolor="none" usesdiagramusefillcolor="1" x="-1713" showstereotype="1" y="186" text="displayNext() : bool" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" localid="6Bs6SqgoU2Jz" pretext="" role="704" width="102" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="Ok7nhqdUSQLw" height="17"/>
          </messagewidget>
         </messages>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="previous menu sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="358" canvaswidth="812" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="6FhGukmCr5sd" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="previous menu sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="250" canvaswidth="480" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="6FhGukmCr5sd" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
         <widgets>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-2048" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="S79XGyTfUSQ9" width="120" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="25" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1643" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="FBeBSP5HMT4c" width="75" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UiHr8cAebdRG" height="25" drawasactor="0"/>
@@ -685,7 +681,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="t2TgaSraalwB" uniqueid="z2ELqsHRcNye" documentation=""/>
+  <docsettings viewid="5yCvZXVjVAFT" uniqueid="MFxxIVfoH6bB" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component View"/>
@@ -693,7 +689,7 @@
     <listitem open="1" type="836" id="Entity Relationship Model"/>
     <listitem open="1" type="801" id="Logical View">
      <listitem open="0" type="807" id="t2TgaSraalwB" label="class diagram"/>
-     <listitem open="1" type="830" id="Datatypes">
+     <listitem open="0" type="830" id="Datatypes">
       <listitem open="1" type="829" id="GzSqkP0K74x7"/>
       <listitem open="1" type="829" id="f6oMaKMTKo7s"/>
       <listitem open="1" type="829" id="eqCw05JfSnYC"/>
@@ -741,7 +737,7 @@
       <listitem open="0" type="810" id="5mslO8aMCbyH" label="power on sequence diagram"/>
       <listitem open="0" type="810" id="6FhGukmCr5sd" label="previous menu sequence diagram"/>
       <listitem open="1" type="813" id="0MpbnXeKxWLw"/>
-      <listitem open="1" type="813" id="UiHr8cAebdRG">
+      <listitem open="0" type="813" id="UiHr8cAebdRG">
        <listitem open="0" type="815" id="t3thqFi9JKco"/>
        <listitem open="0" type="815" id="NgIsTgrn1OPU"/>
        <listitem open="0" type="815" id="ageV1SyARznN"/>
