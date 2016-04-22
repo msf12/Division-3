@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2016-04-18T16:39:47" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2016-04-22T08:56:31" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -225,7 +225,7 @@
         </messages>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="play button sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="675" canvaswidth="1147" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="Eh3zPWRbAdla" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="play button sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="675" canvaswidth="1147" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="Eh3zPWRbAdla" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
         <widgets>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-527.635986328125" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="ou0DqcTV6Vin" width="83" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UiHr8cAebdRG" height="28" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-735" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,5,50,0,0,0,0,0" localid="CbwOAB6NH1aC" width="132" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="QJjddjtHvVbK" height="28" drawasactor="0"/>
@@ -237,7 +237,7 @@
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1049" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="mSSfNl5ZTXhv" width="142" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="28" drawasactor="0"/>
          <objectwidget linecolor="#ff0000" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-341" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="qYj4HRkdhSIn" width="148" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="iGLcjrl6N25O" height="28" drawasactor="0"/>
          <combinedFragmentwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1111" showstereotype="1" y="544" font="Sans Serif,9,-1,0,50,0,0,0,0,0" CombinedFragmenttype="7" localid="qf6mGoTPKFRu" combinedFragmentname="isPlaying() : true" width="964" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="atgajMnlfpMj" documentation="" height="114">
-          <floatingdashlinewidget linecolor="#ff0000" usesdiagramfillcolor="1" maxY="658" minY="544" linewidth="0" textcolor="none" usesdiagramusefillcolor="1" x="-1111" showstereotype="1" y="0" text="else" font="Noto Sans,10,-1,0,50,0,0,0,0,0" localid="H8YwWnbMSf6h" width="964" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UX6mlVeLPIt6" height="20"/>
+          <floatingdashlinewidget linecolor="#ff0000" usesdiagramfillcolor="1" maxY="658" minY="544" linewidth="0" textcolor="none" usesdiagramusefillcolor="1" x="-1111" showstereotype="1" y="601" text="else" font="Noto Sans,10,-1,0,50,0,0,0,0,0" localid="H8YwWnbMSf6h" width="964" isinstance="0" usefillcolor="1" fillcolor="none" xmi.id="UX6mlVeLPIt6" height="20"/>
          </combinedFragmentwidget>
         </widgets>
         <messages>
@@ -278,7 +278,7 @@
         </messages>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="0" showpackage="1" showpubliconly="0" showstereotype="1" name="menu navigation sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="250" canvaswidth="698" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5nMAyiie4HKz" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="menu navigation sequence diagram" font="Sans Serif,9,-1,0,50,0,0,0,0,0" canvasheight="250" canvaswidth="698" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" autoincrementsequence="0" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="5nMAyiie4HKz" documentation="" showscope="1" snapgrid="0" showatts="1" type="3">
         <widgets>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-2048" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="S79XGyTfUSQ9" width="120" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="5f2b9Vc7ujOP" height="25" drawasactor="0"/>
          <objectwidget linecolor="none" usesdiagramfillcolor="1" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="1" x="-1690" decon="0" showstereotype="1" y="80" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="G4BI6SuinrlD" width="117" isinstance="0" multipleinstance="0" usefillcolor="1" fillcolor="none" xmi.id="QJjddjtHvVbK" height="25" drawasactor="0"/>
@@ -681,7 +681,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="5yCvZXVjVAFT" uniqueid="MFxxIVfoH6bB" documentation=""/>
+  <docsettings viewid="5nMAyiie4HKz" uniqueid="ghsDofEmFIpR" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component View"/>

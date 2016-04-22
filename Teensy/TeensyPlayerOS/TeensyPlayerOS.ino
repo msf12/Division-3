@@ -1,16 +1,17 @@
 #include "Settings.h"
-#include "DoublyLinkedList.h"
 
 /*
-TODO:
-store info of currently displayed files
-main menu?
-interpret and handle inputs
+ * DEVELOPER'S NOTE:
+ * The serial connection and ui print statements in setup()
+ * are there for debugging purposes and should be removed
+ * in a final build.
 */
-
 void setup()
 {
+
+	//wait for serial connection to boot
 	while(!Serial);
+
 	ui.setup();
 	ui.println("Screen connected");
 	delay(1000);
@@ -40,8 +41,9 @@ void setup()
 	delay(1000);
 	audio.setup();
 	
-	// ui.println("Preparing user input");
+	//USER INPUT NOT YET USED
 
+	// ui.println("Preparing user input");
 
 // #if USE_INTERRUPTS
 // 	ui.println("Using interrupts for button input");
@@ -53,10 +55,15 @@ void setup()
 	ui.println("Device has booted successfully\nLoading main menu");
 	delay(1000);
 	
+	//disable textWrap so long names won't cause issues
 	ui.textWrap(false);
+	//printMenu is a demo method as the UI handler has not been implemented yet
 	ui.printMenu(MainMenu,4);	
 }
 
+/*
+ * The current OS loop is to demo
+ */
 void loop()
 {
 	ui.scrollMenu(DOWN);

@@ -13,6 +13,7 @@ public:
 
 	UIHandler() : tft(TFT_CS, TFT_DC, TFT_RST, TFT_MOSI, TFT_SCLK, TFT_MISO)
 	{
+		//connect to the ILI9341_t3 display
 		tft.begin();
 	}
 
@@ -23,6 +24,7 @@ public:
 	// {
 	// }
 
+	//paint the screen white and reset the cursor position
 	bool clearScreen()
 	{
 		tft.fillScreen(ILI9341_WHITE);
@@ -30,11 +32,13 @@ public:
 		return true;
 	}
 
+	//print a single string
 	bool print(String s)
 	{
 		return tft.print(s);
 	}
 
+	//print a single string followed by a newline
 	bool println(String s)
 	{
 		return print(s + '\n');
@@ -42,12 +46,16 @@ public:
 
 	bool setup()
 	{
+		//initialize the UI handler to print black text of a set size
 		tft.setTextColor(ILI9341_BLACK);
 		tft.setTextSize(2);
+
+		//clear the screen
 		clearScreen();
 		return true;
 	}
 
+	//FOLLOWING METHODS FOR DEMO PURPOSES ONLY
 	bool printMenu(String *menu, int menuSize, uint16_t index = 0)
 	{
 		selectedItem = index;
@@ -87,10 +95,6 @@ public:
 
 	bool scrollMenu(MenuNavigationDirection navDirect, String newItem)
 	{
-		//todo: add newItem to tail of visible items if navDirect == DOWN or
-		//to head if navDirect == UP
-		//update display (center item remains highlighted)
-		//remove hidden item from list of visible items
 		return false;
 	}
 

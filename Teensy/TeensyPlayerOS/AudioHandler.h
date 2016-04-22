@@ -10,10 +10,13 @@ extern SdFat SD;
 #include <play_sd_mp3.h>
 #include <play_sd_aac.h>
 
+//Audio stream and connection definitions
+//https://github.com/PaulStoffregen/Audio
+//https://github.com/FrankBoesing/Arduino-Teensy-Codec-lib/
 AudioPlaySdFlac	playFlac;
 AudioPlaySdMp3	playMp3;
 AudioPlaySdAac	playAac;
-AudioOutputI2S i2s;
+AudioOutputI2S  i2s;
 AudioConnection patchCord1(playFlac, 0, i2s, 0);
 AudioConnection patchCord2(playFlac, 1, i2s, 1);
 AudioConnection patchCord3(playMp3, 0, i2s, 0);
