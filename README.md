@@ -11,4 +11,7 @@ The Digital Circuits and Systems directory contains copies of all homework compl
 The Teensy directory contains all diagrams and development, testing, and final code for the Teensy 3.2 device made as part of the Division 3.
 ######4. [Division 3 Contract](https://github.com/msf12/Division-3/blob/master/Division%203%20contract.pdf)
 My Division 3 contract is visible as a PDF at the link above.
-######5. 
+######5. README.md
+README.md is the file you are currently reading.
+######6. [logisim-generic-2.7.1.jar](http://www.cburch.com/logisim/)
+Logisim is a Java program that was used for the creation of circuit diagrams for Digital Circuits and Systems and can be used to open and simulate all included .circ files.
