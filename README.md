@@ -1,7 +1,7 @@
-# Division 3 Title
+# Designing and Engineering Hardware and Software for an Arduino Music Player
 ## by Mitchel Fields
 
-This file serves as a table of contents and summary for the Division 3 *Title*.
+This file serves as a table of contents and summary for the Division 3 *Designing and Engineering Hardware and Software for an Arduino Music Player*.
 
 ######1. [CPP](https://github.com/msf12/Division-3/tree/master/CPP)
 The CPP directory contains C++ code written to learn C++ and to develop the database code to work on a computer before eventually porting it to the Teensy.
