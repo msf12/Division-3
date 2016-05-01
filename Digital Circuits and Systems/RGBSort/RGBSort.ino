@@ -1,3 +1,7 @@
+#define B_RED 16
+#define B_GRE 15
+#define B_BLU 14
+
 uint32_t *intsToSort;
 uint32_t numInts;
 
@@ -7,6 +11,12 @@ void setup()
 {
 	Serial.begin(9600);
 	randomSeed(analogRead(0));
+	pinMode(B_RED, OUTPUT);
+	pinMode(B_GRE, OUTPUT);
+	pinMode(B_BLU, OUTPUT);
+	analogWrite(B_RED, 255);
+	analogWrite(B_GRE, 255);
+	analogWrite(B_BLU, 255);
 	while(!Serial);
 	String input;
 	do
@@ -43,7 +53,7 @@ void setup()
 			}
 			randGen = true;
 		}
-		intsToSort[i] = random(0, 15);//0x1000000);
+		intsToSort[i] = random(0, 0x1000000);
 	}
 
 	for(uint32_t i = 0; i < numInts; ++i)
@@ -56,6 +66,9 @@ void setup()
 	{
 		Serial.println(String(intsToSort[i]));
 	}
+	analogWrite(B_RED, 255);
+	analogWrite(B_GRE, 255);
+	analogWrite(B_BLU, 255);
 }
 
 void loop()
@@ -64,39 +77,52 @@ void loop()
 
 void RGBSort(uint32_t *intArr, uint32_t len, uint32_t start)
 {
-	uint32_t *p = intArr + random(start,start + len);
+	if(len == 1)
+		return;
+
+	uint32_t *p = intArr + start + len - 1;
 	Serial.println("\nPivot = " + String(*p));
 	uint32_t *a = intArr + start,
-		*b = a + len - 1;
-	Serial.println("a = " + String(*a));
-	Serial.println("b = " + String(*b));
+		*b = a + len - 2;
+	// Serial.println("a = " + String(*a));
+	// Serial.println("b = " + String(*b));
 
-	while(a+1 != b)
+	while(a != b)
 	{
-		if(*a >= *p && (*b < *p || b == p))
+		delay(500);
+		analogWrite(B_RED, 255 - (*a >> 16 & 0xFF));
+		analogWrite(B_GRE, 255 - (*a >> 8 & 0xFF));
+		analogWrite(B_BLU, 255 - (*a & 0xFF));
+		if(*a >= *p && *b < *p)
 		{
 			uint32_t temp = *a;
 			*a = *b;
 			*b = temp;
-			if(p == a)
-			{
-				p = b;
-			}
-			else if(p == b)
-			{
-				p = a;
-			}
 		}
 		if(*a < *p)
 		{
 			++a;
 		}
-		if(*b >= *p && b != p)
+		if(*b >= *p && b != a)
 		{
 			--b;
 		}
-		Serial.println("\nPivot = " + String(*p));
-		Serial.println("a = " + String(*a));
-		Serial.println("b = " + String(*b));
+		// Serial.println("a = " + String(*a));
+		// Serial.println("b = " + String(*b));
 	}
+
+	if(*b < *p)
+	{
+		++b;
+	}
+	else
+	{
+		--a;
+	}
+	uint32_t temp = *b;
+	*b = *p;
+	*p = temp;
+
+	RGBSort(intArr, a - (intArr + start) + 1, start);
+	RGBSort(intArr, p - b + 1, b - intArr);
 }
